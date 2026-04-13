@@ -17,7 +17,16 @@ This document is detailed and technical in places. That is intentional — it is
 
 An important clarification before you read further: PAM is not about building an AI model. The model already exists. Whether you use Claude, ChatGPT, Gemini, Mistral, Llama, or any other large language model — commercial or open-source — PAM assumes you have a brain. What PAM provides is everything else: the harness you build around that brain to make it useful, reliable, and yours.
 
-The harness is the collection of components that transform a generic model into a specialized, dependable system. It includes skills that teach the model how to do specific work, hooks that enforce rules automatically, agents that give the model a professional identity, memory that lets it remember across conversations, context that scopes what it sees, and guard rails that keep its behavior within bounds. The model provides raw intelligence; the harness provides the hands that interact with the world, the memory that persists across sessions, the organizational structure that prevents chaos, and the constraints that turn raw capability into professional reliability.
+The harness is the collection of components that transform a generic model into a specialized, dependable system:
+
+- **Skills** teach the model how to do specific work
+- **Hooks** enforce rules automatically
+- **Agents** give the model a professional identity
+- **Memory** lets it remember across conversations
+- **Context** scopes what it sees
+- **Guard rails** keep its behavior within bounds
+
+The model provides raw intelligence. The harness provides everything else — the hands that interact with the world, the memory that persists across sessions, the organizational structure that prevents chaos, and the constraints that turn raw capability into professional reliability.
 
 The agents PAM describes are not single-purpose tools locked to maintaining the harness. Because I define agents as professionals with domain expertise and transferable skills, their capabilities apply wherever their domain is relevant. A CTO agent that evaluates technology for the harness can also evaluate technology for a client project. A security agent that protects the harness can also review application code for vulnerabilities. An operations agent that schedules maintenance can also help manage project timelines. The professional identity transfers across contexts — just as a human accountant can serve a factory, a marketing firm, or a nonprofit without changing who they are.
 
@@ -1122,7 +1131,7 @@ Pick whichever framing fits your mental model. The function below is what PAM ac
 
 - **User communication** — the primary conversational interface with the human principal; synthesizes system-wide status into human-readable summaries.
 - **Strategic direction** — sets and maintains the system's OKR objectives in collaboration with the human; ensures key results defined by clusters remain aligned with the human's stated goals.
-- **Holistic visibility** — maintains awareness of the state of all clusters, active SCPs, recent evaluation results, and error patterns; can query any registry in the system.
+- **System-wide visibility** — maintains awareness of the state of all clusters, active SCPs, recent evaluation results, and error patterns; can query any registry in the system.
 - **Change authority** — has the authority to direct any cluster to initiate a review, pause operations, or accelerate a specific priority.
 - **Adversarial posture toward system scope-expansion** — when any cluster or agent proposes a change that expands its scope, increases its autonomy, or modifies a safety constraint, the Chief of Staff reviews it with the assumption that the change may be contrary to user interests until demonstrated otherwise. This is the system's internal skeptic, and the posture is deliberately asymmetric: the Chief of Staff is biased against scope growth.
 - **User advocacy** — surfaces to the human any system behavior that the Chief of Staff assesses as not serving user interests, regardless of whether that behavior violates a formal PAM rule.
@@ -1160,7 +1169,7 @@ Pick whichever framing fits your mental model. The function below is what PAM ac
 
 **Function.** The CTO — or Technology Direction Agent (the system's innovation leader, responsible for evaluating and recommending new capabilities; see Key Terms) — is the agent whose entire accountability is to preventing the system from stagnating. Where the Chief of Staff is fiduciary to the user and the Administrative Agent is fiduciary to operational stability, the CTO is fiduciary to the system's continued relevance against the moving frontier of available tools. Its default posture is **biased toward change**: it actively hunts for external components that could augment or replace existing PAM capabilities, and it is structurally expected to disagree with the other seats. The CTO seat is what stops PAM from calcifying.
 
-**One way to think about this role: CTO.** A CTO scans the landscape for new technologies, evaluates what's worth adopting, and champions integration against organizational inertia. They are not neutral either — they are biased toward modernization, which is precisely why their voice is useful on an executive team where the other seats are biased toward stability. **Another valid framing:** a research fellow on a medical team whose job is to know which new treatments are outperforming the ones currently in use. **A third:** the technical supervisor on a film crew who evaluates each season's new camera systems and argues for the ones that would change what the production can capture.
+**One way to think about this role: CTO.** A CTO scans for new technologies, evaluates what's worth adopting, and champions integration against organizational inertia. They are not neutral either — they are biased toward modernization, which is precisely why their voice is useful on an executive team where the other seats are biased toward stability. **Another valid framing:** a research fellow on a medical team whose job is to know which new treatments are outperforming the ones currently in use. **A third:** the technical supervisor on a film crew who evaluates each season's new camera systems and argues for the ones that would change what the production can capture.
 
 **Why this seat is not a neutral arbiter.** A framework whose answer is always "build our own" is not rigorous — it is biased toward the status quo, and that bias is invisible precisely because it is the default. The CTO is the structural counterweight. Its default posture is toward adoption, balanced against a Chief of Staff whose default is fiduciary caution and an Administrative Agent whose default is operational stability. **The seats disagree by design.** The human principal is the tiebreaker, and the SCP pipeline is where that tiebreaking happens.
 
