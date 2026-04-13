@@ -1,0 +1,6 @@
+{
+  "name": "pam-framework",
+  "version": "0.5.2",
+  "description": "Professional Agent Model (PAM) — meta-skills for building PAM-compliant agent systems. Includes skill creator, hook creator, agent creator, and cluster creator.",
+  "author": "Jonathan Reyes / Ethion Consulting"
+}
