@@ -185,7 +185,7 @@ You start here. You grow from here.
 
 PAM is one approach among many. The agentic AI space is moving fast, and there are other excellent frameworks and patterns emerging. Use what resonates from PAM. Leave what does not. Borrow specific ideas. Combine them with approaches from other systems. I did not set out to create the one true framework -- I set out to give you a blueprint detailed enough to build from.
 
-The [full specification](./PAM-framework-v0_5.2.md) -- all 21,000+ words -- covers every building block in precise detail: governance, self-improvement loops, operational primitives, and a complete reference implementation. It is a working blueprint, not a brochure.
+The [full specification](./PAM-framework-v0_5.2.md) -- all 25,000+ words -- covers every building block in precise detail: governance, self-improvement loops, operational primitives, and a complete reference implementation. It is a working blueprint, not a brochure.
 
 If you want to get started, here is what I would do:
 
