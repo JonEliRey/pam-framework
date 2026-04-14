@@ -8,7 +8,7 @@ By [Jonathan Reyes](https://ethion.io) / Ethion Consulting
 
 ## What Is PAM?
 
-PAM is a blueprint for building AI agent systems. Not a ready-made system — a design philosophy and set of tools for creating your own, purpose-built for you.
+PAM is a blueprint for building AI agent systems. Not a ready-made system. A design philosophy and set of tools for creating your own, purpose-built for you.
 
 PAM assumes you already have a brain (Claude, ChatGPT, Gemini, Mistral, or any LLM). What it provides is everything else: the harness you build around that brain to make it useful, reliable, and yours.
 
@@ -30,10 +30,10 @@ git clone https://github.com/JonEliRey/pam-framework.git
 
 Claude Code will automatically discover the plugin and its skills. You'll have access to:
 
-- `/pam-skill-creator` — create PAM-compliant skills (wraps `/skill-creator` with PAM standards)
-- `/pam-hook-creator` — create PAM-compliant hooks (wraps `/hookify` with criticality tiers)
-- `/pam-agent-creator` — create PAM-compliant agents with memory, cluster namespace, and skill preloading
-- `/pam-cluster-creator` — create complete PAM clusters with root context, domain.yaml, and registries
+- `/pam-skill-creator`: create PAM-compliant skills (wraps `/skill-creator` with PAM standards)
+- `/pam-hook-creator`: create PAM-compliant hooks (wraps `/hookify` with criticality tiers)
+- `/pam-agent-creator`: create PAM-compliant agents with memory, cluster namespace, and skill preloading
+- `/pam-cluster-creator`: create complete PAM clusters with root context, domain.yaml, and registries
 
 ### Build Your First Cluster
 
@@ -82,6 +82,6 @@ MIT
 
 ## Author
 
-Jonathan Reyes — [Ethion Consulting](https://ethion.io)
+Jonathan Reyes · [Ethion Consulting](https://ethion.io)
 
 *PAM is a living framework. This document is the starting point, not the destination.*
