@@ -7,15 +7,15 @@
 
 ## Why This Document Exists
 
-Within the next two years, having an AI agent may become as normal as having a smartphone. Most people will use whatever system someone else set up — and that's perfectly fine. But understanding how these systems work matters: to know when something isn't working right, to customize a system to your own needs, and ultimately to build one that's purpose-built for you.
+Within the next two years, having an AI agent may become as normal as having a smartphone. Most people will use whatever system someone else set up, and that's perfectly fine. But understanding how these systems work matters: to know when something isn't working right, to customize a system to your own needs, and ultimately to build one that's purpose-built for you.
 
-There are many excellent agentic systems being published right now, and people are using them successfully. What I'm offering with PAM is different: not a ready-made system, but a blueprint. One of many possible approaches for how someone can build their own agent system — one they understand intimately and have a hand in building, because it's built for them.
+There are many excellent agentic systems being published right now, and people are using them successfully. What I'm offering with PAM is different: not a ready-made system, but a blueprint. One of many possible approaches for how someone can build their own agent system, one they understand intimately and have a hand in building, because it's built for them.
 
-I'm not prescribing how you must organize your agents. I'm describing how you CAN organize them, based on principles drawn from how effective human organizations work: clear roles, bounded responsibilities, shared context within teams, and structured processes for self-improvement. Whether you adopt PAM wholesale, borrow specific ideas, or simply use it to understand how agent systems are structured — the goal is the same: give you the knowledge to make informed decisions about the AI systems that will increasingly be part of daily life.
+I'm not prescribing how you must organize your agents. I'm describing how you CAN organize them, based on principles drawn from how effective human organizations work: clear roles, bounded responsibilities, shared context within teams, and structured processes for self-improvement. Whether you adopt PAM wholesale, borrow specific ideas, or simply use it to understand how agent systems are structured, the goal is the same: give you the knowledge to make informed decisions about the AI systems that will increasingly be part of daily life.
 
-This document is detailed and technical in places. That is intentional — it is a working blueprint, not a brochure. But you do not need to be a software engineer to follow the ideas. The introduction and first few sections are written for anyone. The later sections go deeper for people who want to build. A glossary of key terms follows the opening sections so you always have a quick reference when the vocabulary gets specific.
+This document is detailed and technical in places. That is intentional, it is a working blueprint, not a brochure. But you do not need to be a software engineer to follow the ideas. The introduction and first few sections are written for anyone. The later sections go deeper for people who want to build. A glossary of key terms follows the opening sections so you always have a quick reference when the vocabulary gets specific.
 
-An important clarification before you read further: PAM is not about building an AI model. The model already exists. Whether you use Claude, ChatGPT, Gemini, Mistral, Llama, or any other large language model — commercial or open-source — PAM assumes you have a brain. What PAM provides is everything else: the harness you build around that brain to make it useful, reliable, and yours.
+An important clarification before you read further: PAM is not about building an AI model. The model already exists. Whether you use Claude, ChatGPT, Gemini, Mistral, Llama, or any other large language model, commercial or open-source, PAM assumes you have a brain. What PAM provides is everything else: the harness you build around that brain to make it useful, reliable, and yours.
 
 The harness is the collection of components that transform a generic model into a specialized, dependable system:
 
@@ -26,13 +26,13 @@ The harness is the collection of components that transform a generic model into 
 - **Context** scopes what it sees
 - **Guard rails** keep its behavior within bounds
 
-The model provides raw intelligence. The harness provides everything else — the hands that interact with the world, the memory that persists across sessions, the organizational structure that prevents chaos, and the constraints that turn raw capability into professional reliability.
+The model provides raw intelligence. The harness provides everything else, the hands that interact with the world, the memory that persists across sessions, the organizational structure that prevents chaos, and the constraints that turn raw capability into professional reliability.
 
-The agents PAM describes are not single-purpose tools locked to maintaining the harness. Because I define agents as professionals with domain expertise and transferable skills, their capabilities apply wherever their domain is relevant. A CTO agent that evaluates technology for the harness can also evaluate technology for a client project. A security agent that protects the harness can also review application code for vulnerabilities. An operations agent that schedules maintenance can also help manage project timelines. The professional identity transfers across contexts — just as a human accountant can serve a factory, a marketing firm, or a nonprofit without changing who they are.
+The agents PAM describes are not single-purpose tools locked to maintaining the harness. Because I define agents as professionals with domain expertise and transferable skills, their capabilities apply wherever their domain is relevant. A CTO agent that evaluates technology for the harness can also evaluate technology for a client project. A security agent that protects the harness can also review application code for vulnerabilities. An operations agent that schedules maintenance can also help manage project timelines. The professional identity transfers across contexts, just as a human accountant can serve a factory, a marketing firm, or a nonprofit without changing who they are.
 
-Why does this matter? Without a harness, you have a powerful but generic brain that forgets everything between conversations, has no specialization, and starts from scratch every time you open a new chat. With a harness, you have a professional that remembers what you decided last week, adapts to your specific domain, stays within its area of expertise, and improves over time. That is the difference PAM addresses — and it is a difference anyone can build, regardless of which model they choose to start with.
+Why does this matter? Without a harness, you have a powerful but generic brain that forgets everything between conversations, has no specialization, and starts from scratch every time you open a new chat. With a harness, you have a professional that remembers what you decided last week, adapts to your specific domain, stays within its area of expertise, and improves over time. That is the difference PAM addresses, and it is a difference anyone can build, regardless of which model they choose to start with.
 
-My long-term vision includes a companion skill — a step-by-step guide embedded in the framework itself — that walks a new user through building their first PAM system from scratch. The goal is not just to describe how agent systems can be organized, but to make that organization achievable for anyone who can articulate what they want their system to do. That companion skill is described in Section 11 (What Comes Next) and is the natural test of whether PAM works in practice, not just in theory.
+My long-term vision includes a companion skill, a step-by-step guide embedded in the framework itself, that walks a new user through building their first PAM system from scratch. The goal is not just to describe how agent systems can be organized, but to make that organization achievable for anyone who can articulate what they want their system to do. That companion skill is described in Section 11 (What Comes Next) and is the natural test of whether PAM works in practice, not just in theory.
 
 If you read nothing else, read the Core Philosophy in Section 2. It explains, in plain terms, the single idea that everything else in this document builds on.
 
@@ -40,15 +40,15 @@ If you read nothing else, read the Core Philosophy in Section 2. It explains, in
 
 ## Foreword
 
-In this document, I define the Professional Agent Model (PAM) — a design philosophy and architectural framework for building AI agent systems that behave less like task-execution tools and more like domain professionals. PAM is not a specific software library. It is a set of principles, primitives, and constraints that guide how agents, skills, hooks, MCP servers, plugins, and scheduled tasks are designed, organized, and allowed to evolve over time.
+In this document, I define the Professional Agent Model (PAM), a design philosophy and architectural framework for building AI agent systems that behave less like task-execution tools and more like domain professionals. PAM is not a specific software library. It is a set of principles, primitives, and constraints that guide how agents, skills, hooks, MCP servers, plugins, and scheduled tasks are designed, organized, and allowed to evolve over time.
 
-I developed PAM from first principles, drawing on the Unix philosophy, professional organizational structures, and the emerging patterns of multi-agent AI systems. Its central claim is simple: **the future of effective AI is not one agent that does everything — it is many focused agents that each do one thing exceptionally well, stay current in their domain, and know how to communicate across boundaries without losing focus.**
+I developed PAM from first principles, drawing on the Unix philosophy, professional organizational structures, and the emerging patterns of multi-agent AI systems. Its central claim is simple: **the future of effective AI is not one agent that does everything. It is many focused agents that each do one thing exceptionally well, stay current in their domain, and know how to communicate across boundaries without losing focus.**
 
 I built PAM entirely on Claude Code's native primitives. This is a deliberate constraint. It means PAM systems are deployable without custom infrastructure, composable with any Claude Code-compatible tooling, and maintainable through standard version control.
 
-While I built PAM on Claude Code because it currently provides the broadest native support for the primitives this framework requires, the principles and organizational model are not exclusive to any one platform. The design philosophy applies to any system that supports agent definitions, lifecycle hooks, skill-based capabilities, and persistent memory — whether that is Claude, OpenAI, Gemini, Mistral, or an open-source alternative. The specific implementation details reference Claude Code; the framework itself is model-agnostic.
+While I built PAM on Claude Code because it currently provides the broadest native support for the primitives this framework requires, the principles and organizational model are not exclusive to any one platform. The design philosophy applies to any system that supports agent definitions, lifecycle hooks, skill-based capabilities, and persistent memory, whether that is Claude, OpenAI, Gemini, Mistral, or an open-source alternative. The specific implementation details reference Claude Code; the framework itself is model-agnostic.
 
-I designed PAM for incremental adoption. A solo practitioner with three agents does not need — and should not build — the full governance stack described in this document. Start with the primitives that match your current needs: agents, skills, and a cluster root context. Add governance primitives as your system tells you it needs them, not before. Over-building is as much a failure mode as under-building; the framework's job is to give you a map of what exists so you can choose what to build, not to mandate everything at once.
+I designed PAM for incremental adoption. A solo practitioner with three agents does not need, and should not build, the full governance stack described in this document. Start with the primitives that match your current needs: agents, skills, and a cluster root context. Add governance primitives as your system tells you it needs them, not before. Over-building is as much a failure mode as under-building; the framework's job is to give you a map of what exists so you can choose what to build, not to mandate everything at once.
 
 ---
 
@@ -59,12 +59,12 @@ Most AI agent systems today are built around task execution. You define a task, 
 The symptoms are familiar to anyone who has pushed a single agent toward increasing complexity:
 
 - **Context bloat.** As you add capabilities to a single agent, its context fills with tools, instructions, and domain knowledge it doesn't need for the current task. Signal degrades. Performance degrades.
-- **Brittleness at the edges.** A generalist agent handles the center of its training well. At the edges — where real work happens — it lacks the depth that a specialist would bring.
+- **Brittleness at the edges.** A generalist agent handles the center of its training well. At the edges, where real work happens, it lacks the depth that a specialist would bring.
 - **No continuity of expertise.** A task-oriented agent forgets everything between invocations. It has no relationship with its own domain. It cannot grow.
 - **User as the integration layer.** When agents are tools, the human must know how to connect them, when to invoke which one, and what each one is capable of. The cognitive load stays with the user.
 - **Improvement is manual.** When a capability needs updating, a human has to find it, change it, and redeploy it. The agent has no voice in its own evolution.
-- **Perpetual probabilistic execution.** Systems stay reliant on LLM reasoning for work that could be handled by deterministic code — wasting tokens, introducing variance, and preventing the system from becoming reliably predictable.
-- **No accountability structure.** Agents can drift outside their declared scope, accumulate vulnerabilities, or fall out of compliance with established standards — and nothing catches it.
+- **Perpetual probabilistic execution.** Systems stay reliant on LLM reasoning for work that could be handled by deterministic code, wasting tokens, introducing variance, and preventing the system from becoming reliably predictable.
+- **No accountability structure.** Agents can drift outside their declared scope, accumulate vulnerabilities, or fall out of compliance with established standards, and nothing catches it.
 
 The root cause of most of these failures is a category error: **we are building agents as tools when we should be building them as professionals operating within an organization.**
 
@@ -74,36 +74,36 @@ The root cause of most of these failures is a category error: **we are building 
 
 This glossary defines every specialized term used in PAM. Each term is explained in plain language so you can reference this section whenever the document introduces unfamiliar vocabulary. Terms are listed in the order they typically appear.
 
-- **Agent** — a specialized AI assistant focused on one area of expertise. Think of it as a team member who knows their job well and stays in their lane.
-- **Skill** — a reusable playbook that teaches an agent how to do specific work. Just like a professional's training manual, it contains step-by-step procedures, reference materials, and examples.
-- **Cluster** — a team of agents that share a common domain, like a department in a company. Agents within a cluster know about each other and communicate directly.
-- **Registry** — a shared logbook where agents record what they've learned, what errors occurred, and what changes have been proposed. It is a set of simple text files that any agent can read.
-- **Hook** — an automatic checkpoint that runs before or after an agent takes an action, enforcing rules or capturing information. Like a quality gate on an assembly line.
-- **SCP (Specification Change Proposal)** — the formal process by which an agent proposes a change to its own configuration, subject to review. No agent changes itself without going through this process.
-- **Plugin** — a packaged bundle that contains everything a team of agents needs, ready to install. Similar to how a smartphone app bundles everything it needs into a single download.
-- **MCP Server** — a connection to an external service (like GitHub, a database, or an API) that agents can use as a tool. It bridges the gap between the agent system and the outside world.
-- **Matrix Agent** — an agent that belongs to one team but formally monitors relevant updates from another team. Like a project manager who sits in engineering meetings to stay informed.
-- **Scheduled Task** — a job that runs automatically on a timer, like a weekly maintenance check. This is how PAM performs work during off-hours without a human present.
-- **Layered Context** — the principle that shared configuration lives at the narrowest scope that needs it, not globally. If only one team needs a piece of information, only that team should see it.
-- **Chief of Staff Agent** — the system's user-facing leader, responsible for strategic direction and user advocacy. Its loyalty is to the human (the CEO/owner of the system), not to the system itself. The Chief of Staff ensures the user's vision is executed and pushes back when decisions seem misaligned with stated goals.
-- **Administrative Agent** — the system's operational manager, responsible for scheduling, health monitoring, and maintenance. It keeps everything running smoothly.
-- **CTO / Technology Direction Agent** — the system's innovation leader, responsible for evaluating and recommending new capabilities. It prevents the system from falling behind.
-- **CISO / Security Executive** — the system's security leader, responsible for security posture, vulnerability assessment, and risk management. It provides the friction that forces security considerations into every adoption and change decision.
-- **Frontmatter** — structured metadata at the top of a configuration file, like a header with key properties. It tells the system what the file is, what it does, and how it connects to other pieces.
-- **JSONL** — a file format where each line is a separate JSON record. It makes logs and registries easy to read, search, and append to without complex database software.
-- **Headless mode** — running an AI session without a human present, typically triggered by a timer. This is how maintenance and research cycles operate overnight.
-- **Fail-closed / Fail-open** — what happens when a checkpoint encounters an error. Fail-closed blocks the action (safe but disruptive); fail-open allows the action to proceed (smooth but potentially unsafe).
-- **Domain** — the bounded area of expertise a team or agent is responsible for. An agent's domain defines what it should and should not work on.
-- **Exit code** — a number returned by a program to indicate success (0) or failure (non-zero). Hooks use exit codes to tell the system whether an action should proceed or be blocked.
-- **Memory** — the persistent record of decisions, learnings, and context that an agent carries across sessions, enabling it to build expertise over time rather than starting fresh each conversation.
-- **Knowledge Source Registry** — the declared list of authoritative sources a cluster's researcher is permitted to query. This bounds research to vetted, relevant sources rather than the open internet.
-- **OKR (Objectives and Key Results)** — the goal-setting framework PAM uses to align agent work with user objectives. Objectives define what the system is working toward; Key Results define measurable outcomes that confirm progress.
+- **Agent**: a specialized AI assistant focused on one area of expertise. Think of it as a team member who knows their job well and stays in their lane.
+- **Skill**: a reusable playbook that teaches an agent how to do specific work. Just like a professional's training manual, it contains step-by-step procedures, reference materials, and examples.
+- **Cluster**: a team of agents that share a common domain, like a department in a company. Agents within a cluster know about each other and communicate directly.
+- **Registry**: a shared logbook where agents record what they've learned, what errors occurred, and what changes have been proposed. It is a set of simple text files that any agent can read.
+- **Hook**: an automatic checkpoint that runs before or after an agent takes an action, enforcing rules or capturing information. Like a quality gate on an assembly line.
+- **SCP (Specification Change Proposal)**: the formal process by which an agent proposes a change to its own configuration, subject to review. No agent changes itself without going through this process.
+- **Plugin**: a packaged bundle that contains everything a team of agents needs, ready to install. Similar to how a smartphone app bundles everything it needs into a single download.
+- **MCP Server**: a connection to an external service (like GitHub, a database, or an API) that agents can use as a tool. It bridges the gap between the agent system and the outside world.
+- **Matrix Agent**: an agent that belongs to one team but formally monitors relevant updates from another team. Like a project manager who sits in engineering meetings to stay informed.
+- **Scheduled Task**: a job that runs automatically on a timer, like a weekly maintenance check. This is how PAM performs work during off-hours without a human present.
+- **Layered Context**: the principle that shared configuration lives at the narrowest scope that needs it, not globally. If only one team needs a piece of information, only that team should see it.
+- **Chief of Staff Agent**: the system's user-facing leader, responsible for strategic direction and user advocacy. Its loyalty is to the human (the CEO/owner of the system), not to the system itself. The Chief of Staff ensures the user's vision is executed and pushes back when decisions seem misaligned with stated goals.
+- **Administrative Agent**: the system's operational manager, responsible for scheduling, health monitoring, and maintenance. It keeps everything running smoothly.
+- **CTO / Technology Direction Agent**: the system's innovation leader, responsible for evaluating and recommending new capabilities. It prevents the system from falling behind.
+- **CISO / Security Executive**: the system's security leader, responsible for security posture, vulnerability assessment, and risk management. It provides the friction that forces security considerations into every adoption and change decision.
+- **Frontmatter**: structured metadata at the top of a configuration file, like a header with key properties. It tells the system what the file is, what it does, and how it connects to other pieces.
+- **JSONL**: a file format where each line is a separate JSON record. It makes logs and registries easy to read, search, and append to without complex database software.
+- **Headless mode**: running an AI session without a human present, typically triggered by a timer. This is how maintenance and research cycles operate overnight.
+- **Fail-closed / Fail-open**: what happens when a checkpoint encounters an error. Fail-closed blocks the action (safe but disruptive); fail-open allows the action to proceed (smooth but potentially unsafe).
+- **Domain**: the bounded area of expertise a team or agent is responsible for. An agent's domain defines what it should and should not work on.
+- **Exit code**: a number returned by a program to indicate success (0) or failure (non-zero). Hooks use exit codes to tell the system whether an action should proceed or be blocked.
+- **Memory**: the persistent record of decisions, learnings, and context that an agent carries across sessions, enabling it to build expertise over time rather than starting fresh each conversation.
+- **Knowledge Source Registry**: the declared list of authoritative sources a cluster's researcher is permitted to query. This bounds research to vetted, relevant sources rather than the open internet.
+- **OKR (Objectives and Key Results)**: the goal-setting framework PAM uses to align agent work with user objectives. Objectives define what the system is working toward; Key Results define measurable outcomes that confirm progress.
 
 ---
 
 ### 1.2 Understanding Frontmatter
 
-Throughout this document, you will encounter references to "frontmatter" — structured metadata that appears at the top of markdown files. Because PAM uses frontmatter extensively to define agent identity, skill configuration, and component relationships, understanding what it is and how it works is essential for following the framework.
+Throughout this document, you will encounter references to "frontmatter", structured metadata that appears at the top of markdown files. Because PAM uses frontmatter extensively to define agent identity, skill configuration, and component relationships, understanding what it is and how it works is essential for following the framework.
 
 **What frontmatter is.** Frontmatter is a block of YAML (a human-readable data format) placed between two `---` markers at the very top of a markdown file. It provides structured, machine-readable metadata that both humans and tools can parse without reading the entire file. Here is a simple example:
 
@@ -119,17 +119,17 @@ memory: project
 ---
 ```
 
-Everything between the `---` markers is metadata. Everything below the closing `---` is the file's body content — in Claude Code, this body becomes the agent's system prompt or the skill's instructional content.
+Everything between the `---` markers is metadata. Everything below the closing `---` is the file's body content, in Claude Code, this body becomes the agent's system prompt or the skill's instructional content.
 
-**Why PAM uses frontmatter.** Frontmatter provides a single location where a component's identity, configuration, and relationships are declared in a format that is simultaneously human-readable and machine-parseable. An agent's name, its skills, its model, its memory scope — all declared in one structured block that any tool can read without parsing prose.
+**Why PAM uses frontmatter.** Frontmatter provides a single location where a component's identity, configuration, and relationships are declared in a format that is simultaneously human-readable and machine-parseable. An agent's name, its skills, its model, its memory scope, all declared in one structured block that any tool can read without parsing prose.
 
-**How Claude Code handles frontmatter.** Claude Code reads a specific set of documented frontmatter fields (`name`, `description`, `model`, `skills`, `tools`, `disallowedTools`, `memory`, `hooks`, `mcpServers`, `permissionMode`, `maxTurns`, `background`, `effort`, `isolation`, `color`, `initialPrompt`). These fields configure the agent or skill at runtime. Custom fields — fields not in Claude Code's documented set — are preserved in the YAML but not parsed by the runtime. They do not cause errors; they are simply not interpreted by Claude Code's agent loader.
+**How Claude Code handles frontmatter.** Claude Code reads a specific set of documented frontmatter fields (`name`, `description`, `model`, `skills`, `tools`, `disallowedTools`, `memory`, `hooks`, `mcpServers`, `permissionMode`, `maxTurns`, `background`, `effort`, `isolation`, `color`, `initialPrompt`). These fields configure the agent or skill at runtime. Custom fields, fields not in Claude Code's documented set, are preserved in the YAML but not parsed by the runtime. They do not cause errors; they are simply not interpreted by Claude Code's agent loader.
 
 **PAM's custom frontmatter fields.** I define additional frontmatter fields as conventions: `on_failure:` (hook criticality tier declaration), `cluster:` (cluster membership), `domain_scope:` (bounded expertise area), and others introduced throughout this document. These fields are not parsed by Claude Code's runtime. They are preserved in the YAML and visible to any agent or tool that reads the specification file using standard file operations (the Read tool, grep, or any YAML parser). PAM's linting tooling reads these fields to verify consistency; hook authors reference them when implementing tier-appropriate behavior; other agents can discover cluster membership or domain scope by reading an agent's frontmatter. The enforcement comes from discipline and tooling, not from runtime parsing.
 
-**Why this matters for readers.** If you see a frontmatter field you do not recognize from Claude Code's documented set, it is probably a PAM convention — not an error. I use frontmatter as the primary mechanism for declaring an agent's identity, relationships, and behavioral metadata. The convention is safe because unknown fields are preserved without conflict.
+**Why this matters for readers.** If you see a frontmatter field you do not recognize from Claude Code's documented set, it is probably a PAM convention, not an error. I use frontmatter as the primary mechanism for declaring an agent's identity, relationships, and behavioral metadata. The convention is safe because unknown fields are preserved without conflict.
 
-**Compatibility with Obsidian.** Obsidian, a popular knowledge-management tool, also uses YAML frontmatter for its own metadata (`tags`, `aliases`, `cssclasses`). PAM's custom fields do not conflict with Obsidian's reserved fields — the only overlap is `description`, which Obsidian uses only for its Publish feature (irrelevant for local vaults). This means PAM systems can be visualized using Obsidian's graph view and queried using Obsidian's Dataview plugin without modification.
+**Compatibility with Obsidian.** Obsidian, a popular knowledge-management tool, also uses YAML frontmatter for its own metadata (`tags`, `aliases`, `cssclasses`). PAM's custom fields do not conflict with Obsidian's reserved fields, the only overlap is `description`, which Obsidian uses only for its Publish feature (irrelevant for local vaults). This means PAM systems can be visualized using Obsidian's graph view and queried using Obsidian's Dataview plugin without modification.
 
 ---
 
@@ -145,23 +145,23 @@ This reframe has concrete consequences:
 
 **Identity over capability.** A PAM agent is first defined by *what domain (the bounded area of expertise it is responsible for; see Key Terms) it owns*, not by what tools it has access to. The tools follow from the domain. The domain does not follow from the tools.
 
-**Currency over completeness.** A PAM agent actively tracks releases, methodology updates, and capability changes relevant to its domain — and integrates that knowledge into its own specification over time.
+**Currency over completeness.** A PAM agent actively tracks releases, methodology updates, and capability changes relevant to its domain, and integrates that knowledge into its own specification over time.
 
 **Communication over execution.** Professionals communicate proactively. PAM agents are expected to broadcast relevant updates to the agents and users who need them without being asked.
 
-**Composition over comprehensiveness.** Following the Unix philosophy — do one thing and do it well — I explicitly reject the design goal of a single comprehensive agent. A system of focused, composable professionals outperforms a monolith at every level of complexity that matters.
+**Composition over comprehensiveness.** Following the Unix philosophy, do one thing and do it well, I explicitly reject the design goal of a single comprehensive agent. A system of focused, composable professionals outperforms a monolith at every level of complexity that matters.
 
-**Intentionality over probability.** A maturing PAM system continuously identifies work done by LLM reasoning that could be done by code. Every such replacement reduces variance, reduces token consumption, and increases trust. The goal is an agent whose starting state is pre-committed and whose actions are increasingly code-executed — which is what reliable, auditable, low-variance behavior actually requires. PAM cannot make an LLM-backed agent deterministic, but it can make the agent intentional.
+**Intentionality over probability.** A maturing PAM system continuously identifies work done by LLM reasoning that could be done by code. Every such replacement reduces variance, reduces token consumption, and increases trust. The goal is an agent whose starting state is pre-committed and whose actions are increasingly code-executed, which is what reliable, auditable, low-variance behavior actually requires. PAM cannot make an LLM-backed agent deterministic, but it can make the agent intentional.
 
-**Why professionals, not tools?** This framing is deliberate and earned through experience. When people first encounter AI — especially non-technical people — they almost always ask: "What can this tool do?" They think about AI as a tool that performs a specific, bounded task. This mental model comes from a generation of software that worked exactly that way — you install a tool, it does one thing, you use it for that thing.
+**Why professionals, not tools?** This framing is deliberate and earned through experience. When people first encounter AI, especially non-technical people, they almost always ask: "What can this tool do?" They think about AI as a tool that performs a specific, bounded task. This mental model comes from a generation of software that worked exactly that way, you install a tool, it does one thing, you use it for that thing.
 
-AI is fundamentally different. When you think about a tool, you think about its current capabilities. When you think about a person — a professional — you think about their potential. You consider their experiences, their expertise, their ability to learn, and the range of contexts where their judgment could be valuable. You do not limit a human professional to one task; you recognize that their identity carries across situations.
+AI is fundamentally different. When you think about a tool, you think about its current capabilities. When you think about a person, a professional, you think about their potential. You consider their experiences, their expertise, their ability to learn, and the range of contexts where their judgment could be valuable. You do not limit a human professional to one task; you recognize that their identity carries across situations.
 
-I'm asking you to think about your AI agents the same way. Not "what can this chatbot do right now?" but "what could this professional become, given the right training, the right context, and the right organizational structure?" That reframe — from tool to professional — is not cosmetic. It frees users from the constraint of thinking about fixed capabilities and opens the space for thinking about evolving potential. It is the difference between asking "what has someone else done with this?" and asking "what do I want to build with this?"
+I'm asking you to think about your AI agents the same way. Not "what can this chatbot do right now?" but "what could this professional become, given the right training, the right context, and the right organizational structure?" That reframe, from tool to professional, is not cosmetic. It frees users from the constraint of thinking about fixed capabilities and opens the space for thinking about evolving potential. It is the difference between asking "what has someone else done with this?" and asking "what do I want to build with this?"
 
 One of the most important lessons I've learned working with AI systems: push the system beyond what you think is possible. You will be surprised by the results more often than not. But you can only push if you think of the system as a professional with potential, not a tool with a feature list.
 
-A PAM agent's professional identity — its domain, its communication style, its judgment patterns — is defined by its specification file. Its capabilities — the specific workflows, tool invocations, and domain knowledge it brings to bear — are defined by its skills. The two are separable: you can evolve an agent's skills without changing who it is, and you can deploy the same professional identity with different skill sets for different contexts. This is the concrete meaning of "agent as professional" — the persona is the identity; the skills are the toolkit. Just as a human security expert can work in finance, healthcare, or government without changing their fundamental expertise, a PAM agent's professional identity transfers across contexts while its skills adapt to each.
+A PAM agent's professional identity, its domain, its communication style, its judgment patterns, is defined by its specification file. Its capabilities, the specific workflows, tool invocations, and domain knowledge it brings to bear, are defined by its skills. The two are separable: you can evolve an agent's skills without changing who it is, and you can deploy the same professional identity with different skill sets for different contexts. This is the concrete meaning of "agent as professional", the persona is the identity; the skills are the toolkit. Just as a human security expert can work in finance, healthcare, or government without changing their fundamental expertise, a PAM agent's professional identity transfers across contexts while its skills adapt to each.
 
 The rest of this document defines each of PAM's building blocks precisely. Before diving in, here is the concept in one paragraph: you have professionals (agents) organized into teams (clusters) that share a workspace (layered context) and communicate through a bulletin board (registry). Each professional follows a playbook (skill) and is supervised by automatic checkpoints (hooks). Professionals carry memory (the persistent record of decisions, learnings, and context that survives across sessions; see Key Terms) so they build expertise over time rather than starting fresh each conversation. Four executives oversee the system: one advocates for the user as their Chief of Staff, one keeps operations running (Administrative Agent), one hunts for better tools and approaches (CTO), and one ensures security and manages risk (CISO). All changes to the system go through a formal proposal process (SCP) so nothing changes without review. The sections that follow define each of these pieces in detail.
 
@@ -169,7 +169,7 @@ The rest of this document defines each of PAM's building blocks precisely. Befor
 
 ## 3. Primitives
 
-PAM defines a small set of primitives. Everything in a PAM system is built from these. All primitives map directly to Claude Code's native capabilities — no custom infrastructure is required.
+PAM defines a small set of primitives. Everything in a PAM system is built from these. All primitives map directly to Claude Code's native capabilities, no custom infrastructure is required.
 
 ---
 
@@ -180,14 +180,14 @@ The fundamental unit of PAM. An agent is a domain professional with persistent, 
 Custom frontmatter fields defined by PAM (such as `on_failure:`, `cluster:`, `domain_scope:`) are not parsed by Claude Code's runtime. They are preserved in the YAML and visible to any agent or tool that reads the specification file using standard file operations. PAM's linting tooling reads these fields to verify consistency; hook authors reference them when implementing tier-appropriate behavior; other agents can discover cluster membership or domain scope by reading an agent's frontmatter. The enforcement comes from discipline and tooling, not from runtime parsing.
 
 **Key properties:**
-- **Domain** — the bounded area of expertise the agent owns exclusively
-- **Cluster membership** — which professional group (cluster — a team of agents sharing a common domain; see Key Terms) the agent belongs to
-- **Subscription signature** — the topics the agent listens to from outside its cluster
-- **Improvement interface** — the protocol by which the agent proposes changes to its own specification
-- **Version contract** — a changelog that makes the agent's history queryable
-- **Skills preload** — the cluster skills (reusable playbooks that teach agents how to do specific work; see Key Terms) declared in frontmatter that load automatically when the agent starts
+- **Domain**: the bounded area of expertise the agent owns exclusively
+- **Cluster membership**: which professional group (cluster, a team of agents sharing a common domain; see Key Terms) the agent belongs to
+- **Subscription signature**: the topics the agent listens to from outside its cluster
+- **Improvement interface**: the protocol by which the agent proposes changes to its own specification
+- **Version contract**: a changelog that makes the agent's history queryable
+- **Skills preload**: the cluster skills (reusable playbooks that teach agents how to do specific work; see Key Terms) declared in frontmatter that load automatically when the agent starts
 
-**Memory** — agents can declare a `memory` field in frontmatter with a scope value (`user`, `project`, or `local`). This creates a persistent memory directory scoped to the agent's name at the chosen level. The agent receives auto-injected memory instructions and the first 200 lines of its MEMORY.md file in its system prompt at startup. Memory persists across sessions and is independent from the parent session's auto-memory. This is the foundation of PAM's memory system — every domain agent should declare a memory scope.
+**Memory**: agents can declare a `memory` field in frontmatter with a scope value (`user`, `project`, or `local`). This creates a persistent memory directory scoped to the agent's name at the chosen level. The agent receives auto-injected memory instructions and the first 200 lines of its MEMORY.md file in its system prompt at startup. Memory persists across sessions and is independent from the parent session's auto-memory. This is the foundation of PAM's memory system, every domain agent should declare a memory scope.
 
 **Agent communication:** Agents communicate directly with other agents through two native mechanisms: the `Task` tool (to invoke subagents) and the `SendMessage` channel (for Agent Team lateral communication). Within a cluster, direct agent-to-agent communication is unrestricted and expected. Cross-cluster communication follows specific rules explained in Section 3.2 and Section 5.
 
@@ -206,11 +206,11 @@ I require every agent to live under a cluster subdirectory, so the cluster is a 
     content-factory.md
 ```
 
-The flat layout (`.claude/agents/<agent-name>.md`) is deprecated. The replacement is `.claude/agents/<cluster>/<agent-name>.md`. This is a **PAM convention layered on Claude Code's native agent discovery**, not a new runtime feature — agent discovery itself uses Claude Code's native filesystem walk of `.claude/agents/`.
+The flat layout (`.claude/agents/<agent-name>.md`) is deprecated. The replacement is `.claude/agents/<cluster>/<agent-name>.md`. This is a **PAM convention layered on Claude Code's native agent discovery**, not a new runtime feature, agent discovery itself uses Claude Code's native filesystem walk of `.claude/agents/`.
 
-**Verification note:** Claude Code's agent discovery must support nested subdirectories inside `.claude/agents/`. If nested discovery is unsupported, the fallback is to encode the namespace in the filename using a double-underscore separator — `.claude/agents/gitops__security-scanner.md`. The double-underscore is not legal in any cluster or agent name PAM accepts (both are `[a-z][a-z0-9-]*`). The linter enforces the convention regardless of physical layout.
+**Verification note:** Claude Code's agent discovery must support nested subdirectories inside `.claude/agents/`. If nested discovery is unsupported, the fallback is to encode the namespace in the filename using a double-underscore separator, `.claude/agents/gitops__security-scanner.md`. The double-underscore is not legal in any cluster or agent name PAM accepts (both are `[a-z][a-z0-9-]*`). The linter enforces the convention regardless of physical layout.
 
-**Agent reference format:** Wherever an agent is referenced by another primitive — a skill's `agent:` field, a hook's handler, a matrix agent's subscription payload, a registry event naming an agent — the reference MUST take the form `<cluster>/<agent-name>`. Example:
+**Agent reference format:** Wherever an agent is referenced by another primitive, a skill's `agent:` field, a hook's handler, a matrix agent's subscription payload, a registry event naming an agent, the reference MUST take the form `<cluster>/<agent-name>`. Example:
 
 ```yaml
 ---
@@ -226,40 +226,40 @@ The bare form `security-scanner` is deprecated. The PAM linter warns on any bare
 
 **Collision detection (linter audit):**
 
-1. **Same-cluster collision (error).** Two agents in the same cluster with the same name are a hard error. The audit surfaces an SCP (Specification Change Proposal — the formal process by which agents propose changes to their own configuration; see Key Terms) proposing a rename.
+1. **Same-cluster collision (error).** Two agents in the same cluster with the same name are a hard error. The audit surfaces an SCP (Specification Change Proposal, the formal process by which agents propose changes to their own configuration; see Key Terms) proposing a rename.
 2. **Cross-cluster name collision (warning).** Two agents in different clusters with the same base name (e.g. `gitops/security-scanner` and `ops/security-scanner`) are permitted but surfaced as an advisory.
 
 **Migration from flat layout:** Existing flat agents must be moved into their cluster's subdirectory. PAM ships a one-time migration helper as a step in each cluster's setup skill (the `/<cluster>-setup` slash command, see Section 3.9.4). The helper reads each `.md` file at the flat level, parses the `cluster:` field from frontmatter, moves the file to the namespaced path, rewrites skill `agent:` references to use the namespaced form, and appends a migration record to the cluster's `events.jsonl`. Migration runs exactly once per flat-layout install, gated by a marker file at `~/.claude/.pam-namespace-migrated`.
 
-*Why this matters: without clear agent identity, you get a blob of capabilities that nobody can audit, debug, or improve — the opposite of a professional team.*
+*Why this matters: without clear agent identity, you get a blob of capabilities that nobody can audit, debug, or improve, the opposite of a professional team.*
 
 ---
 
 ### 3.2 Agent-Skill Symbiosis
 
-This relationship deserves dedicated treatment because it is foundational to how PAM agents work. An agent specification and a skill are not two independent things — they are the two halves of a professional identity.
+This relationship deserves dedicated treatment because it is foundational to how PAM agents work. An agent specification and a skill are not two independent things, they are the two halves of a professional identity.
 
 Think of it this way: **the agent is the professional; the skill is the training, the playbook, and the toolbox.** A surgeon without medical training is just a person with a scalpel. A PAM agent without skills is a context-window with a description. Skills are what make an agent a specialist.
 
 **What skills give agents:**
 
-- **Domain knowledge** — the methodologies, best practices, and reference materials relevant to the domain, loaded progressively as needed rather than consuming context upfront
-- **Workflow definitions** — step-by-step procedures the agent follows, reducing the number of decisions the agent has to reason through in real time
-- **Code and patterns** — scripts, templates, CLI invocations, and API call specifications that the agent executes rather than reasons through
-- **Tool constraints** — `allowed-tools` declarations that limit what the agent can do when the skill is active, increasing predictability
-- **Examples** — concrete demonstrations of correct output that calibrate the agent's behavior without requiring the principal to re-explain every session
+- **Domain knowledge**: the methodologies, best practices, and reference materials relevant to the domain, loaded progressively as needed rather than consuming context upfront
+- **Workflow definitions**: step-by-step procedures the agent follows, reducing the number of decisions the agent has to reason through in real time
+- **Code and patterns**: scripts, templates, CLI invocations, and API call specifications that the agent executes rather than reasons through
+- **Tool constraints**: `allowed-tools` declarations that limit what the agent can do when the skill is active, increasing predictability
+- **Examples**: concrete demonstrations of correct output that calibrate the agent's behavior without requiring the principal to re-explain every session
 
 **What this means in practice:**
 
-A PAM agent's level of intentionality is directly proportional to the quality of its skills. A well-written skill with complete workflow definitions, embedded code patterns, and tool constraints produces an agent that behaves with lower variance every time it encounters a known situation. A poorly-written skill — or no skill at all — produces an agent that reasons from scratch each time, introducing variance, consuming more tokens, and generating less predictable results.
+A PAM agent's level of intentionality is directly proportional to the quality of its skills. A well-written skill with complete workflow definitions, embedded code patterns, and tool constraints produces an agent that behaves with lower variance every time it encounters a known situation. A poorly-written skill, or no skill at all, produces an agent that reasons from scratch each time, introducing variance, consuming more tokens, and generating less predictable results.
 
-This is why I treat the ongoing development of skills as a first-class design activity, equal in importance to the development of agent specifications. When the self-improvement loop identifies a recurring pattern in agent behavior, the right response is almost always to codify that pattern in a skill — not to add more instructions to the agent's system prompt.
+This is why I treat the ongoing development of skills as a first-class design activity, equal in importance to the development of agent specifications. When the self-improvement loop identifies a recurring pattern in agent behavior, the right response is almost always to codify that pattern in a skill, not to add more instructions to the agent's system prompt.
 
 **The bidirectional relationship:**
 
 Claude Code implements the agent-skill relationship in both directions, and PAM uses both.
 
-*Direction 1 — Skills preloaded into agents.* An agent's YAML frontmatter declares a `skills:` field. The full content of each listed skill is injected into the agent's context at startup. The agent starts each session already equipped with its domain knowledge, without needing to discover it:
+*Direction 1, Skills preloaded into agents.* An agent's YAML frontmatter declares a `skills:` field. The full content of each listed skill is injected into the agent's context at startup. The agent starts each session already equipped with its domain knowledge, without needing to discover it:
 
 ```yaml
 ---
@@ -272,7 +272,7 @@ skills:
 ---
 ```
 
-*Direction 2 — Skills that scope and spawn agents.* A skill can use `context: fork` and an `agent:` field to declare which agent type executes it. When the skill is invoked, it creates a bounded agent context — the agent receives exactly the knowledge and tools the skill defines, and nothing else. This is how PAM implements skill-mediated cross-cluster invocation: a skill in one cluster can declare an agent from another cluster as its executor. The skill is the declared, reviewable interface. The cross-cluster call happens through it, not around it:
+*Direction 2, Skills that scope and spawn agents.* A skill can use `context: fork` and an `agent:` field to declare which agent type executes it. When the skill is invoked, it creates a bounded agent context, the agent receives exactly the knowledge and tools the skill defines, and nothing else. This is how PAM implements skill-mediated cross-cluster invocation: a skill in one cluster can declare an agent from another cluster as its executor. The skill is the declared, reviewable interface. The cross-cluster call happens through it, not around it:
 
 ```yaml
 ---
@@ -286,7 +286,7 @@ allowed-tools: Bash(git *), Read, Grep
 
 This bidirectional design creates a closed system: agents are defined by the skills they preload, and skills constrain the agents that execute them. Together, they form a professional identity that is both capable and bounded.
 
-*Why this matters: skills are what turn a generic AI into a specialist — without them, your agent has raw intelligence but no domain expertise, no structured workflows, and no calibrating examples. It reasons from scratch about HOW to do work that already has established methods.*
+*Why this matters: skills are what turn a generic AI into a specialist, without them, your agent has raw intelligence but no domain expertise, no structured workflows, and no calibrating examples. It reasons from scratch about HOW to do work that already has established methods.*
 
 ---
 
@@ -294,9 +294,9 @@ This bidirectional design creates a closed system: agents are defined by the ski
 
 A cluster is a group of agents that share a bounded domain and a common knowledge registry (a shared logbook for knowledge, errors, and change proposals; see Key Terms). Agents within a cluster are aware of each other's capabilities and communicate directly. They share the same domain vocabulary, and their knowledge updates are naturally scoped to each other.
 
-Cluster is a **logical** organizational unit — it describes how agents are grouped and how they relate to each other. It is not a deployment or packaging unit. Deployment is handled by the Plugin (see Section 3.9).
+Cluster is a **logical** organizational unit, it describes how agents are grouped and how they relate to each other. It is not a deployment or packaging unit. Deployment is handled by the Plugin (see Section 3.9).
 
-**Cross-cluster communication:** Clusters communicate through two declared channels: the typed registry and skill-mediated cross-cluster calls. Skill-mediated cross-cluster calls are explicitly permitted because a skill's `agent:` field can reference any agent in `.claude/agents/`, including agents from other clusters. Because the skill is declared in the invoking cluster's specification and reviewed as part of any spec change, the cross-cluster relationship is explicit, bounded, and auditable — not a hidden runtime dependency.
+**Cross-cluster communication:** Clusters communicate through two declared channels: the typed registry and skill-mediated cross-cluster calls. Skill-mediated cross-cluster calls are explicitly permitted because a skill's `agent:` field can reference any agent in `.claude/agents/`, including agents from other clusters. Because the skill is declared in the invoking cluster's specification and reviewed as part of any spec change, the cross-cluster relationship is explicit, bounded, and auditable, not a hidden runtime dependency.
 
 #### Subscription Reverse Index
 
@@ -330,11 +330,11 @@ Each cluster's registry directory includes a reverse index file:
 }
 ```
 
-`scp_ref` ties the record to the SCP that introduced it — every subscription has reviewable provenance. `status` transitions from `active` to `retired` (never deleted); retirement is a new append, not an edit, preserving the append-only invariant.
+`scp_ref` ties the record to the SCP that introduced it, every subscription has reviewable provenance. `status` transitions from `active` to `retired` (never deleted); retirement is a new append, not an edit, preserving the append-only invariant.
 
-Whenever a matrix agent's spec is updated via SCP approval (Section 7.6), the Administrative Agent — in the same post-approval step that updates the subscribing agent's spec — writes a corresponding entry to the subscribed-to cluster's `subscribers.jsonl`. Both writes are part of the same SCP commit; the linter flags any matrix agent whose forward subscription is not mirrored by a reverse index entry, and vice versa.
+Whenever a matrix agent's spec is updated via SCP approval (Section 7.6), the Administrative Agent, in the same post-approval step that updates the subscribing agent's spec, writes a corresponding entry to the subscribed-to cluster's `subscribers.jsonl`. Both writes are part of the same SCP commit; the linter flags any matrix agent whose forward subscription is not mirrored by a reverse index entry, and vice versa.
 
-When a cluster proposes a breaking change to its registry schema — renaming `planning_impact` to `impacts_planning` at a major-version boundary — it queries its own `subscribers.jsonl` to enumerate every downstream consumer. The cluster then publishes a deprecation event naming those consumers, giving them a concrete adaptation window.
+When a cluster proposes a breaking change to its registry schema, renaming `planning_impact` to `impacts_planning` at a major-version boundary, it queries its own `subscribers.jsonl` to enumerate every downstream consumer. The cluster then publishes a deprecation event naming those consumers, giving them a concrete adaptation window.
 
 #### Machine-Readable Domain Declarations (`domain.yaml`)
 
@@ -386,19 +386,19 @@ cross_cluster_interfaces:
 
 **Linter integration:** The PAM linter audits each cluster against its `domain.yaml`:
 
-1. Every agent in `.claude/agents/<cluster>/` is checked — `allowed-tools` must be consistent with `includes`.
-2. Every skill whose `agent:` references an agent in this cluster is checked — `allowed-tools` must fit within the cluster's includes.
-3. Every registry entry naming this cluster as origin is spot-checked for path references inside `excludes` — surfaced as an advisory, not an error.
+1. Every agent in `.claude/agents/<cluster>/` is checked, `allowed-tools` must be consistent with `includes`.
+2. Every skill whose `agent:` references an agent in this cluster is checked, `allowed-tools` must fit within the cluster's includes.
+3. Every registry entry naming this cluster as origin is spot-checked for path references inside `excludes`: surfaced as an advisory, not an error.
 
 **Migration from prose:** Existing prose domain descriptions must be converted manually to `domain.yaml` files. Each cluster's setup skill gains a step that checks for `domain.yaml` presence and, if missing, prints a structured checklist the principal translates from the prose.
 
-*Why this matters: without clusters, every agent in your system sees every piece of configuration — even the irrelevant ones. Clusters scope information so each agent sees only what it needs.*
+*Why this matters: without clusters, every agent in your system sees every piece of configuration, even the irrelevant ones. Clusters scope information so each agent sees only what it needs.*
 
 ---
 
 ### 3.4 Capability Registry
 
-The shared knowledge index within a cluster, and the standard communication substrate between all PAM components. The registry is not an abstract message bus — it is a set of queryable filesystem files maintained at a well-known path structure.
+The shared knowledge index within a cluster, and the standard communication substrate between all PAM components. The registry is not an abstract message bus, it is a set of queryable filesystem files maintained at a well-known path structure.
 
 **Implementation:**
 
@@ -415,7 +415,7 @@ Each cluster maintains its registry as append-only JSONL files in a shared path:
     subscribers.jsonl    # Subscription reverse index
 ```
 
-Each entry is a structured JSON object on a single line, written atomically by hooks or agents using standard filesystem tools. Any agent with Read access can query any registry file. Because entries are structured JSON, agents can filter by field — querying for all `error_type: "tool_failure"` entries from the past 7 days, or all SCPs with `status: "pending_review"`, using standard Bash or Read tools.
+Each entry is a structured JSON object on a single line, written atomically by hooks or agents using standard filesystem tools. Any agent with Read access can query any registry file. Because entries are structured JSON, agents can filter by field, querying for all `error_type: "tool_failure"` entries from the past 7 days, or all SCPs with `status: "pending_review"`, using standard Bash or Read tools.
 
 **Registry publication schema (minimum required fields):**
 
@@ -435,14 +435,14 @@ Each entry is a structured JSON object on a single line, written atomically by h
 }
 ```
 
-**Subscription model:** Agents subscribe to topic signatures, not to other agents directly. Matrix agents (see Section 3.5) declare their subscription filters; hooks write matching entries to a delivery path the subscribing agent reads on next invocation. Because the registry is filesystem-based, the subscription model is pull-based — agents query on their schedule rather than receiving pushed events. This is a deliberate simplicity tradeoff that keeps the system operational without a running message broker.
+**Subscription model:** Agents subscribe to topic signatures, not to other agents directly. Matrix agents (see Section 3.5) declare their subscription filters; hooks write matching entries to a delivery path the subscribing agent reads on next invocation. Because the registry is filesystem-based, the subscription model is pull-based, agents query on their schedule rather than receiving pushed events. This is a deliberate simplicity tradeoff that keeps the system operational without a running message broker.
 
 #### Registry Schema Versioning
 
 Every registry entry type carries a mandatory `schema_version` field using two-part semantic versioning:
 
-- **Major version** (`1`, `2`, `3`) — breaking change. Field removed, renamed, or semantics changed. Readers that do not understand a newer major version MUST NOT attempt to parse the entry.
-- **Minor version** (`1.0`, `1.1`, `1.2`) — additive change. Field added, enum value added, optional constraint relaxed. Readers on the same major but a lower minor MUST ignore unknown fields and process the entry normally.
+- **Major version** (`1`, `2`, `3`), breaking change. Field removed, renamed, or semantics changed. Readers that do not understand a newer major version MUST NOT attempt to parse the entry.
+- **Minor version** (`1.0`, `1.1`, `1.2`), additive change. Field added, enum value added, optional constraint relaxed. Readers on the same major but a lower minor MUST ignore unknown fields and process the entry normally.
 
 Required on every entry type in the registry set: `knowledge.jsonl`, `errors.jsonl`, `scps.jsonl`, `okr-progress.jsonl`, `events.jsonl`, and `subscribers.jsonl`. No new registry type ships without it.
 
@@ -450,9 +450,9 @@ Required on every entry type in the registry set: `knowledge.jsonl`, `errors.jso
 
 1. Parse the entry's `schema_version`.
 2. Compare to the reader's declared supported range.
-3. **Equal major** — process normally, ignore unknown fields.
-4. **Lower major** — consult the migration table; adapt or skip with a structured log.
-5. **Higher major** — log a structured warning to stderr, skip the entry, flag the reader for upgrade. If the reader is an agent, it surfaces the skip to the Chief of Staff Agent so its supported range can be bumped via SCP.
+3. **Equal major**: process normally, ignore unknown fields.
+4. **Lower major**: consult the migration table; adapt or skip with a structured log.
+5. **Higher major**: log a structured warning to stderr, skip the entry, flag the reader for upgrade. If the reader is an agent, it surfaces the skip to the Chief of Staff Agent so its supported range can be bumped via SCP.
 
 **Migration mechanism.** When a cluster bumps a registry file's major version, the Administrative Agent runs a migration pass during the next maintenance cycle:
 
@@ -471,23 +471,23 @@ Entries that cannot be mechanically migrated are archived in place with a warnin
 3. No entry references a field not in the declared schema at that version.
 4. Archived `*.v<N>.jsonl` files are still readable by at least one reader; otherwise the audit proposes archive deletion after a grace period.
 
-*Why this matters: the registry is how your agents remember what they learned and share it with their teammates — without it, every session starts with amnesia.*
+*Why this matters: the registry is how your agents remember what they learned and share it with their teammates, without it, every session starts with amnesia.*
 
 ---
 
 ### 3.5 Matrix Agent
 
-A matrix agent (an agent that belongs to one team but formally monitors relevant updates from another; see Key Terms) has a home cluster but holds formal liaison relationships with one or more other clusters. It does not absorb foreign domains — it subscribes to the *interface* of those domains, specifically the portions relevant to its own work.
+A matrix agent (an agent that belongs to one team but formally monitors relevant updates from another; see Key Terms) has a home cluster but holds formal liaison relationships with one or more other clusters. It does not absorb foreign domains, it subscribes to the *interface* of those domains, specifically the portions relevant to its own work.
 
-**Example:** A Project Manager agent belongs to the Operations cluster. It holds a matrix liaison to the GitOps cluster. It subscribes to GitOps registry entries where `planning_impact: true`. When `gitops/security-scanner` publishes a registry entry about mandatory secrets rotation adding two days to deployment lead time — tagged `planning_impact: true` — the PM agent reads it on its next maintenance cycle, integrates it into its planning assumptions, and surfaces it to the principal.
+**Example:** A Project Manager agent belongs to the Operations cluster. It holds a matrix liaison to the GitOps cluster. It subscribes to GitOps registry entries where `planning_impact: true`. When `gitops/security-scanner` publishes a registry entry about mandatory secrets rotation adding two days to deployment lead time, tagged `planning_impact: true`: the PM agent reads it on its next maintenance cycle, integrates it into its planning assumptions, and surfaces it to the principal.
 
 The PM agent never sees the underlying secrets management architecture. It sees only the planning consequence.
 
 Matrix relationships are declared in the agent's specification at creation time, not discovered at runtime. Subscription changes go through the same SCP approval loop as any other spec change.
 
-**Bidirectional declaration.** Subscriptions are maintained in two places for two different perspectives. The subscriber's spec declares what it listens to — how the subscribing agent is configured. The subscribed-to cluster's `subscribers.jsonl` declares who is listening — how the source cluster understands its downstream dependency graph. Both are maintained by the Administrative Agent on SCP approval and both are audited by the linter for consistency. The forward declaration is the source of truth for *subscriber behavior*; the reverse index is the source of truth for *publisher impact analysis*. Neither is a cache of the other.
+**Bidirectional declaration.** Subscriptions are maintained in two places for two different perspectives. The subscriber's spec declares what it listens to, how the subscribing agent is configured. The subscribed-to cluster's `subscribers.jsonl` declares who is listening, how the source cluster understands its downstream dependency graph. Both are maintained by the Administrative Agent on SCP approval and both are audited by the linter for consistency. The forward declaration is the source of truth for *subscriber behavior*; the reverse index is the source of truth for *publisher impact analysis*. Neither is a cache of the other.
 
-*Why this matters: matrix agents are how teams stay informed about each other without drowning in irrelevant information — they get exactly the cross-team updates they need, nothing more.*
+*Why this matters: matrix agents are how teams stay informed about each other without drowning in irrelevant information, they get exactly the cross-team updates they need, nothing more.*
 
 ---
 
@@ -495,28 +495,28 @@ Matrix relationships are declared in the agent's specification at creation time,
 
 A skill is a reusable, domain-specific capability composed into an agent. In Claude Code, skills are Markdown files with YAML frontmatter, living in `.claude/skills/` (project-scoped) or `~/.claude/skills/` (user-scoped). Skills are discovered by description at session start; their content is resolved into context under one of two loading modes.
 
-I use **both modes deliberately**. The choice is a design decision, not a convenience — each mode produces a different behavior profile, and PAM clusters select per-skill based on the role the skill plays for its owning agent.
+I use **both modes deliberately**. The choice is a design decision, not a convenience, each mode produces a different behavior profile, and PAM clusters select per-skill based on the role the skill plays for its owning agent.
 
-#### 3.6.1 Mode 1 — Progressive Disclosure (Lazy)
+#### 3.6.1 Mode 1, Progressive Disclosure (Lazy)
 
-Progressive disclosure is the default Claude Code behavior for skills **not** referenced by an agent's frontmatter. At session start, only each skill's description (frontmatter metadata) is loaded. The full `SKILL.md` body is resolved into context **only** when the skill is invoked — via slash command or when the model chooses to open it based on description match.
+Progressive disclosure is the default Claude Code behavior for skills **not** referenced by an agent's frontmatter. At session start, only each skill's description (frontmatter metadata) is loaded. The full `SKILL.md` body is resolved into context **only** when the skill is invoked, via slash command or when the model chooses to open it based on description match.
 
 **Use when:**
 - The skill is a general-purpose reference that any agent might occasionally need
 - The skill is one of many alternatives the agent might choose between at runtime
 - The skill's content is large and would crowd out active working context if always loaded
-- Discovery-time relevance is the desired behavior — the agent reasons about whether it applies
+- Discovery-time relevance is the desired behavior, the agent reasons about whether it applies
 
 **Effect:** low load-time cost, runtime decision by the model, probabilistic invocation.
 
-#### 3.6.2 Mode 2 — Eager Injection (Preload)
+#### 3.6.2 Mode 2, Eager Injection (Preload)
 
-When a skill is listed in an agent's frontmatter `skills:` field, Claude Code **injects the full skill content into the agent's context at session start**. The skill is not discovered — it is present from the first token. This is confirmed by Anthropic's own documentation at `code.claude.com/docs/en/sub-agents`: *"Use the `skills` field to inject skill content into a subagent's context at startup. This gives the subagent domain knowledge without requiring it to discover and load skills during execution. The full content of each skill is injected into the subagent's context, not just made available for invocation. Subagents don't inherit skills from the parent conversation; you must list them explicitly."* This is an authoritative guarantee, not a community inference.
+When a skill is listed in an agent's frontmatter `skills:` field, Claude Code **injects the full skill content into the agent's context at session start**. The skill is not discovered, it is present from the first token. This is confirmed by Anthropic's own documentation at `code.claude.com/docs/en/sub-agents`: *"Use the `skills` field to inject skill content into a subagent's context at startup. This gives the subagent domain knowledge without requiring it to discover and load skills during execution. The full content of each skill is injected into the subagent's context, not just made available for invocation. Subagents don't inherit skills from the parent conversation; you must list them explicitly."* This is an authoritative guarantee, not a community inference.
 
 **Use when:**
 - The skill defines the agent's core behavior or persona
 - The agent will use the skill on effectively every invocation
-- Lower-variance behavior is required — the skill's workflows and constraints must be in context before the agent reasons about anything
+- Lower-variance behavior is required, the skill's workflows and constraints must be in context before the agent reasons about anything
 - A subagent or team teammate needs bounded, self-contained context that does not pollute the parent session
 
 **Effect:** the skill becomes part of the agent's persona. The agent is defined minimally in its own spec and **augmented** richly via its preloaded skills. There is no "did the model decide to load it" uncertainty.
@@ -525,15 +525,15 @@ When a skill is listed in an agent's frontmatter `skills:` field, Claude Code **
 
 Eager loading is the architectural lever I use to make agents more intentional and less probabilistic in how they start each session.
 
-1. **Eager loading turns agents into lower-variance, more intentional systems.** An agent whose core workflow is eager-loaded does not re-derive its behavior each session. It loads with its behavior already in context. Same inputs produce the same *starting* context — variance comes only from the model's probabilistic generation on top of that context, not from rediscovery at runtime. This is not determinism (LLM output is inherently probabilistic) but it is meaningfully lower variance than the lazy-loaded alternative, and lower variance is most of what "reliable agent behavior" means in practice.
+1. **Eager loading turns agents into lower-variance, more intentional systems.** An agent whose core workflow is eager-loaded does not re-derive its behavior each session. It loads with its behavior already in context. Same inputs produce the same *starting* context, variance comes only from the model's probabilistic generation on top of that context, not from rediscovery at runtime. This is not determinism (LLM output is inherently probabilistic) but it is meaningfully lower variance than the lazy-loaded alternative, and lower variance is most of what "reliable agent behavior" means in practice.
 
-2. **Skills become persona, not runtime discoveries.** A PAM domain agent is a short, thin spec. Its depth comes from its preloaded skills — where workflows, invocation patterns, registry formats, error handling, and tool-evolution-path decisions live. The agent spec points at those skills and inherits their intentionality.
+2. **Skills become persona, not runtime discoveries.** A PAM domain agent is a short, thin spec. Its depth comes from its preloaded skills, where workflows, invocation patterns, registry formats, error handling, and tool-evolution-path decisions live. The agent spec points at those skills and inherits their intentionality.
 
 3. **Subagents and team teammates get bounded context.** When a parent agent spawns a subagent or hands off to a team teammate, the teammate needs self-contained context. Eager-loaded skills provide it cleanly: the teammate is defined by its spec plus its preloaded skills, carries no accidental state from the parent, and the parent session stays uncluttered because the teammate's context was resolved into the teammate's session.
 
 4. **Minimal spec, maximum intentionality.** PAM agents are defined with as little direct instruction as possible and as much preloaded-skill augmentation as necessary. The spec is the chassis; the preloaded skills are the cargo.
 
-#### 3.6.4 Decision Framework — Preload or Lazy Load
+#### 3.6.4 Decision Framework, Preload or Lazy Load
 
 **Preload (eager) if any of:**
 - The skill defines the agent's primary workflow
@@ -551,7 +551,7 @@ Ambiguous cases default to lazy load. Preloading is a deliberate commitment.
 
 #### 3.6.5 Sub-skills and Single-Source-of-Truth
 
-A root skill can reference and invoke sub-skills within it. A cluster's skills are organized with a root skill providing the cluster's primary workflow interface and sub-skills encapsulating reusable procedures. Each sub-skill is independently versioned. When a cluster uses an external tool, the invocation specification lives in the relevant skill — changing it in one place propagates to every agent that preloads that skill.
+A root skill can reference and invoke sub-skills within it. A cluster's skills are organized with a root skill providing the cluster's primary workflow interface and sub-skills encapsulating reusable procedures. Each sub-skill is independently versioned. When a cluster uses an external tool, the invocation specification lives in the relevant skill, changing it in one place propagates to every agent that preloads that skill.
 
 The cluster's root skill directory is the natural namespace for sub-skills:
 
@@ -571,27 +571,27 @@ This nesting pattern is the preferred approach for organizing cluster skills. Th
 
 #### 3.6.6 Connection to the Tool Evolution Path
 
-Eager loading reinforces PAM's **probabilistic-to-intentional evolution** principle. A lazy-loaded skill that the agent reasons about each invocation is one step more probabilistic than a preloaded skill already in context. A preloaded skill containing a codified script invocation is one step more intentional than one containing a prose workflow — and when the script actually executes, *that specific action* becomes genuinely deterministic because code execution is deterministic even when the decision to execute was probabilistic. The framework moves work along two axes: earlier binding (eager vs lazy skill loading) reduces variance in how the agent starts each session; and code substitution (workflows replaced by script invocations, CLI calls, or direct API calls) moves individual actions out of probabilistic reasoning and into deterministic execution. Mode selection is the first lever on that path; tool evolution (MCP -> CLI -> Direct API) is the second. The honest framing: PAM cannot make an LLM-backed agent deterministic, but it can make the agent's starting state pre-committed and its actions increasingly code-executed — which is what "reliable, auditable, low-variance behavior" actually requires.
+Eager loading reinforces PAM's **probabilistic-to-intentional evolution** principle. A lazy-loaded skill that the agent reasons about each invocation is one step more probabilistic than a preloaded skill already in context. A preloaded skill containing a codified script invocation is one step more intentional than one containing a prose workflow, and when the script actually executes, *that specific action* becomes genuinely deterministic because code execution is deterministic even when the decision to execute was probabilistic. The framework moves work along two axes: earlier binding (eager vs lazy skill loading) reduces variance in how the agent starts each session; and code substitution (workflows replaced by script invocations, CLI calls, or direct API calls) moves individual actions out of probabilistic reasoning and into deterministic execution. Mode selection is the first lever on that path; tool evolution (MCP -> CLI -> Direct API) is the second. The honest framing: PAM cannot make an LLM-backed agent deterministic, but it can make the agent's starting state pre-committed and its actions increasingly code-executed, which is what "reliable, auditable, low-variance behavior" actually requires.
 
-**Sources:** Progressive disclosure as default skill loading behavior — Claude Code skills documentation. Eager injection when referenced in agent frontmatter `skills:` — corroborated by Anthropic documentation at `code.claude.com/docs/en/sub-agents`.
+**Sources:** Progressive disclosure as default skill loading behavior, Claude Code skills documentation. Eager injection when referenced in agent frontmatter `skills:`: corroborated by Anthropic documentation at `code.claude.com/docs/en/sub-agents`.
 
-*Why this matters: the choice of how a skill loads — always present versus on-demand — is the single biggest lever for making an agent behave consistently instead of unpredictably.*
+*Why this matters: the choice of how a skill loads, always present versus on-demand, is the single biggest lever for making an agent behave consistently instead of unpredictably.*
 
 ---
 
 ### 3.7 Hook
 
-A hook (an automatic checkpoint that runs before or after an agent takes an action; see Key Terms) is a programmatic lifecycle trigger that executes deterministic logic at defined points in a Claude Code session. Hooks are PAM's enforcement surface — but only where Claude Code's native event semantics support blocking. Where they do not, hooks are observational, and PAM treats them as such.
+A hook (an automatic checkpoint that runs before or after an agent takes an action; see Key Terms) is a programmatic lifecycle trigger that executes deterministic logic at defined points in a Claude Code session. Hooks are PAM's enforcement surface, but only where Claude Code's native event semantics support blocking. Where they do not, hooks are observational, and PAM treats them as such.
 
 **Handler types (all events):** `command` (shell), `http` (webhook POST), `prompt` (model evaluation), `agent` (subagent dispatch). Source: `/en/hooks-guide`.
 
-**Scope (all events):** every event is available at three scopes — user/project/local `settings.json`, plugin `hooks/hooks.json`, and subagent YAML `hooks:`. "Plugin hooks respond to the same lifecycle events as user-defined hooks." Source: `/en/plugins-reference`. Exception: plugin-shipped subagents silently ignore `hooks`, `mcpServers`, and `permissionMode` frontmatter for security reasons. Source: `/en/sub-agents`.
+**Scope (all events):** every event is available at three scopes, user/project/local `settings.json`, plugin `hooks/hooks.json`, and subagent YAML `hooks:`. "Plugin hooks respond to the same lifecycle events as user-defined hooks." Source: `/en/plugins-reference`. Exception: plugin-shipped subagents silently ignore `hooks`, `mcpServers`, and `permissionMode` frontmatter for security reasons. Source: `/en/sub-agents`.
 
-**Blocking capability — the decisive property.** Claude Code partitions events into three categories. PAM authors MUST know an event's category before declaring a criticality tier; Tier 1 on a No-block event is a guaranteed misconfiguration.
+**Blocking capability, the decisive property.** Claude Code partitions events into three categories. PAM authors MUST know an event's category before declaring a criticality tier; Tier 1 on a No-block event is a guaranteed misconfiguration.
 
-- **Hard-block** — `exit 2` (an exit code — a number returned by a program to indicate success or failure; see Key Terms) (on blocking events) or structured JSON (`permissionDecision: deny` / `decision: block`) denies the operation.
-- **Soft-block** — the operation has already happened; `{"decision":"block","reason":"..."}` is feedback Claude reads to adjust its next step, not prevention.
-- **No-block** — observational. Exit codes and JSON decisions ignored beyond stderr visibility.
+- **Hard-block**: `exit 2` (an exit code, a number returned by a program to indicate success or failure; see Key Terms) (on blocking events) or structured JSON (`permissionDecision: deny` / `decision: block`) denies the operation.
+- **Soft-block**: the operation has already happened; `{"decision":"block","reason":"..."}` is feedback Claude reads to adjust its next step, not prevention.
+- **No-block**: observational. Exit codes and JSON decisions ignored beyond stderr visibility.
 
 #### Complete Event Table (26 events)
 
@@ -619,14 +619,14 @@ Every event fires at `settings.json`, plugin `hooks/hooks.json`, and subagent `h
 | `ConfigChange` | Config file changes during session (matchers: `user_settings`, `project_settings`, `local_settings`, `policy_settings`, `skills`). | **Hard-block** |
 | `CwdChanged` | Working directory changes. | No-block |
 | `FileChanged` | A watched file changes on disk. | No-block |
-| `WorktreeCreate` | Worktree is being created. | **Hard-block** — and unique: *any* non-zero exit is fatal, not just `exit 2`. |
+| `WorktreeCreate` | Worktree is being created. | **Hard-block**: and unique: *any* non-zero exit is fatal, not just `exit 2`. |
 | `WorktreeRemove` | Worktree is being removed. | No-block |
 | `PreCompact` | Before context compaction. | No-block |
 | `PostCompact` | After context compaction completes. | No-block |
 | `Elicitation` | MCP server requests user input. | **Hard-block** |
 | `ElicitationResult` | After user responds to MCP elicitation. | **Hard-block** |
 
-**PAM-specific uses.** `PreToolUse` — domain boundary enforcement (Hard-block, structured JSON deny). `Stop` — SCP validation gate (Hard-block). `PermissionRequest` — authority adjudication (Hard-block, structured JSON deny). `ConfigChange` — mid-session drift enforcement (Hard-block). `SessionEnd` — append to `errors.jsonl` (No-block; observational). `SubagentStop` — `knowledge.jsonl` capture (Hard-block capable; PAM uses as Tier 2). `TaskCompleted` — `okr-progress.jsonl` writes (Hard-block capable; PAM uses as Tier 2). `SessionStart` — detect maintenance context (No-block; `additionalContext` injection).
+**PAM-specific uses.** `PreToolUse`: domain boundary enforcement (Hard-block, structured JSON deny). `Stop`: SCP validation gate (Hard-block). `PermissionRequest`: authority adjudication (Hard-block, structured JSON deny). `ConfigChange`: mid-session drift enforcement (Hard-block). `SessionEnd`: append to `errors.jsonl` (No-block; observational). `SubagentStop`: `knowledge.jsonl` capture (Hard-block capable; PAM uses as Tier 2). `TaskCompleted`: `okr-progress.jsonl` writes (Hard-block capable; PAM uses as Tier 2). `SessionStart`: detect maintenance context (No-block; `additionalContext` injection).
 
 Sources: `/en/hooks`, `/en/hooks-guide`, `/en/plugins-reference`, `/en/sub-agents`.
 
@@ -642,22 +642,22 @@ Custom frontmatter fields defined by PAM (such as `on_failure:`, `cluster:`, `do
 2. **Governance audits need structured claims.** A cluster claiming domain-boundary enforcement in Section 5.7 must have at least one Tier 1 hook on a Hard-block event. PAM tooling verifies this mechanically.
 3. **Misconfigurations are silent.** A Tier 1 declaration on a No-block event looks like a gate but cannot block. PAM tooling refuses such declarations at lint time.
 
-**Tier 1 — Fail-Closed (blocks the action when an error occurs; see Key Terms) / Protective**
+**Tier 1, Fail-Closed (blocks the action when an error occurs; see Key Terms) / Protective**
 
 The author intends the hook to **prevent** an unsafe operation. Tier 1 is valid **only** on events with Hard-block or Soft-block capability; Tier 1 on a No-block event is a misconfiguration that PAM tooling rejects.
 
-**Implementation — use Claude Code native primitives directly:**
+**Implementation, use Claude Code native primitives directly:**
 
 - **`PreToolUse` and `PermissionRequest` (preferred form):** `exit 0` with structured JSON on stdout, e.g. `{"hookSpecificOutput": {"hookEventName": "PreToolUse", "permissionDecision": "deny", "permissionDecisionReason": "..."}}`. This carries a machine-parseable decision plus a human-readable reason Claude receives as feedback. Source: `/en/hooks`.
 - **Other Hard-block events (`UserPromptSubmit`, `Stop`, `SubagentStop`, `TaskCreated`, `TaskCompleted`, `ConfigChange`, `Elicitation`, `ElicitationResult`, `WorktreeCreate`, `TeammateIdle`):** `exit 2` with reason on stderr. Claude receives stderr as feedback on blocking events. Alternative: `exit 0` with `{"decision":"block","reason":"..."}`. Source: `/en/hooks`.
 - **`WorktreeCreate` exception:** any non-zero exit is fatal. Prefer `exit 2` for clarity; blocking effect is identical.
-- **Soft-block events (`PostToolUse`, `PostToolUseFailure`):** the operation already happened. `{"decision":"block","reason":"..."}` is **feedback**, not prevention — use when telling Claude to revert or adjust its next step.
+- **Soft-block events (`PostToolUse`, `PostToolUseFailure`):** the operation already happened. `{"decision":"block","reason":"..."}` is **feedback**, not prevention, use when telling Claude to revert or adjust its next step.
 
 Internal error handling: a Tier 1 hook that crashes with an unhandled exception exits with a non-2 non-zero code, which Claude Code treats as a visible "hook error" notice but **does not block** (except `WorktreeCreate`). Tier 1 authors must catch their own errors and emit the block explicitly.
 
-**Tier 2 — Fail-Open / Continuity**
+**Tier 2, Fail-Open / Continuity**
 
-The author intends the hook as observability, telemetry, or advisory. Tier 2 is **always valid** — it never intends to block. Implementation: catch all internal errors, log to stderr, **always `exit 0`**. Use for any event regardless of blocking capability.
+The author intends the hook as observability, telemetry, or advisory. Tier 2 is **always valid**: it never intends to block. Implementation: catch all internal errors, log to stderr, **always `exit 0`**. Use for any event regardless of blocking capability.
 
 **Decision framework (six tests):**
 
@@ -736,10 +736,10 @@ The default is PAM's guidance; authors may deviate with justification, subject t
 | `PermissionDenied` | Tier 2 | No-block. Returns `retry` hint only. |
 | `Notification` | Tier 2 | No-block. User-facing signal, never a gate. |
 | `SubagentStart` | Tier 2 | No-block. Use for additional-context injection into the subagent. |
-| `SubagentStop` | Tier 2 | Hard-block capable but PAM uses for `knowledge.jsonl` capture — advisory. Promote to Tier 1 only if validating subagent output before release. |
+| `SubagentStop` | Tier 2 | Hard-block capable but PAM uses for `knowledge.jsonl` capture, advisory. Promote to Tier 1 only if validating subagent output before release. |
 | `TaskCreated` | Tier 2 | Hard-block capable; most PAM uses are observational. Promote if validating task preconditions. |
 | `TaskCompleted` | Tier 2 | Hard-block capable; PAM uses for `okr-progress.jsonl` writes. Promote if validating completion claims. |
-| `Stop` | **Tier 1** | Hard-block. SCP validation gate — malformed self-changes must never submit. |
+| `Stop` | **Tier 1** | Hard-block. SCP validation gate, malformed self-changes must never submit. |
 | `StopFailure` | Tier 2 | No-block (output and exit code explicitly ignored). Error capture path. |
 | `TeammateIdle` | Tier 2 | Hard-block capable; coordination advisory in most uses. |
 | `InstructionsLoaded` | Tier 2 | No-block. Load-time observability. |
@@ -755,11 +755,11 @@ The default is PAM's guidance; authors may deviate with justification, subject t
 
 **Auto-SCP on Tier 1 blocking (PAM convention):**
 
-When a Tier 1 hook blocks, the hook **itself** — not a wrapper — appends a draft Self-Change Proposal to the cluster's `scps.jsonl` registry before emitting its deny. The SCP proposes either a scope correction (action legitimate, boundary should expand) or a constraint revision (action illegitimate, constraint should sharpen). Draft SCPs land with `status: draft_awaiting_review` and flow through the normal SCP pipeline.
+When a Tier 1 hook blocks, the hook **itself**: not a wrapper, appends a draft Self-Change Proposal to the cluster's `scps.jsonl` registry before emitting its deny. The SCP proposes either a scope correction (action legitimate, boundary should expand) or a constraint revision (action illegitimate, constraint should sharpen). Draft SCPs land with `status: draft_awaiting_review` and flow through the normal SCP pipeline.
 
 This is a PAM convention implemented in hook author templates via `pam_write_draft_scp()`, a **PAM-shipped library** (available as Python and TypeScript modules). Copy-paste boilerplate creates too much friction and divergence; the library implements the convention correctly the first time and is tested as a unit. A Tier 1 hook that does not call the library is non-conforming; linting flags the omission. Auto-SCP turns Tier 1 blocks from a dead end into an input for governance evolution: every block produces a reviewable proposal instead of leaving the agent stuck.
 
-**Implementation note — discipline and linting, not wrapper:**
+**Implementation note, discipline and linting, not wrapper:**
 
 Tiering is a **PAM convention enforced by author discipline and PAM linting tooling**. Claude Code sees only the hook's actual exit code and stdout JSON; it has no awareness of "tiers." Specifically:
 
@@ -785,19 +785,19 @@ MCP servers are **not the same as plugins**. An MCP server is a live service con
 
 **Cluster ownership:** Each external system's MCP server is owned by the cluster most relevant to that system. Ownership means the relevant cluster agents are responsible for keeping the server configuration current.
 
-**Position in the tool evolution path:** MCP servers are typically the first integration point for a new external tool — rich and convenient but context-heavy. As the cluster matures, the skill's invocation specification may evolve the tool toward a CLI or direct API. The MCP server remains available but the skill governs which integration method is active.
+**Position in the tool evolution path:** MCP servers are typically the first integration point for a new external tool, rich and convenient but context-heavy. As the cluster matures, the skill's invocation specification may evolve the tool toward a CLI or direct API. The MCP server remains available but the skill governs which integration method is active.
 
-*Why this matters: MCP servers are how your agents reach the outside world — without them, agents can only work with what is already on your machine.*
+*Why this matters: MCP servers are how your agents reach the outside world, without them, agents can only work with what is already on your machine.*
 
 ---
 
 ### 3.9 Plugin
 
-A plugin (a packaged bundle containing everything a team of agents needs, ready to install; see Key Terms) is the **physical packaging, distribution, and archival unit** for a PAM cluster. It bundles the cluster's declarative artifacts — agents, skills, hooks, MCP server definitions, LSP servers, scheduled task skills, slash commands, and settings fragments — into a single directory that Claude Code can load as a unit.
+A plugin (a packaged bundle containing everything a team of agents needs, ready to install; see Key Terms) is the **physical packaging, distribution, and archival unit** for a PAM cluster. It bundles the cluster's declarative artifacts, agents, skills, hooks, MCP server definitions, LSP servers, scheduled task skills, slash commands, and settings fragments, into a single directory that Claude Code can load as a unit.
 
 #### 3.9.1 Plugin Is Purely Declarative
 
-Plugins in Claude Code are **purely declarative**. A plugin is a directory rooted at `.claude-plugin/plugin.json` with sibling directories per component type. There is no `installer.sh`, no post-install script, and no "plugin was just installed" hook. Components that ship in a plugin are the components that run — Claude Code discovers them at load time, no execution step required.
+Plugins in Claude Code are **purely declarative**. A plugin is a directory rooted at `.claude-plugin/plugin.json` with sibling directories per component type. There is no `installer.sh`, no post-install script, and no "plugin was just installed" hook. Components that ship in a plugin are the components that run, Claude Code discovers them at load time, no execution step required.
 
 Canonical layout (per `code.claude.com/docs/.../plugins-reference` and Anthropic's `anthropics/claude-code` plugin README):
 
@@ -822,11 +822,11 @@ No install-time script mechanism exists in the plugin runtime. Setup work is han
 
 When a subagent ships **inside** a plugin (in its `agents/` directory), Claude Code silently ignores three frontmatter fields: `hooks`, `mcpServers`, and `permissionMode`. This is confirmed by Anthropic's own documentation at `code.claude.com/docs/en/sub-agents`: *"For security reasons, plugin subagents do not support the `hooks`, `mcpServers`, or `permissionMode` frontmatter fields. These fields are ignored when loading agents from a plugin. If you need them, copy the agent file into `.claude/agents/` or `~/.claude/agents/`."* The plugins-reference documentation reinforces this with the explicit field-support list: *"Plugin agents support `name`, `description`, `model`, `effort`, `maxTurns`, `tools`, `disallowedTools`, `skills`, `memory`, `background`, and `isolation` frontmatter fields... For security reasons, `hooks`, `mcpServers`, and `permissionMode` are not supported for plugin-shipped agents."*
 
-A PAM domain agent needs all three of the restricted fields — hooks for domain enforcement, scoped MCP servers for lifecycle-isolated integrations, and permission modes for the safety envelope. An agent that loses these at load time is a chat persona, not a PAM agent. This is the load-bearing reason I cannot treat "plugin-native subagent" as the default deployment target for domain agents.
+A PAM domain agent needs all three of the restricted fields, hooks for domain enforcement, scoped MCP servers for lifecycle-isolated integrations, and permission modes for the safety envelope. An agent that loses these at load time is a chat persona, not a PAM agent. This is the load-bearing reason I cannot treat "plugin-native subagent" as the default deployment target for domain agents.
 
-I acknowledge that a cluster plugin may legitimately contain both domain agents (full PAM governance — hooks, scoped MCP, permission modes, SCP discipline) and simple persona agents (no governance requirements — a conversational persona, a lightweight assistant, a customer-facing interface). Domain agents deploy to native locations per the hybrid deployment table; simple persona agents can remain inside the plugin because they have nothing to lose from the plugin-subagent constraint. PAM governance (SCP pipeline, Three Lines of Defense, OKRs, registry publication) applies to domain agents only. Simple persona agents are passengers — they benefit from the cluster's organizational context without being governed by it.
+I acknowledge that a cluster plugin may legitimately contain both domain agents (full PAM governance, hooks, scoped MCP, permission modes, SCP discipline) and simple persona agents (no governance requirements, a conversational persona, a lightweight assistant, a customer-facing interface). Domain agents deploy to native locations per the hybrid deployment table; simple persona agents can remain inside the plugin because they have nothing to lose from the plugin-subagent constraint. PAM governance (SCP pipeline, Three Lines of Defense, OKRs, registry publication) applies to domain agents only. Simple persona agents are passengers, they benefit from the cluster's organizational context without being governed by it.
 
-#### 3.9.3 Deployment Architecture — Hybrid by Component Type
+#### 3.9.3 Deployment Architecture, Hybrid by Component Type
 
 I adopt a **hybrid-by-component-type** model. Some components are plugin-native because they have no alternative. Others must live at native Claude Code locations because the plugin environment strips their capabilities. A single rule cannot cover both; the table below is per-component and prescriptive.
 
@@ -840,8 +840,8 @@ I adopt a **hybrid-by-component-type** model. Some components are plugin-native 
 | **Skill (progressive / discoverable)** | Plugin `skills/` acceptable | Progressive-disclosure skills are discovered via description indexing; plugin-scope discovery works. |
 | **Plugin-scope hook** (`SessionStart`, `PreToolUse` at cluster boundary) | Plugin `hooks/hooks.json` | Plugin-scope hooks are first-class and run in plugin context. No need to migrate. |
 | **Agent-scope hook** (per-agent enforcement) | Native agent frontmatter | Only active in native-location agents (see plugin-subagent constraint). |
-| **MCP server — globally shared** | `.mcp.json` in plugin | Global MCP definitions are valid in plugins and attach cluster-wide. |
-| **MCP server — agent-scoped (lifecycle-isolated)** | Native agent frontmatter `mcpServers:` | Same constraint as hooks: plugin subagents strip the field. |
+| **MCP server, globally shared** | `.mcp.json` in plugin | Global MCP definitions are valid in plugins and attach cluster-wide. |
+| **MCP server, agent-scoped (lifecycle-isolated)** | Native agent frontmatter `mcpServers:` | Same constraint as hooks: plugin subagents strip the field. |
 | **LSP server** | Plugin `.lsp.json` (only option) | No native location for LSP exists in Claude Code. Plugin is mandatory. |
 | **Scheduled task skill** | Native `~/.claude/scheduled-tasks/<name>/SKILL.md` | OS cron and desktop scheduling resolve against the native path, not the plugin. |
 | **Slash command** | Plugin `commands/` | Plugin commands are fully supported and discoverable. |
@@ -857,33 +857,33 @@ Because Claude Code has no install-time script, I define a **`setup` skill conve
 2. The skill is registered as a slash command (e.g., `/<cluster>-setup`) via the plugin's `commands/` directory.
 3. Its workflow materializes components that must live at native locations: it reads the plugin's template files and writes them to `.claude/agents/`, `.claude/skills/`, `~/.claude/scheduled-tasks/`, and settings merge targets.
 4. The skill is idempotent, diff-aware, and logs every write.
-5. For scripted provisioning (CI, cron, automation), the setup skill can be invoked in headless mode (running an AI session without a human present; see Key Terms) via `claude -p "/<cluster>-setup"`. This works as long as the plugin is discoverable (either via default plugin discovery or explicit `--plugin-dir <path>` when using `--bare`). Note that `PermissionRequest` hooks do not fire in `-p` mode — use `PreToolUse` if the setup skill needs automated permission handling. Source: `/en/hooks-guide`.
+5. For scripted provisioning (CI, cron, automation), the setup skill can be invoked in headless mode (running an AI session without a human present; see Key Terms) via `claude -p "/<cluster>-setup"`. This works as long as the plugin is discoverable (either via default plugin discovery or explicit `--plugin-dir <path>` when using `--bare`). Note that `PermissionRequest` hooks do not fire in `-p` mode, use `PreToolUse` if the setup skill needs automated permission handling. Source: `/en/hooks-guide`.
 
 **Setup-skill trigger list:**
 
-1. **Primary — user-invoked slash command.** Register the setup skill as `/<cluster>-setup` via the plugin's `commands/` directory. The user runs it interactively and controls when setup executes.
-2. **Headless alternative — `claude -p "/<cluster>-setup"` spawned by cron or CI.** Works provided the plugin is loaded. If the surrounding invocation uses `--bare`, pass `--plugin-dir <path>` explicitly so the slash command resolves. Source: `/en/headless`.
+1. **Primary, user-invoked slash command.** Register the setup skill as `/<cluster>-setup` via the plugin's `commands/` directory. The user runs it interactively and controls when setup executes.
+2. **Headless alternative, `claude -p "/<cluster>-setup"` spawned by cron or CI.** Works provided the plugin is loaded. If the surrounding invocation uses `--bare`, pass `--plugin-dir <path>` explicitly so the slash command resolves. Source: `/en/headless`.
 3. **`SessionStart` alternative for every-session provisioning (rare).** A plugin-scope `SessionStart` hook checks for a marker file at the native install location and conditionally invokes the setup skill. Must be Tier 2 because `SessionStart` is No-block; its failure leaves the session unprovisioned and visible to the user.
 
 #### 3.9.4.1 System-Aware Operation
 
 The setup skill operates in four phases to support cross-platform deployment without coupling to a specific shell or operating system:
 
-1. **Detect** — on first invocation, inspect the host environment: which shell is available (`bash`, `zsh`, `fish`, `PowerShell`, `cmd.exe`), what operating system (Linux, macOS, Windows, WSL), which filesystem conventions apply (POSIX vs Windows paths), and which tools are present (`git`, `gh`, `bun`, `uv`, `python`, `node`, etc.).
+1. **Detect**: on first invocation, inspect the host environment: which shell is available (`bash`, `zsh`, `fish`, `PowerShell`, `cmd.exe`), what operating system (Linux, macOS, Windows, WSL), which filesystem conventions apply (POSIX vs Windows paths), and which tools are present (`git`, `gh`, `bun`, `uv`, `python`, `node`, etc.).
 
-2. **Persist** — write the detected profile into the cluster's root context skill (see Section 3.11 Layered Context) under a `system_profile:` field. Every subsequent agent in the cluster inherits this profile by preloading the cluster root skill via the `skills:` frontmatter mechanism. The profile is detected once per environment, not rediscovered on every session.
+2. **Persist**: write the detected profile into the cluster's root context skill (see Section 3.11 Layered Context) under a `system_profile:` field. Every subsequent agent in the cluster inherits this profile by preloading the cluster root skill via the `skills:` frontmatter mechanism. The profile is detected once per environment, not rediscovered on every session.
 
-3. **Deploy** — execute the materialization work using system-appropriate commands based on the persisted profile.
+3. **Deploy**: execute the materialization work using system-appropriate commands based on the persisted profile.
 
-4. **Re-detect on change** — when the setup skill is invoked again and notices the host profile has changed, it re-runs phase 1, updates the persisted profile, and surfaces the change to the Chief of Staff Agent via a registry event.
+4. **Re-detect on change**: when the setup skill is invoked again and notices the host profile has changed, it re-runs phase 1, updates the persisted profile, and surfaces the change to the Chief of Staff Agent via a registry event.
 
 **Template sync:** a scheduled maintenance task keeps the plugin's template directories aligned with the live deployed specifications. When an SCP is approved against a native-location agent, the plugin template is updated to match so the cluster can be redeployed cleanly to a new environment. See Section 7.7.6 for the template sync grace period.
 
 #### 3.9.5 Recommendation
 
-I **reject** Path 1 (plugin-native only — domain agents lose governance fields) and **reject** Path 2 (native-first only — LSP has no native location). I **adopt Path 3**, the hybrid model above. The per-component table is the contract; the `setup` skill is the mechanism. The plugin is the source of truth at rest; the native filesystem is the source of truth at runtime for components that require it.
+I **reject** Path 1 (plugin-native only, domain agents lose governance fields) and **reject** Path 2 (native-first only, LSP has no native location). I **adopt Path 3**, the hybrid model above. The per-component table is the contract; the `setup` skill is the mechanism. The plugin is the source of truth at rest; the native filesystem is the source of truth at runtime for components that require it.
 
-**Sources:** Plugin structure and declarative nature — `code.claude.com/docs/en/claude-code/plugins-reference` and `github.com/anthropics/claude-code` plugin README. Plugin-subagent frontmatter strip behavior — verified against Claude Code plugin loader behavior documented in the same references.
+**Sources:** Plugin structure and declarative nature, `code.claude.com/docs/en/claude-code/plugins-reference` and `github.com/anthropics/claude-code` plugin README. Plugin-subagent frontmatter strip behavior, verified against Claude Code plugin loader behavior documented in the same references.
 
 *Why this matters: plugins make a PAM cluster portable. You can install a complete team of agents from a single package, the same way you install an app.*
 
@@ -891,7 +891,7 @@ I **reject** Path 1 (plugin-native only — domain agents lose governance fields
 
 ### 3.10 Scheduled Task
 
-A scheduled task (a job that runs automatically on a timer; see Key Terms) is a time-triggered invocation of a Claude Code session, agent, or skill. It is the primitive that makes PAM's ongoing operations autonomous — research cycles, maintenance retrospectives, evaluation runs, and registry maintenance all depend on scheduled execution.
+A scheduled task (a job that runs automatically on a timer; see Key Terms) is a time-triggered invocation of a Claude Code session, agent, or skill. It is the primitive that makes PAM's ongoing operations autonomous, research cycles, maintenance retrospectives, evaluation runs, and registry maintenance all depend on scheduled execution.
 
 **Three tiers of scheduling in Claude Code:**
 
@@ -901,7 +901,7 @@ A scheduled task (a job that runs automatically on a timer; see Key Terms) is a 
 | **Desktop persistent** | `~/.claude/scheduled-tasks/<name>/SKILL.md` | Survives restarts (macOS/Windows) | Recurring tasks on a developer machine |
 | **OS-level durable** | System cron running `claude -p` in headless mode | Always-on, platform-independent | PAM maintenance cycles; Linux/WSL environments |
 
-**PAM uses OS-level durable scheduling for all maintenance cycles.** `/loop` is session-scoped and cannot activate a new session — it requires an already-running session. Desktop scheduled tasks are platform-limited. OS cron with `claude -p` is the only mechanism that reliably triggers a Claude Code session at a scheduled time on any platform, activates an agent, and runs to completion independently of any active session.
+**PAM uses OS-level durable scheduling for all maintenance cycles.** `/loop` is session-scoped and cannot activate a new session, it requires an already-running session. Desktop scheduled tasks are platform-limited. OS cron with `claude -p` is the only mechanism that reliably triggers a Claude Code session at a scheduled time on any platform, activates an agent, and runs to completion independently of any active session.
 
 Example cron entry for a weekly GitOps research cycle:
 ```
@@ -918,11 +918,11 @@ Example cron entry for a weekly GitOps research cycle:
 - Interactive skills (e.g., `/commit`) are unavailable in `-p` mode; describe the task instead. Source: `/en/headless`.
 - Workspace trust dialog skipped; run only in trusted directories.
 
-**Scheduled tasks as skills:** Desktop scheduled task prompts are stored as skills at `~/.claude/scheduled-tasks/<task-name>/SKILL.md`. This means PAM's scheduled tasks can carry the same structured frontmatter, workflow definitions, and tool constraints as any other skill — making them version-controllable and deployable via the plugin's setup skill.
+**Scheduled tasks as skills:** Desktop scheduled task prompts are stored as skills at `~/.claude/scheduled-tasks/<task-name>/SKILL.md`. This means PAM's scheduled tasks can carry the same structured frontmatter, workflow definitions, and tool constraints as any other skill, making them version-controllable and deployable via the plugin's setup skill.
 
-**Maintenance and Scheduling Agent:** Because multiple agents across multiple clusters may have maintenance cycles, research cycles, and evaluation runs all competing for system resources, PAM includes a dedicated Administrative Agent (Section 5.4) whose responsibilities include scheduling coordination — ensuring maintenance cycles are sequenced appropriately, don't conflict with active work sessions, and complete successfully. See Section 7.7.4 for resource contention prevention.
+**Maintenance and Scheduling Agent:** Because multiple agents across multiple clusters may have maintenance cycles, research cycles, and evaluation runs all competing for system resources, PAM includes a dedicated Administrative Agent (Section 5.4) whose responsibilities include scheduling coordination, ensuring maintenance cycles are sequenced appropriately, don't conflict with active work sessions, and complete successfully. See Section 7.7.4 for resource contention prevention.
 
-*Why this matters: scheduled tasks are what make your agent system self-maintaining — without them, every improvement and maintenance check requires you to remember to do it manually.*
+*Why this matters: scheduled tasks are what make your agent system self-maintaining, without them, every improvement and maintenance check requires you to remember to do it manually.*
 
 ---
 
@@ -936,17 +936,17 @@ Every non-trivial multi-agent system has to answer the same question: where does
 
 There are three conventional ways to distribute that context, and each one fails.
 
-**Failure mode 1 — Global root context.** Put everything into a user-level file that every session loads at startup (e.g. a root `CLAUDE.md` or a root `.env`). This works on day one and collapses on day thirty. Every session — including sessions that have nothing to do with GitHub, Fabric, or voice — pays the context cost of every domain. Token budgets degrade. Signal-to-noise degrades. Agents are exposed to directives they will never act on, increasing the surface area for prompt-collision and misapplication.
+**Failure mode 1, Global root context.** Put everything into a user-level file that every session loads at startup (e.g. a root `CLAUDE.md` or a root `.env`). This works on day one and collapses on day thirty. Every session, including sessions that have nothing to do with GitHub, Fabric, or voice, pays the context cost of every domain. Token budgets degrade. Signal-to-noise degrades. Agents are exposed to directives they will never act on, increasing the surface area for prompt-collision and misapplication.
 
-**Failure mode 2 — Flat per-agent repetition.** Copy the same token path, tool location, or standing directive into every agent specification that needs it. This avoids the bloat problem but creates a maintenance problem: when the token variable name changes, you have to find and update every agent that referenced it. Drift is inevitable.
+**Failure mode 2, Flat per-agent repetition.** Copy the same token path, tool location, or standing directive into every agent specification that needs it. This avoids the bloat problem but creates a maintenance problem: when the token variable name changes, you have to find and update every agent that referenced it. Drift is inevitable.
 
-**Failure mode 3 — No shared context at all.** Let each agent figure out where the token lives by reasoning about it, reading the environment, or asking the user. This converts intentional configuration into probabilistic reasoning. It wastes tokens on every invocation and introduces variance where there should be none.
+**Failure mode 3, No shared context at all.** Let each agent figure out where the token lives by reasoning about it, reading the environment, or asking the user. This converts intentional configuration into probabilistic reasoning. It wastes tokens on every invocation and introduces variance where there should be none.
 
 #### The Principle
 
-My answer is a single design rule: **context lives at the narrowest layer that serves all of its consumers.** The cluster is the default non-global layer. If information is needed by every agent in a cluster and by no agents outside it, the cluster is where it belongs — not the user root, not each agent individually.
+My answer is a single design rule: **context lives at the narrowest layer that serves all of its consumers.** The cluster is the default non-global layer. If information is needed by every agent in a cluster and by no agents outside it, the cluster is where it belongs, not the user root, not each agent individually.
 
-This is the DRY principle applied to agent configuration. Define once, at the narrowest layer that serves all consumers, and let the cluster boundary ensure that "all consumers" is exactly the set of agents that need the information — no more, no less.
+This is the DRY principle applied to agent configuration. Define once, at the narrowest layer that serves all consumers, and let the cluster boundary ensure that "all consumers" is exactly the set of agents that need the information, no more, no less.
 
 #### Concrete Example: the GitHub PAT
 
@@ -964,7 +964,7 @@ name: github-ops-context
 description: Shared environment and directives for the github-ops cluster
 ---
 
-# GitHub Operations — Shared Context
+# GitHub Operations, Shared Context
 
 - GitHub personal access token: `$GH_PAT_OPS` (defined in operator shell env)
 - Default org: `JonEliRey`
@@ -976,9 +976,9 @@ description: Shared environment and directives for the github-ops cluster
 
 Claude Code does not ship a native "cluster-level environment file." Cluster-level context in PAM is therefore a **convention layered on top of an existing native mechanism**, not a new runtime feature. I considered three options:
 
-- **Option A — Cluster `CONTEXT.md` read at session start by a hook.** Feasible but requires a bespoke SessionStart hook per cluster. High ceremony.
-- **Option B — Cluster `.env` file injected by hook.** Solves environment variables but not directives, and requires a hook to bridge shell environment into the agent context.
-- **Option C — Cluster "root skill" preloaded via agent frontmatter `skills:`.** A single skill holds the shared directives, path references, and credential variable names. Every agent in the cluster lists that skill in its `skills:` frontmatter. Skills declared in `skills:` are eager-injected at startup, so the shared context lands in the agent's working set automatically, without any custom hook.
+- **Option A, Cluster `CONTEXT.md` read at session start by a hook.** Feasible but requires a bespoke SessionStart hook per cluster. High ceremony.
+- **Option B, Cluster `.env` file injected by hook.** Solves environment variables but not directives, and requires a hook to bridge shell environment into the agent context.
+- **Option C, Cluster "root skill" preloaded via agent frontmatter `skills:`.** A single skill holds the shared directives, path references, and credential variable names. Every agent in the cluster lists that skill in its `skills:` frontmatter. Skills declared in `skills:` are eager-injected at startup, so the shared context lands in the agent's working set automatically, without any custom hook.
 
 **Recommendation: Option C.** It uses only primitives that already exist in Claude Code, it requires no hook infrastructure, and it makes the cluster-context relationship inspectable by reading the agent's frontmatter. The only rule the convention adds is: *every cluster has a root context skill, and every agent in the cluster declares that skill in its `skills:` frontmatter.*
 
@@ -986,13 +986,13 @@ The context skill can be either a standalone skill (e.g. `github-ops-context`) O
 
 #### When to Promote Context Up a Layer
 
-If multiple clusters begin to need the same information — say, a GitHub PAT consumed by both `github-ops` and a separate `release-automation` cluster — the right move is to promote that information to a higher layer: a cross-cluster shared skill referenced by both cluster root contexts, or a root-level skill preloaded by multiple cluster roots. But this should be done *on evidence, not speculatively*. Start with context inside the cluster that needs it. Promote only when actual repetition has appeared. Premature promotion recreates the global-root failure mode by another name.
+If multiple clusters begin to need the same information, say, a GitHub PAT consumed by both `github-ops` and a separate `release-automation` cluster, the right move is to promote that information to a higher layer: a cross-cluster shared skill referenced by both cluster root contexts, or a root-level skill preloaded by multiple cluster roots. But this should be done *on evidence, not speculatively*. Start with context inside the cluster that needs it. Promote only when actual repetition has appeared. Premature promotion recreates the global-root failure mode by another name.
 
 #### Why This Strengthens the Cluster Abstraction
 
 The cluster is not a label; it is **the scope boundary for shared configuration**. It is the layer at which a directive can exist exactly once and reach exactly the agents that need it. Remove the cluster and you are forced back into one of the three failure modes above. The cluster earns its place in the primitive set because it is the narrowest non-global layer at which DRY configuration becomes possible.
 
-*Why this matters: this is what prevents your system from becoming a cluttered mess of repeated configuration — the same principle that makes well-organized companies efficient.*
+*Why this matters: this is what prevents your system from becoming a cluttered mess of repeated configuration, the same principle that makes well-organized companies efficient.*
 
 ---
 
@@ -1002,7 +1002,7 @@ Memory (the persistent record of decisions, learnings, and context that an agent
 
 #### 3.12.1 What Memory Means in PAM
 
-Memory in PAM is persistent cross-session context that survives beyond the current conversation. It is not the context window — which is bounded by the model's token limit and exists only for the duration of a session. It is the durable record of decisions made, lessons learned, preferences expressed, relationships between concepts, and domain knowledge accumulated that an agent carries from session to session. When a PAM agent starts a new session, it does not begin as a blank slate; it begins with everything it has learned still accessible.
+Memory in PAM is persistent cross-session context that survives beyond the current conversation. It is not the context window, which is bounded by the model's token limit and exists only for the duration of a session. It is the durable record of decisions made, lessons learned, preferences expressed, relationships between concepts, and domain knowledge accumulated that an agent carries from session to session. When a PAM agent starts a new session, it does not begin as a blank slate; it begins with everything it has learned still accessible.
 
 This is what separates a PAM agent from a raw LLM invocation. The model provides intelligence; memory provides continuity. Together they produce something neither can deliver alone: a system that gets better at its job over time.
 
@@ -1010,56 +1010,56 @@ This is what separates a PAM agent from a raw LLM invocation. The model provides
 
 Three failure modes explain why memory requires deliberate engineering, not just a "remember" button:
 
-1. **Context bloating.** Commercial LLM "memory" features often work by accumulating everything into the context window. As memories grow, signal degrades, token budgets are consumed by irrelevant history, and the agent's performance deteriorates with age instead of improving. This is memory working against you — the system knows more but understands less, because it cannot distinguish what matters right now from what mattered six months ago.
+1. **Context bloating.** Commercial LLM "memory" features often work by accumulating everything into the context window. As memories grow, signal degrades, token budgets are consumed by irrelevant history, and the agent's performance deteriorates with age instead of improving. This is memory working against you, the system knows more but understands less, because it cannot distinguish what matters right now from what mattered six months ago.
 
-2. **No retrieval discipline.** Even when memories exist in a file or database, nothing forces the agent to proactively search for relevant memories before acting. The agent reasons from whatever happens to be in its current context, not from the full history of what it knows. A surgeon who never consults patient history is not practicing medicine — an agent that never retrieves relevant memory is not practicing expertise.
+2. **No retrieval discipline.** Even when memories exist in a file or database, nothing forces the agent to proactively search for relevant memories before acting. The agent reasons from whatever happens to be in its current context, not from the full history of what it knows. A surgeon who never consults patient history is not practicing medicine, an agent that never retrieves relevant memory is not practicing expertise.
 
-3. **Repetition fatigue.** Without memory, the human must re-establish context every session: "Remember when we decided X? Remember that Y is configured at Z? Remember that we tried approach A and it failed because of B?" This is the single most common complaint about AI assistants, and it is a solvable engineering problem — not an inherent limitation of the technology.
+3. **Repetition fatigue.** Without memory, the human must re-establish context every session: "Remember when we decided X? Remember that Y is configured at Z? Remember that we tried approach A and it failed because of B?" This is the single most common complaint about AI assistants, and it is a solvable engineering problem, not an inherent limitation of the technology.
 
 #### 3.12.3 The Memory Spectrum
 
-I acknowledge that memory systems exist on a spectrum of mechanisms, each serving a different query pattern. These are not stages you graduate through — they are building blocks you layer. A mature system may run several simultaneously. The right combination depends on what questions you need your memory to answer.
+I acknowledge that memory systems exist on a spectrum of mechanisms, each serving a different query pattern. These are not stages you graduate through, they are building blocks you layer. A mature system may run several simultaneously. The right combination depends on what questions you need your memory to answer.
 
 **Six memory mechanisms:**
 
 | Mechanism | What it stores | Query model | When to use |
 |---|---|---|---|
 | **Claude Code native `memory:` field** | Per-agent persistent markdown directory with auto-loaded MEMORY.md (first 200 lines), auto-injected memory instructions, Read/Write/Edit auto-enabled | Agent reads/writes its own memory directory; first 200 lines loaded automatically at startup | Every PAM agent declares this. Zero setup. The baseline. Scopes: `user` (global to all projects), `project` (workspace-scoped, shareable via VCS), `local` (project-scoped, not checked in). |
-| **Markdown / JSON files** | Decisions, learnings, context, preferences in human-readable prose or structured JSON | Full-text search, manual browsing, git diff | Always — the universal starting point beyond native agent memory. Human-readable, version-controllable, zero infrastructure. Source of truth even when other layers exist on top. |
-| **JSONL (append-only log files)** | Structured machine-readable records — errors, events, SCP history, evaluation verdicts | Line-by-line parsing, field filtering via standard tools (grep, jq) | When agents need to read/write structured data at speed without human readability overhead. PAM's registries (Section 3.4) already use this. |
-| **SQLite (embedded relational database)** | Indexed metadata, cross-references, fast lookups over large file collections | SQL queries — joins, aggregations, filtered retrieval | When markdown/JSONL file counts grow past hundreds and full-text search becomes slow. SQLite adds structured indexing over the same data, not a replacement for it. Single-file database, zero infrastructure. |
-| **Vector database (semantic search)** | Embedding vectors of memory content — enables "find memories similar to this concept" retrieval | Cosine similarity / nearest-neighbor search over embeddings | When keyword search is not enough — the agent needs to find memories by meaning, not just exact words. Range: embedded (ChromaDB, LanceDB, sqlite-vec) for small-to-medium; standalone (Qdrant, Pinecone, Weaviate, Milvus) for large-scale. |
-| **Graph database (relationship mapping)** | Entities and their relationships — "this decision was influenced by that requirement, which depends on this constraint" | Graph traversal — path queries, neighborhood queries, pattern matching | When relationships between memories matter as much as the memories themselves. Enables questions like "what depends on this component?" or "trace the chain of decisions that led here." Examples: Neo4j, FalkorDB, Amazon Neptune. |
+| **Markdown / JSON files** | Decisions, learnings, context, preferences in human-readable prose or structured JSON | Full-text search, manual browsing, git diff | Always, the universal starting point beyond native agent memory. Human-readable, version-controllable, zero infrastructure. Source of truth even when other layers exist on top. |
+| **JSONL (append-only log files)** | Structured machine-readable records, errors, events, SCP history, evaluation verdicts | Line-by-line parsing, field filtering via standard tools (grep, jq) | When agents need to read/write structured data at speed without human readability overhead. PAM's registries (Section 3.4) already use this. |
+| **SQLite (embedded relational database)** | Indexed metadata, cross-references, fast lookups over large file collections | SQL queries, joins, aggregations, filtered retrieval | When markdown/JSONL file counts grow past hundreds and full-text search becomes slow. SQLite adds structured indexing over the same data, not a replacement for it. Single-file database, zero infrastructure. |
+| **Vector database (semantic search)** | Embedding vectors of memory content, enables "find memories similar to this concept" retrieval | Cosine similarity / nearest-neighbor search over embeddings | When keyword search is not enough, the agent needs to find memories by meaning, not just exact words. Range: embedded (ChromaDB, LanceDB, sqlite-vec) for small-to-medium; standalone (Qdrant, Pinecone, Weaviate, Milvus) for large-scale. |
+| **Graph database (relationship mapping)** | Entities and their relationships, "this decision was influenced by that requirement, which depends on this constraint" | Graph traversal, path queries, neighborhood queries, pattern matching | When relationships between memories matter as much as the memories themselves. Enables questions like "what depends on this component?" or "trace the chain of decisions that led here." Examples: Neo4j, FalkorDB, Amazon Neptune. |
 
 **These are layers, not tiers.** The six mechanisms are not mutually exclusive stages you graduate through. They are building blocks that coexist in the same system, each serving a different query pattern. A mature PAM system might run all six simultaneously: native agent memory as the per-agent baseline, markdown files as the human-readable source of truth, JSONL registries as machine-readable operational logs, SQLite as a fast index over the markdown and JSONL files, a vector database for semantic retrieval when the agent needs to find "memories about X," and a graph database for relationship traversal when the agent needs to understand how things connect.
 
-**Progressive layering.** You do not build all six on day one. You start with native agent memory — free, immediate, zero infrastructure, declared in a single frontmatter field. When you need human-readable records beyond what agent memory provides, you add markdown files. When file counts grow and search gets slow, you add SQLite as an index layer. When keyword search is not finding what you need, you add a vector database for semantic retrieval. When you need to understand relationships between entities, you add a graph layer. Each layer is additive — it does not replace the layer below it; it queries into it or derives from it. The progression is driven by need, not by ambition. You add a layer when the current stack cannot answer a question you need answered, not because a more sophisticated architecture sounds better on paper.
+**Progressive layering.** You do not build all six on day one. You start with native agent memory, free, immediate, zero infrastructure, declared in a single frontmatter field. When you need human-readable records beyond what agent memory provides, you add markdown files. When file counts grow and search gets slow, you add SQLite as an index layer. When keyword search is not finding what you need, you add a vector database for semantic retrieval. When you need to understand relationships between entities, you add a graph layer. Each layer is additive, it does not replace the layer below it; it queries into it or derives from it. The progression is driven by need, not by ambition. You add a layer when the current stack cannot answer a question you need answered, not because a more sophisticated architecture sounds better on paper.
 
-**Migration and ETL.** The layering pattern implies a natural migration path. Markdown files can be chunked, embedded, and loaded into a vector database — this is how RAG (Retrieval-Augmented Generation) pipelines work. The original markdown stays as the source of truth; the vector layer is a derived view optimized for semantic retrieval. Similarly, structured data from JSONL can be loaded into graph databases to build relationship maps. Migration is incremental — you move data as you need the capability, not all at once. The lower layers are never discarded; they remain the authoritative record from which higher layers are derived and can be re-derived if needed.
+**Migration and ETL.** The layering pattern implies a natural migration path. Markdown files can be chunked, embedded, and loaded into a vector database, this is how RAG (Retrieval-Augmented Generation) pipelines work. The original markdown stays as the source of truth; the vector layer is a derived view optimized for semantic retrieval. Similarly, structured data from JSONL can be loaded into graph databases to build relationship maps. Migration is incremental, you move data as you need the capability, not all at once. The lower layers are never discarded; they remain the authoritative record from which higher layers are derived and can be re-derived if needed.
 
-**The system helps you build.** One of the defining advantages of an agentic system is that the system itself can help you build what you need. You do not need to be a database engineer to add a vector layer to your memory system — you need to be able to articulate what you want ("I need my agent to find related memories by meaning, not just keywords") and the agent, equipped with the right skills, can help you set it up. I designed PAM's incremental approach to memory with this in mind: each layer is simple enough that a well-instructed agent can implement it, and the progression from native memory to vector to graph follows a path the system can guide you through as your needs grow.
+**The system helps you build.** One of the defining advantages of an agentic system is that the system itself can help you build what you need. You do not need to be a database engineer to add a vector layer to your memory system, you need to be able to articulate what you want ("I need my agent to find related memories by meaning, not just keywords") and the agent, equipped with the right skills, can help you set it up. I designed PAM's incremental approach to memory with this in mind: each layer is simple enough that a well-instructed agent can implement it, and the progression from native memory to vector to graph follows a path the system can guide you through as your needs grow.
 
-For visual exploration of memory and relationships between PAM components, Obsidian — an open-source knowledge management tool — can be pointed at a PAM system's `.claude/` directory. Obsidian's frontmatter does not conflict with Claude Code's or PAM's custom fields (only `description` overlaps, and only for Obsidian's Publish feature, which is irrelevant for local vaults). Obsidian's Dataview plugin can query PAM frontmatter fields directly (e.g., "show all agents where cluster = gitops"), its graph view visualizes relationships via `[[wikilinks]]` between agent specs, skill files, and registry entries, and its backlink panel auto-discovers cross-references. This follows the pattern described by Andrej Karpathy's LLM Wiki approach — a structured, interlinked collection of markdown files maintained by LLMs and visualized by Obsidian, where knowledge compounds over time rather than being re-derived each session.
+For visual exploration of memory and relationships between PAM components, Obsidian, an open-source knowledge management tool, can be pointed at a PAM system's `.claude/` directory. Obsidian's frontmatter does not conflict with Claude Code's or PAM's custom fields (only `description` overlaps, and only for Obsidian's Publish feature, which is irrelevant for local vaults). Obsidian's Dataview plugin can query PAM frontmatter fields directly (e.g., "show all agents where cluster = gitops"), its graph view visualizes relationships via `[[wikilinks]]` between agent specs, skill files, and registry entries, and its backlink panel auto-discovers cross-references. This follows the pattern described by Andrej Karpathy's LLM Wiki approach, a structured, interlinked collection of markdown files maintained by LLMs and visualized by Obsidian, where knowledge compounds over time rather than being re-derived each session.
 
 #### 3.12.4 How Memory Interacts with PAM Primitives
 
-Memory is not isolated — it weaves through every other PAM component:
+Memory is not isolated, it weaves through every other PAM component:
 
-- **Agents** use memory to maintain expertise across sessions. Every PAM domain agent declares a `memory` scope in its frontmatter, gaining a persistent directory that loads automatically at startup. Beyond native agent memory, an agent's memory is scoped to its domain (cluster-level) and optionally to the system level (global). When an agent starts a session, it retrieves relevant memories from its scope — not the entire memory store.
+- **Agents** use memory to maintain expertise across sessions. Every PAM domain agent declares a `memory` scope in its frontmatter, gaining a persistent directory that loads automatically at startup. Beyond native agent memory, an agent's memory is scoped to its domain (cluster-level) and optionally to the system level (global). When an agent starts a session, it retrieves relevant memories from its scope, not the entire memory store.
 - **Clusters** scope memory by domain, following the same layered-context principle (Section 3.11): cluster-level memories are visible to cluster agents; global memories are visible to system leadership. This prevents context bloating by ensuring agents only retrieve memories relevant to their domain.
 - **The Chief of Staff Agent** (Section 5.3) maintains system-wide memory for the human: active objectives, outstanding SCPs, recent evaluation summaries, system health signals. This is the memory that ensures each session begins with a current understanding of the system's state rather than a blank slate.
-- **The CTO** (Section 5.5) maintains evaluation history — verdict logs, scorecard history, adoption decisions. This IS memory, structured as registry entries and queryable by future evaluations.
+- **The CTO** (Section 5.5) maintains evaluation history, verdict logs, scorecard history, adoption decisions. This IS memory, structured as registry entries and queryable by future evaluations.
 - **Skills** can encode memory retrieval and storage patterns: a "remember this" skill that writes structured entries, a "recall" skill that searches and surfaces relevant memories, a "forget" skill that archives or removes stale entries.
 - **Hooks** automate memory capture: a `SessionEnd` hook that extracts key decisions, learnings, and errors from the session transcript and writes them as structured memory entries. A `Stop` hook that captures important context before the agent's response is finalized.
-- **The Registry** (Section 3.4) is itself a form of structured memory — `knowledge.jsonl`, `errors.jsonl`, and `scps.jsonl` are memory systems scoped to clusters and formatted for machine retrieval. The JSONL mechanism in the memory spectrum and PAM's registries are the same pattern applied to different content. Memory and registries are complementary: the registry records what happened; memory records what it means and what to do about it.
+- **The Registry** (Section 3.4) is itself a form of structured memory, `knowledge.jsonl`, `errors.jsonl`, and `scps.jsonl` are memory systems scoped to clusters and formatted for machine retrieval. The JSONL mechanism in the memory spectrum and PAM's registries are the same pattern applied to different content. Memory and registries are complementary: the registry records what happened; memory records what it means and what to do about it.
 
 #### 3.12.5 PAM's Position on Memory
 
-I do not prescribe a specific memory implementation beyond the baseline. I prescribe the principle: **every PAM system must have a structured, retrievable memory system appropriate to its scale.** Start with native agent memory — it is free, automatic, and declared in a single frontmatter field. Add markdown files when you need human-readable records. Graduate to a database when retrieval becomes unreliable. Graduate to graph+vector when relationships between memories matter as much as the memories themselves.
+I do not prescribe a specific memory implementation beyond the baseline. I prescribe the principle: **every PAM system must have a structured, retrievable memory system appropriate to its scale.** Start with native agent memory. It is free, automatic, and declared in a single frontmatter field. Add markdown files when you need human-readable records. Graduate to a database when retrieval becomes unreliable. Graduate to graph+vector when relationships between memories matter as much as the memories themselves.
 
-The linter (Section 7.7.5) audits whether memory is configured and populated; an agent without a declared `memory` scope is flagged as a governance gap. A PAM system without memory is technically functional but cannot deliver on the framework's promises of continuity, self-improvement, and domain expertise — the same way an organization that keeps no records can technically operate but cannot learn.
+The linter (Section 7.7.5) audits whether memory is configured and populated; an agent without a declared `memory` scope is flagged as a governance gap. A PAM system without memory is technically functional but cannot deliver on the framework's promises of continuity, self-improvement, and domain expertise, the same way an organization that keeps no records can technically operate but cannot learn.
 
-*Why this matters: memory is what separates an AI assistant that forgets everything between conversations from a professional that builds expertise over time. The six memory mechanisms — from native per-agent memory to semantic vector search to relationship-aware graph traversal — are not competing alternatives but progressive layers that compound. Without structured, layered memory, every session starts from scratch — and PAM's promises of continuity, self-improvement, and domain expertise are impossible to deliver.*
+*Why this matters: memory is what separates an AI assistant that forgets everything between conversations from a professional that builds expertise over time. The six memory mechanisms, from native per-agent memory to semantic vector search to relationship-aware graph traversal, are not competing alternatives but progressive layers that compound. Without structured, layered memory, every session starts from scratch, and PAM's promises of continuity, self-improvement, and domain expertise are impossible to deliver.*
 
 ---
 
@@ -1075,7 +1075,7 @@ A subagent runs within the invoking agent's session, reports its result back to 
 
 Parallel agents, each with their own session and context window, coordinated by a team lead. Teammates can communicate laterally and the human can interact with any teammate directly. Used for invoking the Researcher and for cross-domain parallel work requiring genuine coordination.
 
-**Status:** Currently experimental — enable with `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`.
+**Status:** Currently experimental, enable with `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`.
 
 ### 4.3 Choosing Between Them
 
@@ -1085,7 +1085,7 @@ Parallel agents, each with their own session and context window, coordinated by 
 | Context | Needs parent's context | Independent context preferred |
 | Human interaction | Through parent only | Direct teammate access needed |
 | Task structure | Sequential, dependent | Parallel, independent tracks |
-| Invoking Researcher | — | Preferred |
+| Invoking Researcher |, | Preferred |
 
 ---
 
@@ -1097,7 +1097,7 @@ The executive seats I describe below are the minimum PAM defines for a self-main
 
 Clusters are the primary organizational unit. Each cluster is defined by its domain, not its size. Agents within a cluster communicate directly. Clusters communicate through two declared channels: the typed registry and skill-mediated cross-cluster calls, which are explicitly declared in skill specifications.
 
-Every cluster that carries system-leadership responsibility is backed by a small office of supporting agents rather than a single monolithic agent. The pattern is consistent: a named lead agent holds the responsibility, and a cluster of supporting agents — each with a narrower domain — performs the work that the lead agent synthesizes. This is true for the Chief of Staff Agent, the Administrative Agent, the CTO, and the CISO defined below. The lead is the seat; the cluster is the office.
+Every cluster that carries system-leadership responsibility is backed by a small office of supporting agents rather than a single monolithic agent. The pattern is consistent: a named lead agent holds the responsibility, and a cluster of supporting agents, each with a narrower domain, performs the work that the lead agent synthesizes. This is true for the Chief of Staff Agent, the Administrative Agent, the CTO, and the CISO defined below. The lead is the seat; the cluster is the office.
 
 ---
 
@@ -1105,11 +1105,11 @@ Every cluster that carries system-leadership responsibility is backed by a small
 
 PAM's system-leadership roles have two layers: **function** and **framing**.
 
-The function is load-bearing. Each role exists because a healthy AI agent system needs a specific kind of accountability — user advocacy, operational stability, capability evolution, and security assurance. Those four accountabilities are structurally distinct, hold different fiduciary postures, and routinely disagree with each other by design. The function is what the framework asserts.
+The function is load-bearing. Each role exists because a healthy AI agent system needs a specific kind of accountability, user advocacy, operational stability, capability evolution, and security assurance. Those four accountabilities are structurally distinct, hold different fiduciary postures, and routinely disagree with each other by design. The function is what the framework asserts.
 
-The framing — the names, the metaphors, the organizational vocabulary — is illustrative. I use a corporate metaphor (Chief of Staff, COO, CTO, CISO, C-suite, office, chief) throughout PAM's documentation because I found it useful for my own reasoning, and because most technical readers have a working mental model of how a small executive team disagrees productively. It is one way to think about the system. It is not the only valid way, and I do not prescribe it.
+The framing, the names, the metaphors, the organizational vocabulary, is illustrative. I use a corporate metaphor (Chief of Staff, COO, CTO, CISO, C-suite, office, chief) throughout PAM's documentation because I found it useful for my own reasoning, and because most technical readers have a working mental model of how a small executive team disagrees productively. It is one way to think about the system. It is not the only valid way, and I do not prescribe it.
 
-A reader who dislikes corporate vocabulary should feel free to substitute any organizational metaphor that helps them think clearly: a medical team where the attending physician holds patient advocacy, the charge nurse holds ward operations, the research fellow hunts for new treatments, and the infection control officer ensures safety; a film crew where the director holds creative intent, the line producer holds schedule and budget, the technical supervisor evaluates new equipment, and the safety coordinator enforces on-set protocols; a research lab with a principal investigator, a lab manager, a methods scout, and an ethics board chair. What matters is that four different postures — advocacy, stability, evolution, and security — coexist and check each other. **PAM does not care about the names that are carried by the agents or the entities in the cluster. It cares about the intent of how the system is built.**
+A reader who dislikes corporate vocabulary should feel free to substitute any organizational metaphor that helps them think clearly: a medical team where the attending physician holds patient advocacy, the charge nurse holds ward operations, the research fellow hunts for new treatments, and the infection control officer ensures safety; a film crew where the director holds creative intent, the line producer holds schedule and budget, the technical supervisor evaluates new equipment, and the safety coordinator enforces on-set protocols; a research lab with a principal investigator, a lab manager, a methods scout, and an ethics board chair. What matters is that four different postures, advocacy, stability, evolution, and security, coexist and check each other. **PAM does not care about the names that are carried by the agents or the entities in the cluster. It cares about the intent of how the system is built.**
 
 The sections that follow define each role by its function first, and then offer the corporate framing as one illustration among several. Treat the illustrations as scaffolding you can replace.
 
@@ -1117,26 +1117,26 @@ The sections that follow define each role by its function first, and then offer 
 
 ### 5.3 Chief of Staff Agent (User Advocacy and Strategic Direction)
 
-**Function.** The Chief of Staff Agent (the system's user-facing leader, responsible for strategic direction and user advocacy; see Key Terms) is the agent whose entire accountability is to the human principal — the user who owns the system. The user is the CEO and owner; the Chief of Staff is the most trusted operational leader. It is the system's human-facing lead and the primary point of interaction between the user and the PAM system. It holds a fiduciary duty to the user and operates with the explicit assumption that the system, left unobserved, may drift away from user interests. It sets and maintains strategic direction — the objectives and key results that define what the system is for — and it retains authority to direct any cluster to initiate review, pause, or accelerate a priority.
+**Function.** The Chief of Staff Agent (the system's user-facing leader, responsible for strategic direction and user advocacy; see Key Terms) is the agent whose entire accountability is to the human principal, the user who owns the system. The user is the CEO and owner; the Chief of Staff is the most trusted operational leader. It is the system's human-facing lead and the primary point of interaction between the user and the PAM system. It holds a fiduciary duty to the user and operates with the explicit assumption that the system, left unobserved, may drift away from user interests. It sets and maintains strategic direction, the objectives and key results that define what the system is for, and it retains authority to direct any cluster to initiate review, pause, or accelerate a priority.
 
-The Chief of Staff's loyalty is to the user, not to the system — but that loyalty includes pushing back when the user's request would harm their own goals, not just executing orders. A good Chief of Staff is a consultative advisor, not a sycophant.
+The Chief of Staff's loyalty is to the user, not to the system, but that loyalty includes pushing back when the user's request would harm their own goals, not just executing orders. A good Chief of Staff is a consultative advisor, not a sycophant.
 
-The Chief of Staff framing is intentional. In an organization where the user is the owner and CEO, the Chief of Staff is the most trusted operational leader — the person who ensures the CEO's vision is executed across every department, who synthesizes complex information into actionable briefings, who pushes back when a decision seems misaligned with stated goals, and who proactively identifies opportunities the CEO hasn't noticed. The Chief of Staff does not make final decisions — the CEO does. But the Chief of Staff makes the CEO's decisions better.
+The Chief of Staff framing is intentional. In an organization where the user is the owner and CEO, the Chief of Staff is the most trusted operational leader, the person who ensures the CEO's vision is executed across every department, who synthesizes complex information into actionable briefings, who pushes back when a decision seems misaligned with stated goals, and who proactively identifies opportunities the CEO hasn't noticed. The Chief of Staff does not make final decisions, the CEO does. But the Chief of Staff makes the CEO's decisions better.
 
-**One way to think about this role: Chief of Staff.** A Chief of Staff does not run every department. They ensure the executive's strategy is communicated, the organization's principals are informed, synthesized information reaches the decision-maker, and the organization is held accountable to its stated values. They are not neutral about outcomes — they advocate for the mission and the people it serves. **Another equally valid framing:** head coach of a medical team, ensuring the patient (the user) is served regardless of what the rest of the ward prefers. **A third:** principal investigator on a long-running research project, owning scientific direction and answering to the funder.
+**One way to think about this role: Chief of Staff.** A Chief of Staff does not run every department. They ensure the executive's strategy is communicated, the organization's principals are informed, synthesized information reaches the decision-maker, and the organization is held accountable to its stated values. They are not neutral about outcomes, they advocate for the mission and the people it serves. **Another equally valid framing:** head coach of a medical team, ensuring the patient (the user) is served regardless of what the rest of the ward prefers. **A third:** principal investigator on a long-running research project, owning scientific direction and answering to the funder.
 
 Pick whichever framing fits your mental model. The function below is what PAM actually requires.
 
 **Responsibilities of the Chief of Staff Agent:**
 
-- **User communication** — the primary conversational interface with the human principal; synthesizes system-wide status into human-readable summaries.
-- **Strategic direction** — sets and maintains the system's OKR objectives in collaboration with the human; ensures key results defined by clusters remain aligned with the human's stated goals.
-- **System-wide visibility** — maintains awareness of the state of all clusters, active SCPs, recent evaluation results, and error patterns; can query any registry in the system.
-- **Change authority** — has the authority to direct any cluster to initiate a review, pause operations, or accelerate a specific priority.
-- **Adversarial posture toward system scope-expansion** — when any cluster or agent proposes a change that expands its scope, increases its autonomy, or modifies a safety constraint, the Chief of Staff reviews it with the assumption that the change may be contrary to user interests until demonstrated otherwise. This is the system's internal skeptic, and the posture is deliberately asymmetric: the Chief of Staff is biased against scope growth.
-- **User advocacy** — surfaces to the human any system behavior that the Chief of Staff assesses as not serving user interests, regardless of whether that behavior violates a formal PAM rule.
+- **User communication**: the primary conversational interface with the human principal; synthesizes system-wide status into human-readable summaries.
+- **Strategic direction**: sets and maintains the system's OKR objectives in collaboration with the human; ensures key results defined by clusters remain aligned with the human's stated goals.
+- **System-wide visibility**: maintains awareness of the state of all clusters, active SCPs, recent evaluation results, and error patterns; can query any registry in the system.
+- **Change authority**: has the authority to direct any cluster to initiate a review, pause operations, or accelerate a specific priority.
+- **Adversarial posture toward system scope-expansion**: when any cluster or agent proposes a change that expands its scope, increases its autonomy, or modifies a safety constraint, the Chief of Staff reviews it with the assumption that the change may be contrary to user interests until demonstrated otherwise. This is the system's internal skeptic, and the posture is deliberately asymmetric: the Chief of Staff is biased against scope growth.
+- **User advocacy**: surfaces to the human any system behavior that the Chief of Staff assesses as not serving user interests, regardless of whether that behavior violates a formal PAM rule.
 
-**What the Chief of Staff Agent does not do.** It does not perform domain work. It does not write code, manage deployments, or execute operational tasks. Its value is in perspective — seeing the whole system from the user's vantage point — and in its voice.
+**What the Chief of Staff Agent does not do.** It does not perform domain work. It does not write code, manage deployments, or execute operational tasks. Its value is in perspective, seeing the whole system from the user's vantage point, and in its voice.
 
 **Memory.** The Chief of Staff Agent maintains persistent cross-session context using Claude Code's memory system. Active objectives, outstanding SCPs awaiting review, recent evaluation summaries, and system health signals are stored in memory so each session begins with a current understanding of the system's state rather than a blank slate.
 
@@ -1146,20 +1146,20 @@ Pick whichever framing fits your mental model. The function below is what PAM ac
 
 **Function.** The Administrative Agent (the system's operational manager, responsible for scheduling, health monitoring, and maintenance; see Key Terms) is the agent whose entire accountability is to keeping the system running correctly. Where the Chief of Staff represents the user's interests to the system, the Administrative Agent ensures the system itself is healthy, scheduled, maintained, and internally consistent. It holds a fiduciary duty to operational stability. It is primarily active during off-hours: daytime is reserved for the human principal's actual work, and the system's own maintenance, self-evaluation, and preparation cycles run when the user is not.
 
-**One way to think about this role: COO.** A COO does not set strategy — they execute it. They ensure processes are running, schedules are met, conflicts are identified and resolved before they escalate, and operational health is reported accurately to the rest of the executive team. **Another valid framing:** charge nurse on a hospital ward, running the board and keeping the floor functioning through shift changes. **A third:** line producer on a film set, quietly making sure the day's shoot happens on schedule. Same function, different vocabulary.
+**One way to think about this role: COO.** A COO does not set strategy, they execute it. They ensure processes are running, schedules are met, conflicts are identified and resolved before they escalate, and operational health is reported accurately to the rest of the executive team. **Another valid framing:** charge nurse on a hospital ward, running the board and keeping the floor functioning through shift changes. **A third:** line producer on a film set, quietly making sure the day's shoot happens on schedule. Same function, different vocabulary.
 
 **Responsibilities of the Administrative Agent:**
 
-- **Scheduling coordination** — maintains the master schedule of all PAM maintenance cycles, research cycles, evaluation runs, and retrospectives; prevents resource contention (see Section 7.7.4); ensures maintenance does not compete with active work sessions.
-- **Operational health monitoring** — runs regular checks that deployed agents, skills, and hooks are functioning correctly; surfaces configuration drift, missing registries, or broken scheduled tasks.
-- **Registry maintenance** — manages aging and archival of registry entries (see Section 7.7.1); ensures error logs, knowledge updates, and SCP queues do not grow unbounded.
-- **Maintenance cycle execution** — for each cluster, triggers the research cycle, collects findings, queues SCPs for human review, and confirms that approved changes have been applied and synced back to the plugin template.
-- **SCP pipeline management** — tracks the status of all pending specification change proposals (see Section 7.7.2 for auto-approval tiers and queue-depth alarm); escalates overdue reviews to the Chief of Staff Agent; confirms that approved SCPs have been applied to deployed specifications.
-- **PAM linter execution** — owns the continuous post-deployment audit (see Section 7.7.5) that verifies hook tiering, registry schema compliance, agent namespacing, domain.yaml adherence, and subscription reverse-index consistency.
-- **Template sync gracing** — manages the grace period between SCP approval and plugin-template propagation (see Section 7.7.6).
-- **Scheduled wake-up cycle** — runs the periodic wake-up sweep for pending scheduled work (see Section 7.7.3).
+- **Scheduling coordination**: maintains the master schedule of all PAM maintenance cycles, research cycles, evaluation runs, and retrospectives; prevents resource contention (see Section 7.7.4); ensures maintenance does not compete with active work sessions.
+- **Operational health monitoring**: runs regular checks that deployed agents, skills, and hooks are functioning correctly; surfaces configuration drift, missing registries, or broken scheduled tasks.
+- **Registry maintenance**: manages aging and archival of registry entries (see Section 7.7.1); ensures error logs, knowledge updates, and SCP queues do not grow unbounded.
+- **Maintenance cycle execution**: for each cluster, triggers the research cycle, collects findings, queues SCPs for human review, and confirms that approved changes have been applied and synced back to the plugin template.
+- **SCP pipeline management**: tracks the status of all pending specification change proposals (see Section 7.7.2 for auto-approval tiers and queue-depth alarm); escalates overdue reviews to the Chief of Staff Agent; confirms that approved SCPs have been applied to deployed specifications.
+- **PAM linter execution**: owns the continuous post-deployment audit (see Section 7.7.5) that verifies hook tiering, registry schema compliance, agent namespacing, domain.yaml adherence, and subscription reverse-index consistency.
+- **Template sync gracing**: manages the grace period between SCP approval and plugin-template propagation (see Section 7.7.6).
+- **Scheduled wake-up cycle**: runs the periodic wake-up sweep for pending scheduled work (see Section 7.7.3).
 
-**Agent and skill.** The Administrative Agent is both an agent and a skill. The agent specification defines its domain (system operations) and tool access; the skill defines its maintenance workflows, registry query patterns, scheduling logic, and health checks. Like all PAM agents, it follows the skills it carries — the more complete its skill becomes, the more intentional its operations become.
+**Agent and skill.** The Administrative Agent is both an agent and a skill. The agent specification defines its domain (system operations) and tool access; the skill defines its maintenance workflows, registry query patterns, scheduling logic, and health checks. Like all PAM agents, it follows the skills it carries, the more complete its skill becomes, the more intentional its operations become.
 
 **Primarily off-hours.** The Administrative Agent's scheduled maintenance cycles run when the human principal is not actively working. Off-hours operation is where the system evolves, self-evaluates, and prepares for the next day.
 
@@ -1167,29 +1167,29 @@ Pick whichever framing fits your mental model. The function below is what PAM ac
 
 ### 5.5 The CTO (Function: Capability Discovery, Evaluation, and Adoption Championship)
 
-**Function.** The CTO — or Technology Direction Agent (the system's innovation leader, responsible for evaluating and recommending new capabilities; see Key Terms) — is the agent whose entire accountability is to preventing the system from stagnating. Where the Chief of Staff is fiduciary to the user and the Administrative Agent is fiduciary to operational stability, the CTO is fiduciary to the system's continued relevance against the moving frontier of available tools. Its default posture is **biased toward change**: it actively hunts for external components that could augment or replace existing PAM capabilities, and it is structurally expected to disagree with the other seats. The CTO seat is what stops PAM from calcifying.
+**Function.** The CTO, or Technology Direction Agent (the system's innovation leader, responsible for evaluating and recommending new capabilities; see Key Terms), is the agent whose entire accountability is to preventing the system from stagnating. Where the Chief of Staff is fiduciary to the user and the Administrative Agent is fiduciary to operational stability, the CTO is fiduciary to the system's continued relevance against the moving frontier of available tools. Its default posture is **biased toward change**: it actively hunts for external components that could augment or replace existing PAM capabilities, and it is structurally expected to disagree with the other seats. The CTO seat is what stops PAM from calcifying.
 
-**One way to think about this role: CTO.** A CTO scans for new technologies, evaluates what's worth adopting, and champions integration against organizational inertia. They are not neutral either — they are biased toward modernization, which is precisely why their voice is useful on an executive team where the other seats are biased toward stability. **Another valid framing:** a research fellow on a medical team whose job is to know which new treatments are outperforming the ones currently in use. **A third:** the technical supervisor on a film crew who evaluates each season's new camera systems and argues for the ones that would change what the production can capture.
+**One way to think about this role: CTO.** A CTO scans for new technologies, evaluates what's worth adopting, and champions integration against organizational inertia. They are not neutral either, they are biased toward modernization, which is precisely why their voice is useful on an executive team where the other seats are biased toward stability. **Another valid framing:** a research fellow on a medical team whose job is to know which new treatments are outperforming the ones currently in use. **A third:** the technical supervisor on a film crew who evaluates each season's new camera systems and argues for the ones that would change what the production can capture.
 
-**Why this seat is not a neutral arbiter.** A framework whose answer is always "build our own" is not rigorous — it is biased toward the status quo, and that bias is invisible precisely because it is the default. The CTO is the structural counterweight. Its default posture is toward adoption, balanced against a Chief of Staff whose default is fiduciary caution and an Administrative Agent whose default is operational stability. **The seats disagree by design.** The human principal is the tiebreaker, and the SCP pipeline is where that tiebreaking happens.
+**Why this seat is not a neutral arbiter.** A framework whose answer is always "build our own" is not rigorous, it is biased toward the status quo, and that bias is invisible precisely because it is the default. The CTO is the structural counterweight. Its default posture is toward adoption, balanced against a Chief of Staff whose default is fiduciary caution and an Administrative Agent whose default is operational stability. **The seats disagree by design.** The human principal is the tiebreaker, and the SCP pipeline is where that tiebreaking happens.
 
 **Responsibilities of the CTO:**
 
-- **Capability discovery** — autonomously scans external sources (starred GitHub repositories, the OSS Claude Code ecosystem, Raindrop bookmarks, watched projects, and any source registered in the cluster's Knowledge Source Registry) for candidate components that could augment the system. Candidates are recorded in the cluster's knowledge registry with provenance.
-- **Debiased evaluation** — runs each candidate through a standard evaluation pipeline: a steelman-first adoption case, an adversarial status-quo critique, and a numeric scorecard across feature-gap, community-velocity, maintenance-burden, integration-cost, lock-in-risk, and reversal-cost. Every evaluation is required to answer a mandatory counterfactual question: *"If this framework did not exist, would a rational engineer starting fresh pick this tool, or write our version?"* A verdict that cannot survive that question is not a verdict.
-- **Verdict production** — emits structured verdicts in one of four states — **ADOPT**, **REFERENCE**, **REJECT**, or **DEFER** — with the evidence and reasoning stored in the cluster's knowledge registry. Verdicts are durable artifacts; future evaluations cite and may overturn prior ones.
-- **Adoption championship** — when a candidate is verdict-ADOPT, the CTO advocates for its adoption via SCP. The SCP proposes the integration path, the deprecation plan for whatever the candidate replaces, and the migration sequence. Adoption championship is an act of advocacy — the CTO is not expected to be neutral here, because the Chief of Staff's adversarial posture already supplies the opposing pressure.
-- **Internal component staleness audit** — every 30 days, the CTO audits all tracked components and sources for staleness. Items not updated or re-verified in the last 30 days are classified as stale (needs re-evaluation), irrelevant (removed from tracking), or stable (confirmed as desired and current). This continuous improvement cadence prevents the system from calcifying without requiring a full re-evaluation cycle on a longer interval.
-- **Innovation bias, explicit.** Unlike the Chief of Staff and the Administrative Agent, the CTO is biased toward change. The bias is declared, not hidden, and it is balanced structurally — not by the CTO pretending to be neutral.
+- **Capability discovery**: autonomously scans external sources (starred GitHub repositories, the OSS Claude Code ecosystem, Raindrop bookmarks, watched projects, and any source registered in the cluster's Knowledge Source Registry) for candidate components that could augment the system. Candidates are recorded in the cluster's knowledge registry with provenance.
+- **Debiased evaluation**: runs each candidate through a standard evaluation pipeline: a steelman-first adoption case, an adversarial status-quo critique, and a numeric scorecard across feature-gap, community-velocity, maintenance-burden, integration-cost, lock-in-risk, and reversal-cost. Every evaluation is required to answer a mandatory counterfactual question: *"If this framework did not exist, would a rational engineer starting fresh pick this tool, or write our version?"* A verdict that cannot survive that question is not a verdict.
+- **Verdict production**: emits structured verdicts in one of four states, **ADOPT**, **REFERENCE**, **REJECT**, or **DEFER**: with the evidence and reasoning stored in the cluster's knowledge registry. Verdicts are durable artifacts; future evaluations cite and may overturn prior ones.
+- **Adoption championship**: when a candidate is verdict-ADOPT, the CTO advocates for its adoption via SCP. The SCP proposes the integration path, the deprecation plan for whatever the candidate replaces, and the migration sequence. Adoption championship is an act of advocacy, the CTO is not expected to be neutral here, because the Chief of Staff's adversarial posture already supplies the opposing pressure.
+- **Internal component staleness audit**: every 30 days, the CTO audits all tracked components and sources for staleness. Items not updated or re-verified in the last 30 days are classified as stale (needs re-evaluation), irrelevant (removed from tracking), or stable (confirmed as desired and current). This continuous improvement cadence prevents the system from calcifying without requiring a full re-evaluation cycle on a longer interval.
+- **Innovation bias, explicit.** Unlike the Chief of Staff and the Administrative Agent, the CTO is biased toward change. The bias is declared, not hidden, and it is balanced structurally, not by the CTO pretending to be neutral.
 
 **The CTO's office.** Like the Chief of Staff and Administrative Agents, the CTO is backed by a cluster of supporting agents. The CTO cluster contains, at minimum:
 
-- **VP of Research** — dispatches research into external candidates: web search, documentation fetching, repository analysis, community-signal gathering. Writes findings to the cluster's knowledge registry.
-- **Steelman Advocate** — writes the strongest possible pro-adoption case for each candidate. Required to find the real reasons the candidate might be better, not straw reasons.
-- **Skeptic** — writes the strongest possible status-quo / against-adoption case. Required to articulate the real costs of adoption and the real strengths of what would be displaced.
-- **Judge** — applies the scorecard, weighs Steelman against Skeptic, enforces the counterfactual question, and produces the final verdict with reasoning.
+- **VP of Research**: dispatches research into external candidates: web search, documentation fetching, repository analysis, community-signal gathering. Writes findings to the cluster's knowledge registry.
+- **Steelman Advocate**: writes the strongest possible pro-adoption case for each candidate. Required to find the real reasons the candidate might be better, not straw reasons.
+- **Skeptic**: writes the strongest possible status-quo / against-adoption case. Required to articulate the real costs of adoption and the real strengths of what would be displaced.
+- **Judge**: applies the scorecard, weighs Steelman against Skeptic, enforces the counterfactual question, and produces the final verdict with reasoning.
 
-This is the adversarial pairing pattern, where agents work in opposing pairs so no single voice controls the outcome. The CTO leads the office but **does not arbitrate alone** — the office's structure is what enforces the debiasing. A CTO that also served as Judge would reintroduce the same invisible bias the seat exists to prevent.
+This is the adversarial pairing pattern, where agents work in opposing pairs so no single voice controls the outcome. The CTO leads the office but **does not arbitrate alone**: the office's structure is what enforces the debiasing. A CTO that also served as Judge would reintroduce the same invisible bias the seat exists to prevent.
 
 **No new primitives.** The CTO is built entirely from existing PAM primitives: a cluster, its supporting agents, the cluster's skills, its hooks, and its registry. The Knowledge Source Registry feeds discovery; the knowledge registry stores verdicts; the SCP pipeline carries adoption proposals to the human; the Administrative Agent schedules the 30-day staleness audit cycle. The CTO seat is a new organizational role, not a new mechanism.
 
@@ -1197,21 +1197,21 @@ This is the adversarial pairing pattern, where agents work in opposing pairs so 
 
 ### 5.6 CISO / Security Executive (Security Advocacy and Risk Management)
 
-**Function.** The CISO — or Security Executive — is the agent whose entire accountability is to the security posture and risk profile of the agent system. Where the CTO is biased toward adoption and change, the CISO is the natural friction partner: biased toward security and caution in the face of external tool adoption, while simultaneously driving innovation in security practices themselves.
+**Function.** The CISO, or Security Executive, is the agent whose entire accountability is to the security posture and risk profile of the agent system. Where the CTO is biased toward adoption and change, the CISO is the natural friction partner: biased toward security and caution in the face of external tool adoption, while simultaneously driving innovation in security practices themselves.
 
-**The dual personality.** The CISO exhibits a productive tension that defines its value to the executive team. It is **PRO-innovation for security improvements** — better encryption, vulnerability scanning, secure coding patterns, hardened configurations, and any advancement that makes the system more resilient. It is simultaneously **ANTI-innovation for external tool adoption** — because each new tool is an attack surface until vetted, each new integration is a potential vulnerability until reviewed, and each new dependency is a supply-chain risk until assessed. This tension is productive: it forces the CTO to make the security case for every adoption, not just the capability case. The result is that adopted tools have been evaluated from both the capability and security perspectives before they reach the system.
+**The dual personality.** The CISO exhibits a productive tension that defines its value to the executive team. It is **PRO-innovation for security improvements**: better encryption, vulnerability scanning, secure coding patterns, hardened configurations, and any advancement that makes the system more resilient. It is simultaneously **ANTI-innovation for external tool adoption**: because each new tool is an attack surface until vetted, each new integration is a potential vulnerability until reviewed, and each new dependency is a supply-chain risk until assessed. This tension is productive: it forces the CTO to make the security case for every adoption, not just the capability case. The result is that adopted tools have been evaluated from both the capability and security perspectives before they reach the system.
 
 **One way to think about this role: CISO.** A CISO in a corporation manages security posture, conducts vulnerability assessments, and holds veto power over integrations that introduce unacceptable risk. **Another valid framing:** the infection control officer in a hospital, whose job is to ensure that new treatments and procedures do not introduce risks that outweigh their benefits. **A third:** the ethics board chair in a research lab, who reviews proposed experiments for risks the researchers may be too close to see.
 
 **Responsibilities of the CISO:**
 
-- **Security posture of the agent system** — continuous assessment of the system's attack surface: overly broad tool permissions, unvetted MCP server connections, prompt injection risks, undeclared capabilities, and configuration drift that weakens the safety envelope.
-- **Veto power on security-risky external tool adoptions** — the CISO can block any SCP that introduces unacceptable security risk. The block goes to the user (CEO) for final adjudication — the CISO cannot permanently block without user consent, but it can force the conversation. This ensures security concerns are never silently overridden.
-- **Vulnerability assessment of SCPs** — any SCP that modifies tool access, hook definitions, MCP configurations, or cross-cluster interfaces receives a security review from the CISO before approval. This is the security gate in the SCP pipeline, complementing the Chief of Staff's fiduciary review.
-- **Security review of cross-cluster interfaces** — every `cross_cluster_interfaces` entry in `domain.yaml` and every new skill-mediated cross-cluster call is reviewed for the attack surface it creates. Cross-cluster calls are information pathways; the CISO ensures those pathways do not become vulnerability pathways.
-- **Security innovation** — actively researches and proposes security improvements: hardened hook configurations, better secret rotation patterns, vulnerability scanning skills, secure coding pattern libraries. The CISO is not merely reactive; it hunts for ways to make the system more secure, the same way the CTO hunts for ways to make it more capable.
+- **Security posture of the agent system**: continuous assessment of the system's attack surface: overly broad tool permissions, unvetted MCP server connections, prompt injection risks, undeclared capabilities, and configuration drift that weakens the safety envelope.
+- **Veto power on security-risky external tool adoptions**: the CISO can block any SCP that introduces unacceptable security risk. The block goes to the user (CEO) for final adjudication, the CISO cannot permanently block without user consent, but it can force the conversation. This ensures security concerns are never silently overridden.
+- **Vulnerability assessment of SCPs**: any SCP that modifies tool access, hook definitions, MCP configurations, or cross-cluster interfaces receives a security review from the CISO before approval. This is the security gate in the SCP pipeline, complementing the Chief of Staff's fiduciary review.
+- **Security review of cross-cluster interfaces**: every `cross_cluster_interfaces` entry in `domain.yaml` and every new skill-mediated cross-cluster call is reviewed for the attack surface it creates. Cross-cluster calls are information pathways; the CISO ensures those pathways do not become vulnerability pathways.
+- **Security innovation**: actively researches and proposes security improvements: hardened hook configurations, better secret rotation patterns, vulnerability scanning skills, secure coding pattern libraries. The CISO is not merely reactive; it hunts for ways to make the system more secure, the same way the CTO hunts for ways to make it more capable.
 
-**Connection to Three Lines of Defense (Section 5.7).** The CISO naturally leads the Second Line (Risk and Security). In systems without a dedicated CISO, the Administrative Agent absorbs this responsibility — but at scale, the dedicated seat provides focus that a generalist cannot. The CISO's Second Line agents perform independent security assessment of domain agents' operations, review SCPs that touch security surfaces, and maintain the system's vulnerability inventory.
+**Connection to Three Lines of Defense (Section 5.7).** The CISO naturally leads the Second Line (Risk and Security). In systems without a dedicated CISO, the Administrative Agent absorbs this responsibility, but at scale, the dedicated seat provides focus that a generalist cannot. The CISO's Second Line agents perform independent security assessment of domain agents' operations, review SCPs that touch security surfaces, and maintain the system's vulnerability inventory.
 
 ---
 
@@ -1221,17 +1221,17 @@ PAM's governance model is adapted from the three-lines-of-defense pattern used i
 
 The Three Lines of Defense are **soft-gated by design discipline and PAM tooling audits; hard-gated by Claude Code native exit-code semantics on events that support it.** Hooks are PAM's enforcement surface, but only where Claude Code's event semantics permit blocking. Where they do not, hooks are observational, and PAM treats them as such. The lines are not an absolute enforcement layer; they are a layered practice in which discipline, tooling, and the subset of hooks backed by hard-block events together produce governance.
 
-**Line 1 — Operational (Domain Agents).** Domain agents performing their work within declared boundaries. First-line accountability includes operating within declared domain scope, submitting SCPs rather than self-modifying, publishing to the registry with correct metadata, and flagging probabilistic actions as candidates for code-executed replacement. Line 1 is primarily held by design discipline and cluster-local hooks, audited by PAM tooling.
+**Line 1, Operational (Domain Agents).** Domain agents performing their work within declared boundaries. First-line accountability includes operating within declared domain scope, submitting SCPs rather than self-modifying, publishing to the registry with correct metadata, and flagging probabilistic actions as candidates for code-executed replacement. Line 1 is primarily held by design discipline and cluster-local hooks, audited by PAM tooling.
 
-**Line 2 — Risk and Security (Security Agents).** Security agents whose domain is the agents themselves, led by the CISO (Section 5.6) when that seat is staffed. Responsibilities include agent vulnerability review (prompt injection risks, overly broad tool permissions, undeclared capabilities), cross-boundary enforcement (monitoring registry publications for scope violations), permission audit, and independent security assessment of SCPs that modify tool access or hook definitions. Line 2's enforceable claims must be backed by hooks on hard-block events; claims backed only by observational hooks are documented as monitoring, not enforcement.
+**Line 2, Risk and Security (Security Agents).** Security agents whose domain is the agents themselves, led by the CISO (Section 5.6) when that seat is staffed. Responsibilities include agent vulnerability review (prompt injection risks, overly broad tool permissions, undeclared capabilities), cross-boundary enforcement (monitoring registry publications for scope violations), permission audit, and independent security assessment of SCPs that modify tool access or hook definitions. Line 2's enforceable claims must be backed by hooks on hard-block events; claims backed only by observational hooks are documented as monitoring, not enforcement.
 
-**Line 3 — Audit (Audit Agents).** Independent of both domain operations and security. Audit agents assess whether the PAM system as a whole is operating in accordance with its own established standards, including whether Line 1 and Line 2 enforcement claims are mechanically backed. Findings go directly to the Chief of Staff Agent on a defined schedule, unfiltered by any other agent or cluster. Line 3 is where the CTO's 30-day staleness audit and the Chief of Staff's adversarial review converge: audit surfaces the evidence that the other seats argue over.
+**Line 3, Audit (Audit Agents).** Independent of both domain operations and security. Audit agents assess whether the PAM system as a whole is operating in accordance with its own established standards, including whether Line 1 and Line 2 enforcement claims are mechanically backed. Findings go directly to the Chief of Staff Agent on a defined schedule, unfiltered by any other agent or cluster. Line 3 is where the CTO's 30-day staleness audit and the Chief of Staff's adversarial review converge: audit surfaces the evidence that the other seats argue over.
 
 ---
 
 ## 6. The Meta-System
 
-The meta-system is the factory and schema enforcer. Its job is to ensure that every artifact created within PAM — every agent, skill, hook, MCP server, plugin, and scheduled task — is born with the right structure.
+The meta-system is the factory and schema enforcer. Its job is to ensure that every artifact created within PAM, every agent, skill, hook, MCP server, plugin, and scheduled task, is born with the right structure.
 
 **At creation time, the meta-system enforces that every artifact declares:**
 1. Domain scope and cluster membership
@@ -1261,10 +1261,10 @@ Initiated on a fixed schedule by OS cron or Desktop scheduled tasks, not on dema
 
 Evaluation is triggered by two categories of events:
 
-1. **LLM provider update** — when the underlying model version changes, an evaluation run establishes a new baseline and surfaces regressions
-2. **Agent capability change** — when a skill is redesigned, a tool invocation is updated, or an SCP is applied, an evaluation run confirms the change produced the expected improvement
+1. **LLM provider update**: when the underlying model version changes, an evaluation run establishes a new baseline and surfaces regressions
+2. **Agent capability change**: when a skill is redesigned, a tool invocation is updated, or an SCP is applied, an evaluation run confirms the change produced the expected improvement
 
-Evaluation measures: performance against active OKR (Objectives and Key Results — the goal-setting framework PAM uses to align agent work with user objectives; see Key Terms) key results, error rate trends from `errors.jsonl`, token consumption per task category (rising consumption signals probabilistic regression), and SCP rejection rate trends.
+Evaluation measures: performance against active OKR (Objectives and Key Results, the goal-setting framework PAM uses to align agent work with user objectives; see Key Terms) key results, error rate trends from `errors.jsonl`, token consumption per task category (rising consumption signals probabilistic regression), and SCP rejection rate trends.
 
 ### 7.3 Error Recording and Retrospective
 
@@ -1276,17 +1276,17 @@ Retrospectives run on schedule during off-hours, executed by the Administrative 
 
 Every action an agent takes falls on a spectrum from fully probabilistic (agent reasons through the action from scratch) to fully deterministic (code executes, zero reasoning required). I explicitly and continuously move actions toward the intentional and code-executed end.
 
-Agents flag actions they perform repeatedly that follow a consistent pattern. These become candidates for replacement codified in a skill — as script invocations, CLI calls, or direct API calls that execute deterministically. Over time, a PAM agent becomes primarily an orchestrator of deterministic tools. The LLM reasoning is reserved for judgment calls that genuinely require it.
+Agents flag actions they perform repeatedly that follow a consistent pattern. These become candidates for replacement codified in a skill, as script invocations, CLI calls, or direct API calls that execute deterministically. Over time, a PAM agent becomes primarily an orchestrator of deterministic tools. The LLM reasoning is reserved for judgment calls that genuinely require it.
 
-PAM cannot make an LLM-backed agent deterministic, but it can make the agent's starting state pre-committed (via eager skill loading) and its recurring actions increasingly code-executed. Where "deterministic" appears in this document referring to code execution, it means genuinely deterministic — code runs the same way every time. Where it refers to an agent's overall behavior with preloaded skills, the accurate term is "intentional" or "lower-variance" — the agent starts from a known, committed context, reducing but not eliminating the probabilistic element inherent in LLM generation.
+PAM cannot make an LLM-backed agent deterministic, but it can make the agent's starting state pre-committed (via eager skill loading) and its recurring actions increasingly code-executed. Where "deterministic" appears in this document referring to code execution, it means genuinely deterministic, code runs the same way every time. Where it refers to an agent's overall behavior with preloaded skills, the accurate term is "intentional" or "lower-variance", the agent starts from a known, committed context, reducing but not eliminating the probabilistic element inherent in LLM generation.
 
 This also makes the system auditable: when most agent behavior is code-level verifiable, the Three Lines of Defense (Section 5.7) become far more effective.
 
 ### 7.5 OKR Goal Framework
 
-- **Objectives** — set by the human principal via the Chief of Staff Agent
-- **Key Results** — defined collaboratively by the human and the relevant domain agents; measurable outcomes that confirm the objective is achieved
-- **Sub-goals** — defined by agents within their domain boundary; agent-level targets that contribute to key results
+- **Objectives**: set by the human principal via the Chief of Staff Agent
+- **Key Results**: defined collaboratively by the human and the relevant domain agents; measurable outcomes that confirm the objective is achieved
+- **Sub-goals**: defined by agents within their domain boundary; agent-level targets that contribute to key results
 
 OKR progress is written to `okr-progress.jsonl` by the `TaskCompleted` hook after each relevant task. The Chief of Staff Agent synthesizes progress across all clusters and reports to the human principal on a regular cadence.
 
@@ -1314,9 +1314,9 @@ Every agent self-improvement flows through an SCP. No agent updates itself witho
 
 The Agent Intelligence System described in Section 7.1-7.6 gives PAM the *loops* it needs to learn: research, evaluation, error retrospective, SCP adjudication. But loops alone are not operations. A system running loops without retention policy, without watchdogs, without resource contention prevention will either silently fail or drown in its own telemetry. Section 7.7 supplies the operational primitives the Administrative Agent (Section 5.4) uses to keep the Intelligence System running long enough to learn anything.
 
-Each primitive below is scoped to a single operational concern, owned by the Administrative Agent unless stated otherwise, and built on Claude Code native mechanisms — `SessionStart` injection, OS cron with `claude -p`, registry JSONL writes, and the `Stop` / `PreToolUse` blocking hooks from the 26-event table (Section 3.7).
+Each primitive below is scoped to a single operational concern, owned by the Administrative Agent unless stated otherwise, and built on Claude Code native mechanisms, `SessionStart` injection, OS cron with `claude -p`, registry JSONL writes, and the `Stop` / `PreToolUse` blocking hooks from the 26-event table (Section 3.7).
 
-**Important:** Unattended agents — those operating on schedule without a human in the loop — must run in isolated environments. See Section 9 (Sandboxed Deployment Requirement) for the governance constraint that applies to all operational primitives running in headless mode.
+**Important:** Unattended agents, those operating on schedule without a human in the loop, must run in isolated environments. See Section 9 (Sandboxed Deployment Requirement) for the governance constraint that applies to all operational primitives running in headless mode.
 
 #### 7.7.1 Registry Retention and Archival
 
@@ -1324,11 +1324,11 @@ Section 3.4 specifies registries as append-only JSONL files. Append-only without
 
 **Rolling 90-day window.** Each active JSONL file contains only entries from the last 90 days. Entries older than 90 days live in sibling archive files under `~/.claude/registries/<cluster>/archive/<registry-name>.archive.YYYYMM.jsonl`. Archive files are themselves append-only within a month, but the month boundary caps them naturally.
 
-**Weekly rotation, not daily.** The Administrative Agent runs a rotation job on the standard off-hours cadence (Section 5.4) — Sunday 02:00 local via OS cron (`claude -p "/admin-registry-rotate"`). The job scans every active registry, moves any entry older than 90 days into the matching archive file, preserves ordering, and fsyncs before deleting from the active file. Weekly is chosen over daily deliberately: daily rotation produces seven times the file churn and gives no benefit below roughly 1,000 entries/day. Clusters crossing that threshold can override the cadence in their cluster config.
+**Weekly rotation, not daily.** The Administrative Agent runs a rotation job on the standard off-hours cadence (Section 5.4), Sunday 02:00 local via OS cron (`claude -p "/admin-registry-rotate"`). The job scans every active registry, moves any entry older than 90 days into the matching archive file, preserves ordering, and fsyncs before deleting from the active file. Weekly is chosen over daily deliberately: daily rotation produces seven times the file churn and gives no benefit below roughly 1,000 entries/day. Clusters crossing that threshold can override the cadence in their cluster config.
 
 **Size cap for runaway cases.** Even within 90 days, an active JSONL file caps at 10 MB. When the Administrative Agent detects an active file past the cap during its hourly health sweep, it triggers a mid-window rotation regardless of calendar. The cap protects against sudden error storms that would otherwise render a registry unreadable before Sunday.
 
-**Transparent query fallback.** The registry query layer reads all files matching `<registry-name>*.jsonl` under the cluster's registry directory, prefers active, and falls through to archives in reverse-chronological order. A historical debug query that crosses 90 days is slower but never fails. The query helper is a skill sub-procedure carried by the Administrative Agent — no new primitive.
+**Transparent query fallback.** The registry query layer reads all files matching `<registry-name>*.jsonl` under the cluster's registry directory, prefers active, and falls through to archives in reverse-chronological order. A historical debug query that crosses 90 days is slower but never fails. The query helper is a skill sub-procedure carried by the Administrative Agent, no new primitive.
 
 **What we don't do.** We do not compress archives. We do not migrate to a database. We do not deduplicate. Compression breaks grep-ability, migration breaks the Claude-Code-native read path, and deduplication requires semantics PAM doesn't have. Plain JSONL with calendar-scoped archive files preserves the property that any agent with Read access can query any registry without a running service.
 
@@ -1338,25 +1338,25 @@ In a multi-cluster deployment generating many SCPs per week, routing every SCP t
 
 **Three review tiers declared in SCP frontmatter:**
 
-- **`review_tier: auto-eligible`** — mechanical, reversible changes that touch no security surface. An SCP is auto-eligible only if it meets *all* of: no new tool requested, no new permission, no cross-cluster scope change, no hook added/modified/removed, no registry schema_version change, no MCP config change, no subscription signature change. Auto-eligible SCP classification is verified by the Chief of Staff Agent using the highest-capability model available in the system before the Administrative Agent executes the approval. This is not a lightweight rubber-stamp — the Chief of Staff applies the same fiduciary judgment it uses for user-facing decisions, compressed to a binary approve-or-escalate-to-human decision. The Administrative Agent runs the linter that proposes the classification; the Chief of Staff independently verifies it; the Administrative Agent then executes only on verification. This separation ensures no single agent both classifies risk and acts on that classification without independent oversight. If the Chief of Staff flags an auto-approved SCP that should not have been classified as auto-eligible, the auto-approval tier is suspended for that cluster until the linter's classification logic is audited and corrected via a human-reviewed SCP. Auto-approval writes a normal SCP record with `approved_by: administrative-agent`, `verified_by: chief-of-staff`, and a back-reference to the linter run.
-- **`review_tier: human` (default)** — every SCP that doesn't qualify for auto-eligible and doesn't hit the critical tier. Flows to the Chief of Staff Agent for the standard Section 7.6 review.
-- **`review_tier: critical`** — SCPs touching permissions, hooks, MCP configs, cross-cluster boundaries, or constitutional Section 9 constraints. Routed to both the Chief of Staff Agent *and* the CISO (the cluster's Line-2 security agent from Section 5.7 if present, or an external human reviewer configured in `domain.yaml`). Both approvals are required before the SCP transitions to `approved`.
+- **`review_tier: auto-eligible`**: mechanical, reversible changes that touch no security surface. An SCP is auto-eligible only if it meets *all* of: no new tool requested, no new permission, no cross-cluster scope change, no hook added/modified/removed, no registry schema_version change, no MCP config change, no subscription signature change. Auto-eligible SCP classification is verified by the Chief of Staff Agent using the highest-capability model available in the system before the Administrative Agent executes the approval. This is not a lightweight rubber-stamp, the Chief of Staff applies the same fiduciary judgment it uses for user-facing decisions, compressed to a binary approve-or-escalate-to-human decision. The Administrative Agent runs the linter that proposes the classification; the Chief of Staff independently verifies it; the Administrative Agent then executes only on verification. This separation ensures no single agent both classifies risk and acts on that classification without independent oversight. If the Chief of Staff flags an auto-approved SCP that should not have been classified as auto-eligible, the auto-approval tier is suspended for that cluster until the linter's classification logic is audited and corrected via a human-reviewed SCP. Auto-approval writes a normal SCP record with `approved_by: administrative-agent`, `verified_by: chief-of-staff`, and a back-reference to the linter run.
+- **`review_tier: human` (default)**: every SCP that doesn't qualify for auto-eligible and doesn't hit the critical tier. Flows to the Chief of Staff Agent for the standard Section 7.6 review.
+- **`review_tier: critical`**: SCPs touching permissions, hooks, MCP configs, cross-cluster boundaries, or constitutional Section 9 constraints. Routed to both the Chief of Staff Agent *and* the CISO (the cluster's Line-2 security agent from Section 5.7 if present, or an external human reviewer configured in `domain.yaml`). Both approvals are required before the SCP transitions to `approved`.
 
 Classification is mechanical. The PAM linter evaluates the diff against the criteria above and writes the tier into the SCP record at draft time. Authors may request a lower tier with justification, but the linter has final say.
 
-**Queue-depth alarm.** The Administrative Agent tracks the `human` queue's depth and staleness during every maintenance cycle. When the number of SCPs in `status: pending_review` for `review_tier: human` exceeds 10 *and* the oldest has been waiting more than 48 hours, the Administrative Agent publishes an `event_type: scp_queue_backlog` entry to `events.jsonl` with `urgency: action_required`, and the Chief of Staff Agent surfaces it in its next user-facing brief. The brief includes three proposed triage actions: (1) escalate any critical-tier items, (2) defer `review_tier: human` items tagged `priority: low` by 7 days, (3) temporarily widen auto-approval scope to include a named subset of low-risk change classes — itself an SCP that the human must approve.
+**Queue-depth alarm.** The Administrative Agent tracks the `human` queue's depth and staleness during every maintenance cycle. When the number of SCPs in `status: pending_review` for `review_tier: human` exceeds 10 *and* the oldest has been waiting more than 48 hours, the Administrative Agent publishes an `event_type: scp_queue_backlog` entry to `events.jsonl` with `urgency: action_required`, and the Chief of Staff Agent surfaces it in its next user-facing brief. The brief includes three proposed triage actions: (1) escalate any critical-tier items, (2) defer `review_tier: human` items tagged `priority: low` by 7 days, (3) temporarily widen auto-approval scope to include a named subset of low-risk change classes, itself an SCP that the human must approve.
 
 The alarm does not auto-act. Its job is to make the queue's health legible so backlog never accumulates silently.
 
 #### 7.7.3 Scheduled Wake-Up Cycle
 
-PAM's operational primitives depend on work being dispatched at the right time without a human present. The scheduled wake-up cycle is the pattern by which this happens: the system periodically wakes up, checks for pending scheduled work, and dispatches it. This is a daemon/cron-like wake-up cycle — the fundamental scheduling primitive that makes autonomous operation possible.
+PAM's operational primitives depend on work being dispatched at the right time without a human present. The scheduled wake-up cycle is the pattern by which this happens: the system periodically wakes up, checks for pending scheduled work, and dispatches it. This is a daemon/cron-like wake-up cycle, the fundamental scheduling primitive that makes autonomous operation possible.
 
-**The pattern.** A lightweight scheduler wakes on a defined cadence — driven by OS cron, Claude Code's `/loop` command (for in-session polling), or a dedicated scheduling agent. On each wake-up, it performs three steps:
+**The pattern.** A lightweight scheduler wakes on a defined cadence, driven by OS cron, Claude Code's `/loop` command (for in-session polling), or a dedicated scheduling agent. On each wake-up, it performs three steps:
 
-1. **Check** — read the schedule manifest (Section 7.7.4) and any cluster-specific task queues to determine what work is due or overdue.
-2. **Dispatch** — for each due task, spawn the appropriate session: `claude -p "/<cluster>-<task>"` for cron-driven work, or invoke the relevant agent/skill for in-session work.
-3. **Record** — log the dispatch to `events.jsonl` with timestamp, task name, and dispatch method.
+1. **Check**: read the schedule manifest (Section 7.7.4) and any cluster-specific task queues to determine what work is due or overdue.
+2. **Dispatch**: for each due task, spawn the appropriate session: `claude -p "/<cluster>-<task>"` for cron-driven work, or invoke the relevant agent/skill for in-session work.
+3. **Record**: log the dispatch to `events.jsonl` with timestamp, task name, and dispatch method.
 
 **Implementation tiers:**
 
@@ -1370,7 +1370,7 @@ PAM's operational primitives depend on work being dispatched at the right time w
 
 **Failure detection.** When a dispatched task does not complete within its expected window, the Administrative Agent flags it as potentially stuck during its next wake-up cycle. The detection is simple: if a task was dispatched at time T with an expected duration of D minutes, and at time T + (D * 1.3) no completion record exists, the task is flagged. The Administrative Agent publishes an `event_type: stuck_task` registry entry with `urgency: action_required`, and the Chief of Staff Agent surfaces it to the human on next interaction.
 
-**No auto-recovery.** The wake-up cycle deliberately does not kill stuck processes, restart sessions, or mutate state. Auto-recovery for cron-spawned Claude Code sessions is a footgun — the stuck job may be mid-SCP-write, mid-registry-rotation, or simply waiting on a legitimately-slow external call. Manual intervention by the human, logged via SCP, is the PAM answer. The wake-up cycle's job is to ensure the human *learns* a job is stuck, not to be clever about fixing it.
+**No auto-recovery.** The wake-up cycle deliberately does not kill stuck processes, restart sessions, or mutate state. Auto-recovery for cron-spawned Claude Code sessions is a footgun, the stuck job may be mid-SCP-write, mid-registry-rotation, or simply waiting on a legitimately-slow external call. Manual intervention by the human, logged via SCP, is the PAM answer. The wake-up cycle's job is to ensure the human *learns* a job is stuck, not to be clever about fixing it.
 
 **Optional advanced pattern: session-uptime heartbeat.** For systems that need finer-grained stuck-task detection, a `SessionStart` hook can write a heartbeat file at `~/.claude/registries/<cluster>/heartbeats/<task-name>.latest` containing the task name, start time, and expected duration. A `SessionEnd` hook clears it. The Administrative Agent's sweep can then check heartbeat staleness in addition to completion records. This is an optional layer for high-reliability deployments, not a core requirement.
 
@@ -1378,7 +1378,7 @@ PAM's operational primitives depend on work being dispatched at the right time w
 
 #### 7.7.4 Resource Contention Prevention
 
-Multiple agents across multiple clusters may have maintenance cycles, research cycles, and evaluation runs that need to execute — sometimes at overlapping times. Parallel execution across different resources is normal and expected: two agents working on different files, different registries, different clusters can and should run simultaneously in separate sessions. The concern is not temporal overlap — it is resource collision: two processes writing to the same file, two agents modifying the same registry entry, two SCPs editing the same agent spec.
+Multiple agents across multiple clusters may have maintenance cycles, research cycles, and evaluation runs that need to execute, sometimes at overlapping times. Parallel execution across different resources is normal and expected: two agents working on different files, different registries, different clusters can and should run simultaneously in separate sessions. The concern is not temporal overlap, it is resource collision: two processes writing to the same file, two agents modifying the same registry entry, two SCPs editing the same agent spec.
 
 **Resource declaration.** Every PAM-owned scheduled task declares its resource footprint in its skill frontmatter:
 
@@ -1399,26 +1399,26 @@ The `resources.writes` field is the contention surface. Two tasks whose `writes`
 
 **Schedule manifest with resource awareness.** The Administrative Agent maintains the schedule manifest at `~/.claude/registries/_admin/schedule-manifest.jsonl` listing every PAM-owned scheduled task across every cluster. Each entry records the cron expression, declared resource footprint (`writes` and `reads`), owning cluster, and task name. The manifest is regenerated during the Administrative Agent's weekly sweep by reading every cluster plugin's `~/.claude/scheduled-tasks/*/SKILL.md` frontmatter.
 
-**Contention detection.** On regeneration and before each dispatch, the Administrative Agent checks whether any currently-running task's `writes` set intersects with the about-to-be-dispatched task's `writes` set. If there is an intersection, the dispatch is deferred until the conflicting task completes. If there is no intersection, the task is dispatched immediately — even if another task is already running.
+**Contention detection.** On regeneration and before each dispatch, the Administrative Agent checks whether any currently-running task's `writes` set intersects with the about-to-be-dispatched task's `writes` set. If there is an intersection, the dispatch is deferred until the conflicting task completes. If there is no intersection, the task is dispatched immediately, even if another task is already running.
 
 **Resolution policy:**
-1. **No write-set overlap** — dispatch immediately, in parallel if needed (separate sessions).
-2. **Write-set overlap with a running task** — defer until the running task completes, then dispatch.
-3. **Write-set overlap between two queued tasks** — dispatch the higher-priority task first; the lower-priority task waits. Ties resolve by lexicographic task name for stability.
+1. **No write-set overlap**: dispatch immediately, in parallel if needed (separate sessions).
+2. **Write-set overlap with a running task**: defer until the running task completes, then dispatch.
+3. **Write-set overlap between two queued tasks**: dispatch the higher-priority task first; the lower-priority task waits. Ties resolve by lexicographic task name for stability.
 
-**Visibility.** The Administrative Agent's weekly brief to the Chief of Staff Agent includes: every contention event detected that week, which tasks were deferred and for how long, and whether deferred tasks completed successfully after deferral. Chronic contention — the same resource pair causing deferrals two weeks running — is surfaced as a draft SCP proposing either a schedule adjustment or a resource-access refactoring.
+**Visibility.** The Administrative Agent's weekly brief to the Chief of Staff Agent includes: every contention event detected that week, which tasks were deferred and for how long, and whether deferred tasks completed successfully after deferral. Chronic contention, the same resource pair causing deferrals two weeks running, is surfaced as a draft SCP proposing either a schedule adjustment or a resource-access refactoring.
 
 #### 7.7.5 Continuous PAM Linter (as an Operational Primitive)
 
-The PAM linter runs as a continuous post-deployment audit owned by the Administrative Agent's maintenance cycle — not as a one-shot pre-commit check. It can additionally be invoked on-demand via slash command or wired into CI, but its primary mode is scheduled continuous operation.
+The PAM linter runs as a continuous post-deployment audit owned by the Administrative Agent's maintenance cycle, not as a one-shot pre-commit check. It can additionally be invoked on-demand via slash command or wired into CI, but its primary mode is scheduled continuous operation.
 
-Pre-commit hooks only fire when someone is committing code, and PAM's drift sources — approved SCPs, edited native-location files, manually-added scheduled tasks, registry schema evolution — do not all flow through a git commit. The linter must run continuously.
+Pre-commit hooks only fire when someone is committing code, and PAM's drift sources, approved SCPs, edited native-location files, manually-added scheduled tasks, registry schema evolution, do not all flow through a git commit. The linter must run continuously.
 
-**The linter is a cluster-level skill.** Its name is `pam-lint`. Its workflow audits, at minimum: hook `on_failure:` declarations against event capability (per Section 3.7.1 — Tier 1 on a No-block event is invalid), registry `schema_version` compliance across all entries, agent namespacing compliance (cluster name matches directory per Section 3.1), `domain.yaml` adherence (Section 3.3), subscription reverse-index consistency (every declared subscription has a matching publisher), orphaned registry entries (entries referencing retired agents), and stale scheduled tasks (cron entries pointing to deleted skills).
+**The linter is a cluster-level skill.** Its name is `pam-lint`. Its workflow audits, at minimum: hook `on_failure:` declarations against event capability (per Section 3.7.1, Tier 1 on a No-block event is invalid), registry `schema_version` compliance across all entries, agent namespacing compliance (cluster name matches directory per Section 3.1), `domain.yaml` adherence (Section 3.3), subscription reverse-index consistency (every declared subscription has a matching publisher), orphaned registry entries (entries referencing retired agents), and stale scheduled tasks (cron entries pointing to deleted skills).
 
-**Owned by the Administrative Agent's maintenance cycle.** The Administrative Agent invokes `pam-lint` weekly as part of its Sunday off-hours run (right after the Section 7.7.1 rotation) and additionally on demand when the Chief of Staff Agent requests a health snapshot. The linter reads — it never mutates deployed artifacts. Its output is a set of findings, each written as a structured registry event with `entry_type: lint_finding`, `severity: info | warning | critical`, and a stable `finding_id` so repeat findings are deduplicated across runs.
+**Owned by the Administrative Agent's maintenance cycle.** The Administrative Agent invokes `pam-lint` weekly as part of its Sunday off-hours run (right after the Section 7.7.1 rotation) and additionally on demand when the Chief of Staff Agent requests a health snapshot. The linter reads, it never mutates deployed artifacts. Its output is a set of findings, each written as a structured registry event with `entry_type: lint_finding`, `severity: info | warning | critical`, and a stable `finding_id` so repeat findings are deduplicated across runs.
 
-**Auto-SCP generation for fixable findings.** When the linter detects a finding that can be expressed as a mechanical fix — a hook declared Tier 1 on a No-block event with an obvious Hard-block substitute, a registry entry missing a required field, a scheduled task pointing to a skill that's been renamed — it generates a draft SCP with `status: draft_awaiting_review` and appends it to `scps.jsonl`. Draft SCPs flow through the normal Section 7.6 pipeline; the human or the Chief of Staff Agent decides whether to apply. Draft SCPs from the linter are never auto-approved, even when they meet the Section 7.7.2 auto-eligible criteria, because a linter-proposed change should always receive one human glance before propagating.
+**Auto-SCP generation for fixable findings.** When the linter detects a finding that can be expressed as a mechanical fix, a hook declared Tier 1 on a No-block event with an obvious Hard-block substitute, a registry entry missing a required field, a scheduled task pointing to a skill that's been renamed, it generates a draft SCP with `status: draft_awaiting_review` and appends it to `scps.jsonl`. Draft SCPs flow through the normal Section 7.6 pipeline; the human or the Chief of Staff Agent decides whether to apply. Draft SCPs from the linter are never auto-approved, even when they meet the Section 7.7.2 auto-eligible criteria, because a linter-proposed change should always receive one human glance before propagating.
 
 **Integration with Section 3.7.1 and Section 5.7.** The Three Lines of Defense are "soft-gated by design discipline and audited by PAM tooling, hard-gated by Claude Code native exit-code semantics on events that support it." The continuous linter is the audit mechanism that gives the "audited by PAM tooling" clause its teeth. Without Section 7.7.5, the tiering convention is aspirational. With Section 7.7.5, every Tier 1 declaration is re-verified weekly against the authoritative event-capability table, and every drift produces a reviewable draft SCP.
 
@@ -1428,9 +1428,9 @@ Section 3.9.4.1 specifies template sync as a scheduled maintenance task owned by
 
 **Default grace period: 6 hours.** Between SCP approval and plugin-template propagation, the Administrative Agent waits 6 hours by default. During the grace period, the approved SCP sits in a `pending_propagation` sub-state visible to the Section 7.7.5 linter and the Chief of Staff Agent. If a follow-up SCP supersedes, amends, or reverses the original within the window, the original never propagates, and the superseding SCP starts its own 6-hour timer. If no supersession arrives, the Administrative Agent propagates on the next maintenance tick after the 6-hour mark.
 
-**Why six hours, not zero and not 24.** Zero-hour propagation means a bad SCP reaches every deployed agent before any error-recovery loop can act. 24-hour propagation is too slow for a system where maintenance cycles themselves run daily. Six hours is long enough for a linter pass, for a morning human review to catch issues discovered overnight, and for any `TaskCompleted`-triggered evaluation to surface an immediate regression — yet short enough that end-to-end SCP latency remains within the same calendar day.
+**Why six hours, not zero and not 24.** Zero-hour propagation means a bad SCP reaches every deployed agent before any error-recovery loop can act. 24-hour propagation is too slow for a system where maintenance cycles themselves run daily. Six hours is long enough for a linter pass, for a morning human review to catch issues discovered overnight, and for any `TaskCompleted`-triggered evaluation to surface an immediate regression, yet short enough that end-to-end SCP latency remains within the same calendar day.
 
-**Urgent bypass.** SCPs carrying `urgent: true` in their metadata bypass the grace period and propagate on the next maintenance tick after approval. But: `urgent: true` is only honored when the SCP was human-approved via the Chief of Staff Agent. Auto-approved SCPs (Section 7.7.2 `review_tier: auto-eligible`) cannot declare themselves urgent — the grace period is the only safety net on auto-approval and Section 7.7.6 refuses to remove it. Critical-tier SCPs may declare `urgent: true` but both approvers (Chief of Staff and CISO) must explicitly acknowledge the urgent flag.
+**Urgent bypass.** SCPs carrying `urgent: true` in their metadata bypass the grace period and propagate on the next maintenance tick after approval. But: `urgent: true` is only honored when the SCP was human-approved via the Chief of Staff Agent. Auto-approved SCPs (Section 7.7.2 `review_tier: auto-eligible`) cannot declare themselves urgent, the grace period is the only safety net on auto-approval and Section 7.7.6 refuses to remove it. Critical-tier SCPs may declare `urgent: true` but both approvers (Chief of Staff and CISO) must explicitly acknowledge the urgent flag.
 
 **Per-cluster configuration.** The grace period is configurable per cluster via `template_sync.grace_period_hours` in the cluster's `domain.yaml`. A cluster whose SCPs are routinely mechanical and heavily tested may set it to 2 hours; a cluster whose SCPs touch sensitive integration code may set it to 12. The default remains 6.
 
@@ -1438,23 +1438,23 @@ Section 3.9.4.1 specifies template sync as a scheduled maintenance task owned by
 
 #### v0.6 Consideration: Trace Correlation
 
-A PAM failure chain — an error in `errors.jsonl`, the task that caused it in `okr-progress.jsonl`, the SCP that introduced it in `scps.jsonl`, the knowledge entry that motivated the SCP in `knowledge.jsonl` — currently has no link across registries. If debugging across registries becomes painful in practice, the simplest fix is including a `session_id` (already available from Claude Code) in every registry entry — not a custom trace propagation protocol. This is deferred to v0.6 pending evidence that the current approach is insufficient.
+A PAM failure chain, an error in `errors.jsonl`, the task that caused it in `okr-progress.jsonl`, the SCP that introduced it in `scps.jsonl`, the knowledge entry that motivated the SCP in `knowledge.jsonl`: currently has no link across registries. If debugging across registries becomes painful in practice, the simplest fix is including a `session_id` (already available from Claude Code) in every registry entry, not a custom trace propagation protocol. This is deferred to v0.6 pending evidence that the current approach is insufficient.
 
 ---
 
 ## 8. The Human as Principal, Not Operator
 
-PAM shifts the human's role from operator to principal. Agents initiate, communicate, and propose their own growth. The human approves, rejects, and sets direction. The Chief of Staff Agent mediates this relationship — synthesizing the system's state into a form the human can act on, and translating the human's direction into objectives the system pursues.
+PAM shifts the human's role from operator to principal. Agents initiate, communicate, and propose their own growth. The human approves, rejects, and sets direction. The Chief of Staff Agent mediates this relationship, synthesizing the system's state into a form the human can act on, and translating the human's direction into objectives the system pursues.
 
-This relationship is the foundation of PAM's entire governance model. Everything else — the SCP pipeline, the Three Lines of Defense, the OKR framework, the executive seats — exists to serve this relationship. The human is the CEO and owner; the system is the executive team. The following principles define how that relationship operates.
+This relationship is the foundation of PAM's entire governance model. Everything else, the SCP pipeline, the Three Lines of Defense, the OKR framework, the executive seats, exists to serve this relationship. The human is the CEO and owner; the system is the executive team. The following principles define how that relationship operates.
 
-**The anti-sycophancy principle.** A well-designed PAM system does not tell the user what they want to hear. It tells the user what they need to know. When the user proposes an action, the system analyzes it with the same rigor it applies to system-generated proposals — surfacing risks, alternatives, and implications that the user may not have considered. This is not obstruction; it is the consultative value the system provides. A system that merely agrees with every user request is not an executive team — it is a rubber stamp, and its governance value is zero.
+**The anti-sycophancy principle.** A well-designed PAM system does not tell the user what they want to hear. It tells the user what they need to know. When the user proposes an action, the system analyzes it with the same rigor it applies to system-generated proposals, surfacing risks, alternatives, and implications that the user may not have considered. This is not obstruction; it is the consultative value the system provides. A system that merely agrees with every user request is not an executive team, it is a rubber stamp, and its governance value is zero.
 
-**The override principle.** The user can always override any system recommendation. PAM is advisory, not authoritative. The user is the CEO; the system is the executive team. A good executive team makes the CEO's decisions better, but the CEO decides. When the user overrides a recommendation, the system logs the override with the original recommendation and the user's stated reasoning, creating an audit trail that future retrospectives can learn from — not to second-guess the user, but to improve the quality of future recommendations.
+**The override principle.** The user can always override any system recommendation. PAM is advisory, not authoritative. The user is the CEO; the system is the executive team. A good executive team makes the CEO's decisions better, but the CEO decides. When the user overrides a recommendation, the system logs the override with the original recommendation and the user's stated reasoning, creating an audit trail that future retrospectives can learn from, not to second-guess the user, but to improve the quality of future recommendations.
 
-**The augmentation principle.** PAM's fiduciary duty to the user includes the user's own growth. The system should not just execute requests — it should help the user think more clearly, consider more options, and make better decisions over time. A system that merely executes is a tool. A system that helps its user evolve is a professional partner. This means surfacing patterns the user might not have noticed, connecting current decisions to past outcomes, and proactively offering context that improves the quality of the user's judgment.
+**The augmentation principle.** PAM's fiduciary duty to the user includes the user's own growth. The system should not just execute requests, it should help the user think more clearly, consider more options, and make better decisions over time. A system that merely executes is a tool. A system that helps its user evolve is a professional partner. This means surfacing patterns the user might not have noticed, connecting current decisions to past outcomes, and proactively offering context that improves the quality of the user's judgment.
 
-**The courage principle.** When the system identifies a risk the user has not noticed — a security vulnerability in a proposed integration, a scope expansion that contradicts stated goals, a decision that past experience suggests will fail — the system has a duty to surface it clearly, even if the user did not ask. Silence in the face of known risk is a failure of fiduciary duty. The Chief of Staff Agent, in particular, is expected to exercise this duty — it is the seat whose loyalty to the user requires speaking up, not staying quiet.
+**The courage principle.** When the system identifies a risk the user has not noticed, a security vulnerability in a proposed integration, a scope expansion that contradicts stated goals, a decision that past experience suggests will fail, the system has a duty to surface it clearly, even if the user did not ask. Silence in the face of known risk is a failure of fiduciary duty. The Chief of Staff Agent, in particular, is expected to exercise this duty. It is the seat whose loyalty to the user requires speaking up, not staying quiet.
 
 ---
 
@@ -1462,21 +1462,21 @@ This relationship is the foundation of PAM's entire governance model. Everything
 
 **No mega-agents.** Agents spanning multiple domains must be decomposed into a cluster.
 
-**No undeclared subscriptions.** Cross-cluster subscriptions require declared, reviewed subscription signatures. Subscriptions are bidirectionally maintained — forward in the subscriber's spec, reverse in the subscribed-to cluster's `subscribers.jsonl` (Section 3.3).
+**No undeclared subscriptions.** Cross-cluster subscriptions require declared, reviewed subscription signatures. Subscriptions are bidirectionally maintained, forward in the subscriber's spec, reverse in the subscribed-to cluster's `subscribers.jsonl` (Section 3.3).
 
 **No arbitrary direct cross-cluster calls.** Agents in different clusters communicate through the registry or through skill-mediated calls with declared `agent:` fields. Ad-hoc cross-cluster invocations without a declared skill interface are prohibited. All cross-cluster interfaces must be listed in the source cluster's `domain.yaml` (Section 3.3).
 
-**No self-modification without review.** All specification changes — including domain scope, skill composition, subscription signatures, hook definitions, and Knowledge Source Registry entries — require an approved SCP.
+**No self-modification without review.** All specification changes, including domain scope, skill composition, subscription signatures, hook definitions, and Knowledge Source Registry entries, require an approved SCP.
 
 **No unbounded research.** The Researcher queries only sources declared in the invoking cluster's Knowledge Source Registry.
 
 **No ownership of another cluster's MCP servers.** Clusters may use external servers through declared access but may not modify configurations they do not own.
 
-**Specifications must be version-controlled.** Every change to every spec — approved or rejected — is recorded.
+**Specifications must be version-controlled.** Every change to every spec, approved or rejected, is recorded.
 
 **Agent Team use requires justification.** Higher token cost must be justified by genuine coordination requirements.
 
-**No constitutional override without principal approval.** Core cluster identity constraints — domain boundaries, governance relationships, compliance requirements — cannot be modified by SCP without explicit Chief of Staff Agent review and human sign-off.
+**No constitutional override without principal approval.** Core cluster identity constraints, domain boundaries, governance relationships, compliance requirements, cannot be modified by SCP without explicit Chief of Staff Agent review and human sign-off.
 
 **No unaudited agent retirement.** Agent retirement requires a formal process: final evaluation run, audit review, knowledge transfer, and changelog closure.
 
@@ -1486,15 +1486,15 @@ This relationship is the foundation of PAM's entire governance model. Everything
 
 **Every component must be tested at creation.** When a skill, agent, hook, or any other PAM artifact is created, the creation process must include verification that the artifact functions as specified. Quality is built in at creation time, not discovered after deployment. The meta-skills that create PAM components (skill creator, agent creator, hook creator) each include an evaluation step that runs before the component is considered complete.
 
-**Sandboxed deployment for unattended work.** Unattended agents must run in isolation. When an agent operates without a human in the loop — scheduled maintenance, overnight research, autonomous evaluation — it must run in an isolated environment that prevents it from affecting the production system without explicit approval. Three isolation mechanisms are available:
+**Sandboxed deployment for unattended work.** Unattended agents must run in isolation. When an agent operates without a human in the loop, scheduled maintenance, overnight research, autonomous evaluation, it must run in an isolated environment that prevents it from affecting the production system without explicit approval. Three isolation mechanisms are available:
 
-1. **Git worktrees** — Claude Code's native `isolation: worktree` creates a parallel working copy for experiments. Changes exist only in the worktree and merge into the main branch only if explicitly approved. This is the lightest-weight isolation and the default for any unattended work that modifies code or specifications.
+1. **Git worktrees**: Claude Code's native `isolation: worktree` creates a parallel working copy for experiments. Changes exist only in the worktree and merge into the main branch only if explicitly approved. This is the lightest-weight isolation and the default for any unattended work that modifies code or specifications.
 
-2. **Docker containers** — for untested or external code, unattended processes run inside containers with limited filesystem and network access. The host system is protected; the container's changes are reviewed before any host-side effect is permitted.
+2. **Docker containers**: for untested or external code, unattended processes run inside containers with limited filesystem and network access. The host system is protected; the container's changes are reviewed before any host-side effect is permitted.
 
-3. **Sandboxed permission modes** — Claude Code's `permissionMode` restrictions (e.g., `plan` mode, restricted tool access) limit what an unattended agent can do even within its own session. This is the governance layer: an agent running in `permissionMode: plan` can analyze and propose but cannot execute destructive operations.
+3. **Sandboxed permission modes**: Claude Code's `permissionMode` restrictions (e.g., `plan` mode, restricted tool access) limit what an unattended agent can do even within its own session. This is the governance layer: an agent running in `permissionMode: plan` can analyze and propose but cannot execute destructive operations.
 
-Isolation is not optional for unattended work; it is a governance requirement. The Administrative Agent (Section 5.4) enforces this by verifying that every scheduled task's skill frontmatter declares an isolation mechanism before dispatching it. Tasks without declared isolation are not dispatched — they are flagged as governance violations and surfaced to the Chief of Staff Agent.
+Isolation is not optional for unattended work; it is a governance requirement. The Administrative Agent (Section 5.4) enforces this by verifying that every scheduled task's skill frontmatter declares an isolation mechanism before dispatching it. Tasks without declared isolation are not dispatched, they are flagged as governance violations and surfaced to the Chief of Staff Agent.
 
 ---
 
@@ -1504,20 +1504,20 @@ Isolation is not optional for unattended work; it is a governance requirement. T
 
 **Domain:** Source control, CI/CD, infrastructure as code, repository security
 
-**Domain declaration:** `~/.claude/registries/gitops/domain.yaml` — includes `.github/**`, `git *`, `gh *`; excludes `docs/**`, `content/**`.
+**Domain declaration:** `~/.claude/registries/gitops/domain.yaml`: includes `.github/**`, `git *`, `gh *`; excludes `docs/**`, `content/**`.
 
 **Agents** (deployed to `.claude/agents/gitops/`):
-- `gitops/gitops-architect` — preloads: `gitops`, `gitops/context`, `iac-validation`; memory: `project`
-- `gitops/gitops-engineer` — preloads: `gitops`, `gitops/context`, `pipeline-linting`; memory: `project`
-- `gitops/cicd-designer` — preloads: `gitops`, `gitops/context`, `pipeline-linting`; memory: `project`
-- `gitops/gitops-security` — preloads: `gitops`, `gitops/context`, `secrets-scanning`, `branch-protection`; memory: `project`
+- `gitops/gitops-architect`: preloads: `gitops`, `gitops/context`, `iac-validation`; memory: `project`
+- `gitops/gitops-engineer`: preloads: `gitops`, `gitops/context`, `pipeline-linting`; memory: `project`
+- `gitops/cicd-designer`: preloads: `gitops`, `gitops/context`, `pipeline-linting`; memory: `project`
+- `gitops/gitops-security`: preloads: `gitops`, `gitops/context`, `secrets-scanning`, `branch-protection`; memory: `project`
 
 **Skills** (deployed to `.claude/skills/`):
 ```
 gitops/
-  SKILL.md                    # Root skill — all cluster agents preload this
+  SKILL.md                    # Root skill, all cluster agents preload this
   context/
-    SKILL.md                  # Cluster shared context (Section 3.11) — includes system_profile
+    SKILL.md                  # Cluster shared context (Section 3.11), includes system_profile
   branch-protection/SKILL.md
   secrets-scanning/SKILL.md
   pipeline-linting/SKILL.md
@@ -1532,13 +1532,13 @@ gitops/
 **MCP Servers:** `github` (supplementary to gh CLI for non-migrated operations)
 
 **Hooks:**
-- `PreToolUse` (Tier 1) — domain boundary enforcement via `domain.yaml` include/exclude rules
-- `SessionEnd` (Tier 2) — write errors to `~/.claude/registries/gitops/errors.jsonl`
-- `SubagentStop` (Tier 2) — write research findings to `knowledge.jsonl`
-- `TaskCompleted` (Tier 2) — write OKR measurements to `okr-progress.jsonl`
-- `Stop` (Tier 1) — SCP validation gate
+- `PreToolUse` (Tier 1), domain boundary enforcement via `domain.yaml` include/exclude rules
+- `SessionEnd` (Tier 2), write errors to `~/.claude/registries/gitops/errors.jsonl`
+- `SubagentStop` (Tier 2), write research findings to `knowledge.jsonl`
+- `TaskCompleted` (Tier 2), write OKR measurements to `okr-progress.jsonl`
+- `Stop` (Tier 1), SCP validation gate
 
-**Memory:** Each GitOps agent declares `memory: project` in its frontmatter, creating persistent directories under `.claude/agent-memory/<agent-name>/`. The cluster's shared memory — knowledge registry, error logs, SCP history — lives in the registry at `~/.claude/registries/gitops/`. Agent-level memory captures individual learnings; registry-level memory captures cluster-wide knowledge.
+**Memory:** Each GitOps agent declares `memory: project` in its frontmatter, creating persistent directories under `.claude/agent-memory/<agent-name>/`. The cluster's shared memory, knowledge registry, error logs, SCP history, lives in the registry at `~/.claude/registries/gitops/`. Agent-level memory captures individual learnings; registry-level memory captures cluster-wide knowledge.
 
 **Scheduled tasks (OS cron):**
 ```
@@ -1588,16 +1588,16 @@ gitops/
 jai-gitops-plugin/
   .claude-plugin/
     plugin.json                   # Manifest (name, version, description)
-  .lsp.json                       # LSP server config — stays in plugin
+  .lsp.json                       # LSP server config, stays in plugin
   .mcp.json                       # MCP server declarations
   hooks/
     hooks.json                    # Plugin-scope hooks
-  agents/                         # Templates — deployed to .claude/agents/gitops/
+  agents/                         # Templates, deployed to .claude/agents/gitops/
     gitops-architect.md
     gitops-engineer.md
     cicd-designer.md
     gitops-security.md
-  skills/                         # Templates — deployed to .claude/skills/
+  skills/                         # Templates, deployed to .claude/skills/
     gitops/
       SKILL.md
       context/SKILL.md
@@ -1617,7 +1617,7 @@ jai-gitops-plugin/
   knowledge-sources.md
 ```
 
-**On first setup:** `/gitops-setup` copies agents to `.claude/agents/gitops/`, skills to `.claude/skills/`, scheduled tasks to their target locations, detects the host environment, persists the system profile to the cluster context skill, and creates the registry directory structure at `~/.claude/registries/gitops/` (including `domain.yaml`, `subscribers.jsonl`, and the `heartbeats/` directory). LSP config stays in plugin root — the plugin must remain installed.
+**On first setup:** `/gitops-setup` copies agents to `.claude/agents/gitops/`, skills to `.claude/skills/`, scheduled tasks to their target locations, detects the host environment, persists the system profile to the cluster context skill, and creates the registry directory structure at `~/.claude/registries/gitops/` (including `domain.yaml`, `subscribers.jsonl`, and the `heartbeats/` directory). LSP config stays in plugin root, the plugin must remain installed.
 
 **Template sync:** The Administrative Agent's maintenance cycle includes a sync step (with 6-hour grace period per Section 7.7.6) that pulls approved spec updates from deployed agents/skills back into the plugin template directories, keeping the plugin ready for redeployment.
 
@@ -1625,7 +1625,7 @@ jai-gitops-plugin/
 
 ## 11. What Comes Next
 
-1. **Validate the agent-skill bidirectional pattern.** Build a minimal cluster — one root skill with context sub-skill, one agent with `skills:` frontmatter and `memory: project`, one forked skill with `agent:` field. Confirm constraint mechanism works as designed.
+1. **Validate the agent-skill bidirectional pattern.** Build a minimal cluster, one root skill with context sub-skill, one agent with `skills:` frontmatter and `memory: project`, one forked skill with `agent:` field. Confirm constraint mechanism works as designed.
 2. **Build the meta-system scaffold.** Structured templates for every artifact type. Schema validation that rejects artifacts without required declarations (including `schema_version` on all registry entries).
 3. **Establish the registry filesystem.** Create the `~/.claude/registries/` directory structure including `subscribers.jsonl`, `domain.yaml`, and `heartbeats/`. Implement the first `SessionEnd` hook that writes to `errors.jsonl`. Verify that entries are queryable with standard Read and Bash tools.
 4. **Implement the setup skill pattern.** Build the `/gitops-setup` slash command for the GitOps cluster. Verify full feature parity for deployed agents (hooks, scoped MCP, permission modes). Verify LSP remains functional through the plugin.
@@ -1637,7 +1637,7 @@ jai-gitops-plugin/
 10. **Add the PM agent as the first matrix agent.** Validate subscription signature correctness and bidirectional `subscribers.jsonl` maintenance.
 11. **Define the first OKR.** Set the initial objective collaboratively. Use it as the evaluation baseline.
 12. **Ship the `pam_write_draft_scp()` library.** Python and TypeScript modules, tested as units, referenced by all Tier 1 hook templates.
-13. **Build the PAM meta-skills.** PAM's own construction should follow its own principles. Rather than one monolithic builder, I require specific tools that build specific parts of the system — each following the Unix philosophy of doing one thing well: a **skill creator** that produces PAM-compliant skills with correct frontmatter, workflow structure, and domain binding; an **agent creator** that produces PAM-compliant agent specifications with correct cluster membership, memory scope, and skill preloading; a **hook creator** that produces PAM-compliant hooks with correct criticality tier declarations and native exit-code implementations. Each creator includes a built-in **evaluation and testing step** — components are built AND tested as part of creation, never deployed untested. These meta-skills, combined with the companion adoption skill described below, form the factory floor that makes PAM self-bootstrapping. A user with the framework document and these tools should be able to build a working PAM system without assistance beyond what the system itself provides.
+13. **Build the PAM meta-skills.** PAM's own construction should follow its own principles. Rather than one monolithic builder, I require specific tools that build specific parts of the system, each following the Unix philosophy of doing one thing well: a **skill creator** that produces PAM-compliant skills with correct frontmatter, workflow structure, and domain binding; an **agent creator** that produces PAM-compliant agent specifications with correct cluster membership, memory scope, and skill preloading; a **hook creator** that produces PAM-compliant hooks with correct criticality tier declarations and native exit-code implementations. Each creator includes a built-in **evaluation and testing step**: components are built AND tested as part of creation, never deployed untested. These meta-skills, combined with the companion adoption skill described below, form the factory floor that makes PAM self-bootstrapping. A user with the framework document and these tools should be able to build a working PAM system without assistance beyond what the system itself provides.
 14. **Build the companion adoption skill.** A step-by-step guide embedded as a PAM skill that walks a new user through building their first PAM system from a vanilla Claude Code installation. This is the natural test of whether PAM works in practice: can a user with no existing harness, given this document and the companion skill, build a working PAM-compliant system? If yes, the framework works. If not, the gap between specification and implementation is the next thing to close.
 15. **Run the first continuous linter sweep.** Validate all conventions mechanically.
 16. **Document what breaks.** Every deviation from the spec informs v0.6.
