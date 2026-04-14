@@ -13,7 +13,7 @@ There are many excellent agentic systems being published right now, and people a
 
 I'm not prescribing how you must organize your agents. I'm describing how you CAN organize them, based on principles drawn from how effective human organizations work: clear roles, bounded responsibilities, shared context within teams, and structured processes for self-improvement. Whether you adopt PAM wholesale, borrow specific ideas, or simply use it to understand how agent systems are structured, the goal is the same: give you the knowledge to make informed decisions about the AI systems that will increasingly be part of daily life.
 
-This document is detailed and technical in places. That is intentional, it is a working blueprint, not a brochure. But you do not need to be a software engineer to follow the ideas. The introduction and first few sections are written for anyone. The later sections go deeper for people who want to build. A glossary of key terms follows the opening sections so you always have a quick reference when the vocabulary gets specific.
+This document is detailed and technical in places. That is intentional: it is a working blueprint, not a brochure. But you do not need to be a software engineer to follow the ideas. The introduction and first few sections are written for anyone. The later sections go deeper for people who want to build. A glossary of key terms follows the opening sections so you always have a quick reference when the vocabulary gets specific.
 
 An important clarification before you read further: PAM is not about building an AI model. The model already exists. Whether you use Claude, ChatGPT, Gemini, Mistral, Llama, or any other large language model, commercial or open-source, PAM assumes you have a brain. What PAM provides is everything else: the harness you build around that brain to make it useful, reliable, and yours.
 
@@ -48,7 +48,7 @@ I built PAM entirely on Claude Code's native primitives. This is a deliberate co
 
 While I built PAM on Claude Code because it currently provides the broadest native support for the primitives this framework requires, the principles and organizational model are not exclusive to any one platform. The design philosophy applies to any system that supports agent definitions, lifecycle hooks, skill-based capabilities, and persistent memory, whether that is Claude, OpenAI, Gemini, Mistral, or an open-source alternative. The specific implementation details reference Claude Code; the framework itself is model-agnostic.
 
-I designed PAM for incremental adoption. A solo practitioner with three agents does not need, and should not build, the full governance stack described in this document. Start with the primitives that match your current needs: agents, skills, and a cluster root context. Add governance primitives as your system tells you it needs them, not before. Over-building is as much a failure mode as under-building; the framework's job is to give you a map of what exists so you can choose what to build, not to mandate everything at once.
+I designed PAM for incremental adoption. A solo practitioner with three agents does not need (and should not build) the full governance stack described in this document. Start with the primitives that match your current needs: agents, skills, and a cluster root context. Add governance primitives as your system tells you it needs them, not before. Over-building is as much a failure mode as under-building; the framework's job is to give you a map of what exists so you can choose what to build, not to mandate everything at once.
 
 ---
 
@@ -398,7 +398,7 @@ cross_cluster_interfaces:
 
 ### 3.4 Capability Registry
 
-The shared knowledge index within a cluster, and the standard communication substrate between all PAM components. The registry is not an abstract message bus, it is a set of queryable filesystem files maintained at a well-known path structure.
+The shared knowledge index within a cluster, and the standard communication substrate between all PAM components. The registry is not an abstract message bus. It is a set of queryable filesystem files maintained at a well-known path structure.
 
 **Implementation:**
 
@@ -511,7 +511,7 @@ Progressive disclosure is the default Claude Code behavior for skills **not** re
 
 #### 3.6.2 Mode 2, Eager Injection (Preload)
 
-When a skill is listed in an agent's frontmatter `skills:` field, Claude Code **injects the full skill content into the agent's context at session start**. The skill is not discovered, it is present from the first token. This is confirmed by Anthropic's own documentation at `code.claude.com/docs/en/sub-agents`: *"Use the `skills` field to inject skill content into a subagent's context at startup. This gives the subagent domain knowledge without requiring it to discover and load skills during execution. The full content of each skill is injected into the subagent's context, not just made available for invocation. Subagents don't inherit skills from the parent conversation; you must list them explicitly."* This is an authoritative guarantee, not a community inference.
+When a skill is listed in an agent's frontmatter `skills:` field, Claude Code **injects the full skill content into the agent's context at session start**. The skill is not discovered. It is present from the first token. This is confirmed by Anthropic's own documentation at `code.claude.com/docs/en/sub-agents`: *"Use the `skills` field to inject skill content into a subagent's context at startup. This gives the subagent domain knowledge without requiring it to discover and load skills during execution. The full content of each skill is injected into the subagent's context, not just made available for invocation. Subagents don't inherit skills from the parent conversation; you must list them explicitly."* This is an authoritative guarantee, not a community inference.
 
 **Use when:**
 - The skill defines the agent's core behavior or persona
@@ -1169,9 +1169,9 @@ Pick whichever framing fits your mental model. The function below is what PAM ac
 
 **Function.** The CTO, or Technology Direction Agent (the system's innovation leader, responsible for evaluating and recommending new capabilities; see Key Terms), is the agent whose entire accountability is to preventing the system from stagnating. Where the Chief of Staff is fiduciary to the user and the Administrative Agent is fiduciary to operational stability, the CTO is fiduciary to the system's continued relevance against the moving frontier of available tools. Its default posture is **biased toward change**: it actively hunts for external components that could augment or replace existing PAM capabilities, and it is structurally expected to disagree with the other seats. The CTO seat is what stops PAM from calcifying.
 
-**One way to think about this role: CTO.** A CTO scans for new technologies, evaluates what's worth adopting, and champions integration against organizational inertia. They are not neutral either, they are biased toward modernization, which is precisely why their voice is useful on an executive team where the other seats are biased toward stability. **Another valid framing:** a research fellow on a medical team whose job is to know which new treatments are outperforming the ones currently in use. **A third:** the technical supervisor on a film crew who evaluates each season's new camera systems and argues for the ones that would change what the production can capture.
+**One way to think about this role: CTO.** A CTO scans for new technologies, evaluates what's worth adopting, and champions integration against organizational inertia. They are not neutral either. They are biased toward modernization, which is precisely why their voice is useful on an executive team where the other seats are biased toward stability. **Another valid framing:** a research fellow on a medical team whose job is to know which new treatments are outperforming the ones currently in use. **A third:** the technical supervisor on a film crew who evaluates each season's new camera systems and argues for the ones that would change what the production can capture.
 
-**Why this seat is not a neutral arbiter.** A framework whose answer is always "build our own" is not rigorous, it is biased toward the status quo, and that bias is invisible precisely because it is the default. The CTO is the structural counterweight. Its default posture is toward adoption, balanced against a Chief of Staff whose default is fiduciary caution and an Administrative Agent whose default is operational stability. **The seats disagree by design.** The human principal is the tiebreaker, and the SCP pipeline is where that tiebreaking happens.
+**Why this seat is not a neutral arbiter.** A framework whose answer is always "build our own" is not rigorous. It is biased toward the status quo, and that bias is invisible precisely because it is the default. The CTO is the structural counterweight. Its default posture is toward adoption, balanced against a Chief of Staff whose default is fiduciary caution and an Administrative Agent whose default is operational stability. **The seats disagree by design.** The human principal is the tiebreaker, and the SCP pipeline is where that tiebreaking happens.
 
 **Responsibilities of the CTO:**
 
@@ -1378,7 +1378,7 @@ PAM's operational primitives depend on work being dispatched at the right time w
 
 #### 7.7.4 Resource Contention Prevention
 
-Multiple agents across multiple clusters may have maintenance cycles, research cycles, and evaluation runs that need to execute, sometimes at overlapping times. Parallel execution across different resources is normal and expected: two agents working on different files, different registries, different clusters can and should run simultaneously in separate sessions. The concern is not temporal overlap, it is resource collision: two processes writing to the same file, two agents modifying the same registry entry, two SCPs editing the same agent spec.
+Multiple agents across multiple clusters may have maintenance cycles, research cycles, and evaluation runs that need to execute, sometimes at overlapping times. Parallel execution across different resources is normal and expected: two agents working on different files, different registries, different clusters can and should run simultaneously in separate sessions. The concern is not temporal overlap. It is resource collision: two processes writing to the same file, two agents modifying the same registry entry, two SCPs editing the same agent spec.
 
 **Resource declaration.** Every PAM-owned scheduled task declares its resource footprint in its skill frontmatter:
 
