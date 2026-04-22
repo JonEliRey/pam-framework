@@ -1,7 +1,7 @@
 # Professional Agent Model (PAM)
 ### A Framework for Domain-Bounded, Self-Improving AI Systems
 
-**Version:** 0.5.2 | **Date:** 2026-04-13 | **Author:** Jonathan Reyes / Ethion Consulting | **Status:** Publication-ready
+**Version:** 0.5.2 | **Date:** 2026-04-13 | **Author:** Jonathan Reyes / Ethion Consulting | **Co-authored with Jai, my personal AI assistant** | **Status:** Publication-ready
 
 ---
 
@@ -49,6 +49,8 @@ I built PAM entirely on Claude Code's native primitives. This is a deliberate co
 While I built PAM on Claude Code because it currently provides the broadest native support for the primitives this framework requires, the principles and organizational model are not exclusive to any one platform. The design philosophy applies to any system that supports agent definitions, lifecycle hooks, skill-based capabilities, and persistent memory, whether that is Claude, OpenAI, Gemini, Mistral, or an open-source alternative. The specific implementation details reference Claude Code; the framework itself is model-agnostic.
 
 I designed PAM for incremental adoption. A solo practitioner with three agents does not need (and should not build) the full governance stack described in this document. Start with the primitives that match your current needs: agents, skills, and a cluster root context. Add governance primitives as your system tells you it needs them, not before. Over-building is as much a failure mode as under-building; the framework's job is to give you a map of what exists so you can choose what to build, not to mandate everything at once.
+
+PAM's security model builds directly on **PAI (Personal AI Infrastructure)** by Daniel Miessler (github.com/danielmiessler/PAI). The Trust Hierarchy concept, the `patterns.yaml` single-source-of-truth pattern, the protection-level taxonomy (`blocked / confirm / alert / zeroAccess / readOnly / confirmWrite / noDelete`), and the prompt-injection defense protocol are PAI originals. Where PAM's security guidance earns trust, PAI is the reason. Daniel has been a visionary in understanding where AI systems are going — in their practical implementation and in the conceptual frameworks needed to think about them clearly — long before these topics became mainstream. His contributions have been invaluable to me and to many others building seriously with these systems. I am grateful for his work and for the generosity of making it open.
 
 ---
 
@@ -152,6 +154,16 @@ This reframe has concrete consequences:
 **Composition over comprehensiveness.** Following the Unix philosophy, do one thing and do it well, I explicitly reject the design goal of a single comprehensive agent. A system of focused, composable professionals outperforms a monolith at every level of complexity that matters.
 
 **Intentionality over probability.** A maturing PAM system continuously identifies work done by LLM reasoning that could be done by code. Every such replacement reduces variance, reduces token consumption, and increases trust. The goal is an agent whose starting state is pre-committed and whose actions are increasingly code-executed, which is what reliable, auditable, low-variance behavior actually requires. PAM cannot make an LLM-backed agent deterministic, but it can make the agent intentional.
+
+**Intent over Prescription.** A capable agent is most useful when it understands where you are trying to go, not just what you have told it to do. Humans trained on years of working with software tend to communicate by prescription: describe the steps, specify the process, leave the goal implicit. The goal stays in your head. The agent executes what you said, not what you meant. When the two arrive at different places, both are surprised — because they were never anchored to the same definition of success.
+
+This principle draws on Richard Sutton's *The Bitter Lesson* (2019, incompleteideas.net/IncIdeas/BitterLesson.html). Sutton observed that across seven decades of AI research, general methods that scaled with computation — search and learning — consistently and dramatically outperformed methods built around human domain knowledge. The lesson: when you have a capable system, prescribing how it should think limits what it can achieve. Declaring what you want to achieve and letting the capable system find its own path does not. PAM applies this at the level of human-agent interaction: the most valuable thing a user can communicate is not a list of steps but a clear statement of what success looks like. From that shared anchor, the path becomes a collaborative question, not a guessing game.
+
+**Adaptive, not Constraining.** PAM is a starting point, not a ceiling. Every principle and primitive in this framework is a direction, not a mandate. A solo practitioner building their first agent and a twelve-person team formalizing their second cluster are both using PAM correctly if their system serves them well. The framework grows with you: begin with what fits your current situation, add structure and governance as your system shows you it needs them, and remove what does not earn its place. A framework that insists on its own structure regardless of context is not a framework. It is a prescription in disguise.
+
+**Trust is a runtime property, not a privilege state.** In conventional access-control systems, trust is assigned at configuration time: an entity receives a role, and that role determines what it can do. PAM's security model takes a different view. Trust is not granted — it is demonstrated through verifiable, constrained behavior at runtime. An agent that has been declared trusted is not the same as an agent whose every action is bounded to only what a trusted agent should be able to do.
+
+A simple way to see this: a traditional system gives an employee a badge and trusts them based on their role. A runtime-trust system checks every action — does this agent, with this role, have a legitimate reason to take this specific action right now? The badge does not open the door; verified, constrained behavior opens the door. The difference is observable and auditable, and it matters most at the moments when something — or someone — is trying to act outside their declared role. This distinction shapes how PAM approaches security: not by assigning agents the right privilege level, but by ensuring each agent's actual runtime behavior matches what that privilege level should produce.
 
 **Why professionals, not tools?** This framing is deliberate and earned through experience. When people first encounter AI, especially non-technical people, they almost always ask: "What can this tool do?" They think about AI as a tool that performs a specific, bounded task. This mental model comes from a generation of software that worked exactly that way, you install a tool, it does one thing, you use it for that thing.
 
