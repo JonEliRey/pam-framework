@@ -1,7 +1,7 @@
 # Professional Agent Model (PAM)
 ### A Framework for Domain-Bounded, Self-Improving AI Systems
 
-**Version:** 0.5.2 | **Date:** 2026-04-13 | **Author:** Jonathan Reyes / Ethion Consulting | **Co-authored with Jai, my personal AI assistant** | **Status:** Publication-ready
+**Version:** 0.6 | **Date:** 2026-04-26 | **Author:** Jonathan Reyes / Ethion Consulting | **Co-authored with Jai, my personal AI assistant** | **Status:** Publication-ready
 
 ---
 
@@ -51,6 +51,23 @@ While I built PAM on Claude Code because it currently provides the broadest nati
 I designed PAM for incremental adoption. A solo practitioner with three agents does not need (and should not build) the full governance stack described in this document. Start with the primitives that match your current needs: agents, skills, and a cluster root context. Add governance primitives as your system tells you it needs them, not before. Over-building is as much a failure mode as under-building; the framework's job is to give you a map of what exists so you can choose what to build, not to mandate everything at once.
 
 PAM's security model builds directly on **PAI (Personal AI Infrastructure)** by Daniel Miessler (github.com/danielmiessler/PAI). The Trust Hierarchy concept, the `patterns.yaml` single-source-of-truth pattern, the protection-level taxonomy (`blocked / confirm / alert / zeroAccess / readOnly / confirmWrite / noDelete`), and the prompt-injection defense protocol are PAI originals. Where PAM's security guidance earns trust, PAI is the reason. Daniel has been a visionary in understanding where AI systems are going — in their practical implementation and in the conceptual frameworks needed to think about them clearly — long before these topics became mainstream. His contributions have been invaluable to me and to many others building seriously with these systems. I am grateful for his work and for the generosity of making it open.
+
+---
+
+## What's New in v0.6
+
+v0.6 was shaped by the first wave of real-world adoption and the questions that surfaced when PAM met production conditions. The changes are targeted, not foundational: the professional reframe, the cluster model, and the organizational structure from v0.5 are unchanged. What v0.6 adds is depth in three areas where adopters found the spec underspecified, and formalization of work that was already present in the reference implementation.
+
+1. **§3.13 — Hardening Tier (new section).** The most substantial addition. Defines the security architecture for agent systems that process untrusted external content — email, web, user-pasted input, external APIs. Introduces four named attack surfaces (command injection, identity injection, definition-level tampering, transit tampering) and five reference implementations for hardening the trust boundary: structured-schema-only reviewer, nonce-signed verdict, dual-reviewer consensus, neutralized-view preprocessing, and agent integrity verification. Implementations are composable — combine based on your threat model, not prescribed. Applies at trust boundaries only; internal same-tier agent calls run freely.
+
+2. **Three new core principles (§2).** Added to the Core Philosophy section alongside the existing principles:
+   - *Intent over Prescription* — specify the outcome, not the steps. When you hand an agent a goal rather than a procedure, it finds better paths than you would have prescribed. Applies at every layer: skills declare intent contracts, not step-by-step workflows; creator tools interview for value sought, not implementation wanted.
+   - *Adaptive, not Constraining* — the framework evolves with the user, not the reverse. Agents, skills, and clusters are re-shaped as the system learns what actually works. A PAM system should get better at serving you over time; if it's getting more rigid, something is wrong.
+   - *Trust is a runtime property, not a privilege state* — trust is earned and evaluated continuously at the boundary where content crosses from external to internal. It is not set once at configuration time. This principle underlies the Hardening Tier and extends PAI's security model into the multi-agent layer.
+
+3. **PAM-ONBOARD.md updated.** The portable bootstrap prompt — paste into any frontier AI to begin a guided PAM adoption — had stale internal version references. These are removed. Section 11 (What Comes Next) is updated to reflect the current state of the onboarding document.
+
+4. **PAI attribution formalized.** The Foreword now includes an explicit paragraph crediting PAI (Personal AI Infrastructure) by Daniel Miessler for the Trust Hierarchy concept, the `patterns.yaml` pattern, the protection-level taxonomy, and the prompt-injection defense protocol. PAM's security model builds directly on that foundation, and that debt is named.
 
 ---
 
