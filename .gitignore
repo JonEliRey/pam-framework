@@ -1,2 +1,5 @@
 .codex
 PAM-article-*.html
+.playwright-mcp/
+visuals/article-2/uat-screenshots/
+visuals/article-2/uat-*.html
