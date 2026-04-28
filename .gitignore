@@ -1,5 +1,10 @@
 .codex
 PAM-article-*.html
 .playwright-mcp/
-visuals/article-2/uat-screenshots/
-visuals/article-2/uat-*.html
+
+# Internal work — preserved locally, not for the public repo
+PAM-article-2-copyedit-notes.md
+review/
+specs/
+visuals/
+Plans/
